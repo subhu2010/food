@@ -4,12 +4,12 @@
         <div class="header-middle-message">
             <small class="d-block">Order Online or Call Now:</small>
             <span class="d-block">
-                <a href="tel:{{ $data['setting']->phone }}">
+                <a href="tel:{{ $data['setting']->phone??'+977 98765432' }}">
                     <i class="las la-phone"></i>
-                    {{ $data['setting']->phone }}
+                    {{ $data['setting']->phone??'+977 98765432' }}
                 </a>
             </span>
-            <a href="tel:{{ $data['setting']->phone }}" class="d-md-none"><i class="las la-phone"></i></a>
+            <a href="tel:{{ $data['setting']->phone??'+977 98765432' }}" class="d-md-none"><i class="las la-phone"></i></a>
         </div>
 
         @include("site.includes.mobile-nav")
@@ -54,7 +54,8 @@
                                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-one mb-4">Login</button>
+                                <a href="{{ url('user-dashboard') }}" class="btn btn-primary btn-one mb-4">Login</a>
+                                <!-- <button type="submit" class="btn btn-primary btn-one mb-4">Login</button> -->
                                 <div class="form-group">
                                     <a href="#">Lost your password?</a>
                                 </div>

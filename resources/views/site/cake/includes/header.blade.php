@@ -100,15 +100,6 @@
                                 <span class="d-lg-none">Search</span>
                                 <span class="icon-box"><i class="las la-search"></i></span>
                             </a>
-                            <section class="search-overlay">
-                                <form class="search-form">
-                                    <a href="#" class="btn-search js-searchClose">
-                                        <i class="fa fa-4x fa-times" aria-hidden="true"></i>
-                                    </a>
-                                    
-                                    <input class="search" type="search" placeholder="Search" />
-                                </form>
-                            </section>
                         </li>
                         <li class="navcart-icon mobile-icon">
                             <a href="#" class="header-search">
