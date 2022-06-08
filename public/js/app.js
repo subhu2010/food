@@ -27549,6 +27549,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./public/site-assets/sass/cake.scss":
+/*!*******************************************!*\
+  !*** ./public/site-assets/sass/cake.scss ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -27877,6 +27890,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\xampp\\\\htdocs\\\
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"site-assets/css/cake": 0,
 /******/ 			"site-assets/css/app": 0
 /******/ 		};
 /******/ 		
@@ -27927,8 +27941,9 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\xampp\\\\htdocs\\\
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["site-assets/css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["site-assets/css/app"], () => (__webpack_require__("./public/site-assets/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["site-assets/css/cake","site-assets/css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["site-assets/css/cake","site-assets/css/app"], () => (__webpack_require__("./public/site-assets/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["site-assets/css/cake","site-assets/css/app"], () => (__webpack_require__("./public/site-assets/sass/cake.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

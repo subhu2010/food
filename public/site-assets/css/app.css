@@ -3411,6 +3411,44 @@ ul.top-menu > li > a:hover {
   border-radius: 6.25rem;
 }
 
+.locationmodal form {
+  padding: 2.5rem;
+}
+.locationmodal form h2 {
+  background-color: #f8f8f8;
+  margin-bottom: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.locationmodal form .form-group {
+  margin-top: 1rem;
+}
+.locationmodal form .form-group .form-control {
+  background-color: #f8f8f8;
+  margin-bottom: 1rem;
+}
+.locationmodal form .form-group span {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.locationmodal form .form-group span i {
+  color: #F2002D;
+  font-size: 1.375rem;
+}
+.locationmodal form .form-group button {
+  background-color: #f2002d;
+  color: #fff;
+  border-radius: 6.25rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: inline-block;
+}
+
 /*footer start*/
 footer {
   background: #2a2a2a;

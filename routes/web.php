@@ -36,6 +36,12 @@ Route::get('cart', function () {
 });
 
 
+// cake
+Route::get('cake', function () {
+    return view('site.cake.pages.landing-page');
+});
+
+
 // user dashboard route
 Route::get('user-login', function () {
 	return view('site.pages.user-dashboard.user-login');

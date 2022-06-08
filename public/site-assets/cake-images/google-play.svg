@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="278" height="88" viewBox="0 0 278 88">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_48" data-name="Rectangle 48" width="56" height="57" transform="translate(84 5020)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.423" y1="0.75" x2="0.529" y2="0.25" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00e2ff"/>
+      <stop offset="1" stop-color="#00c5ff"/>
+    </linearGradient>
+  </defs>
+  <g id="google_play" data-name="google play" transform="translate(-18719 -5816)">
+    <g id="Rectangle_47" data-name="Rectangle 47" transform="translate(18719 5816)" fill="#141414" stroke="#707070" stroke-width="1">
+      <rect width="278" height="88" stroke="none"/>
+      <rect x="0.5" y="0.5" width="277" height="87" fill="none"/>
+    </g>
+    <text id="GET_IT_ON" data-name="GET IT ON" transform="translate(18833 5847)" fill="#f7f7f7" font-size="24" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">GET IT ON</tspan></text>
+    <text id="Google_Play-2" data-name="Google Play" transform="translate(18805 5883)" fill="#f7f7f7" font-size="32" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Google Play</tspan></text>
+    <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(18646 811)" clip-path="url(#clip-path)">
+      <g id="googleplay" transform="translate(76.375 5012.875)">
+        <g id="_x34_2.Google_PLay">
+          <path id="Path_134" data-name="Path 134" d="M58.381,31.351l-9.653-5.575-9.882,9.882,9.882,9.882,9.686-5.594a5.017,5.017,0,0,0-.033-8.6Z" fill="#ffce00"/>
+          <path id="Path_135" data-name="Path 135" d="M38.846,35.658,11.929,8.547a5.08,5.08,0,0,0-1.5,3.611V59.076a5.083,5.083,0,0,0,1.5,3.612Z" fill="url(#linear-gradient)"/>
+          <path id="Path_136" data-name="Path 136" d="M38.846,35.658l9.882-9.882.016-.016L35.5,18.137,18.048,7.878a4.952,4.952,0,0,0-5.083-.1,7.543,7.543,0,0,0-1.037.769Z" fill="#00f076"/>
+          <path id="Path_137" data-name="Path 137" d="M11.929,62.687a7.543,7.543,0,0,0,1.037.769,5.191,5.191,0,0,0,2.475.669,5.1,5.1,0,0,0,2.575-.735L35.5,53.18l13.241-7.624-.016-.016-9.882-9.882Z" fill="#f63448"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
