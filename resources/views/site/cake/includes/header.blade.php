@@ -29,8 +29,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/owl/owl.theme.default.min.css') }}">
 
     <!-- Global CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/css/cake-style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/css/cake-responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/css/cake.css') }}">
 
     <!-- xzoom -->
     <script src="{{ asset('site-assets/xzoom/jquery.js') }}"></script>

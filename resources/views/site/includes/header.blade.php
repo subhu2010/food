@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>@yield("page_title")</title>
     <link rel="icon" type="image/ico" href="favicon.ico">
@@ -34,6 +35,12 @@
     <script src="{{asset('site-assets/xzoom/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('site-assets/xzoom/xzoom.min.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('site-assets/xzoom/xzoom.css')}}" media="all" />
+
+    <script>
+    $(document).ready(function() {
+        $("#myLocation").modal('show');
+    });
+    </script>
 
 </head>
 

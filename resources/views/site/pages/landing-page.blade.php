@@ -39,7 +39,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="section-title">
-                                <h3>Beverages</h3>
+                                <h3>Menu</h3>
                             </div>
                         </div>
                         <div class="col-6">
@@ -340,7 +340,7 @@
                         <div class="menu-card-two">
                             <a href="{{ url('item-detail') }}">
                                 <div class="menu-card-img">
-                                    <img src="{{ asset('site-assets/images/1.jpg') }}" class="img-fluid"
+                                    <img src="{{ asset('site-assets/cake-images/image/1.png') }}" class="img-fluid"
                                         alt="food on ways">
                                 </div>
                                 <div class="menu-card-content">
@@ -366,7 +366,7 @@
                         <div class="menu-card-two">
                             <a href="{{ url('item-detail') }}">
                                 <div class="menu-card-img">
-                                    <img src="{{ asset('site-assets/images/5.jpg') }}" class="img-fluid"
+                                    <img src="{{ asset('site-assets/cake-images/image/5.png') }}" class="img-fluid"
                                         alt="food on ways">
                                 </div>
                                 <div class="menu-card-content">
@@ -392,7 +392,7 @@
                         <div class="menu-card-two">
                             <a href="{{ url('item-detail') }}">
                                 <div class="menu-card-img">
-                                    <img src="{{ asset('site-assets/images/4.jpg') }}" class="img-fluid"
+                                    <img src="{{ asset('site-assets/cake-images/image/4.png') }}" class="img-fluid"
                                         alt="food on ways">
                                 </div>
                                 <div class="menu-card-content">
@@ -418,7 +418,7 @@
                         <div class="menu-card-two">
                             <a href="{{ url('item-detail') }}">
                                 <div class="menu-card-img">
-                                    <img src="{{ asset('site-assets/images/7.jpg') }}" class="img-fluid"
+                                    <img src="{{ asset('site-assets/cake-images/image/7.png') }}" class="img-fluid"
                                         alt="food on ways">
                                 </div>
                                 <div class="menu-card-content">
@@ -1447,6 +1447,33 @@
                 </div>
                 <a href="javascript:void(0)" class="btn btn-one">add to cart</a>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="myLocation" class="modal locationmodal fade">
+    <div class="modal-dialog  modal-dialog-centered">
+        <div class=" modal-content">
+            <form action="">
+                <div class="location-detect">
+                    <h2>
+                        <img src="{{asset('site-assets/images/delivery-2.svg')}}" alt="" class="img-fluid me-3">
+                        delivery
+                    </h2>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Address</label>
+                    <input type="text" class="form-control" placeholder="Enter Your Delivery Address">
+                    <span>
+                        <i class="las la-location-arrow"></i>
+                        OR DETECT MY CURRENT LOCATION
+                    </span>
+                </div>
+                <div class="form-group">
+                    <button class="btn">start order</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
