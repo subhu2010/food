@@ -5,9 +5,7 @@
                 <i class="bi bi-justify fs-3"></i>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -39,40 +37,54 @@
                     <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <div class="user-menu d-flex">
                             <div class="user-name text-end me-3">
-                                <h6 class="mb-0 text-gray-600">{{ ucwords(auth()->user()->name) }}</h6>
+                                <h6 class="mb-0 text-gray-600">{{ auth('admin')->user()->name }}</h6>
                                 <p class="mb-0 text-sm text-gray-600">Administrator</p>
                             </div>
+
+                            @php
+
+                            $profile = asset("/uploads/profiles").'/';
+                            $profile.= !empty(auth('admin')->user()->pics) ? auth('admin')->user()->pics : 'default.png'; 
+
+                            @endphp
+
                             <div class="user-img d-flex align-items-center">
                                 <div class="avatar avatar-md">
-                                    <img src="{{ asset('uploads/profiles/admins') }}/{{ !empty(auth()->user('admin')->profile)?auth()->user('admin')->profile:'default-profile.jpg' }}">
+                                    <img src="{{ $profile }}">
                                 </div>
                             </div>
                         </div>
                     </a>
+
+                    <form id="admin-logout" action="{{ route('admin.logout') }}" method="POST"> @csrf </form>
+
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" 
                         style="min-width: 11rem;">
                         <li>
-                            <h6 class="dropdown-header">Hello, {{ ucwords(auth()->user()->name) }}</h6>
+                            <h6 class="dropdown-header">Hello, {{ auth('admin')->user()->name }} !</h6>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ route('admin.profile') }}">
-                                <i class="las la-user-alt me-2"></i>
-                                MyProfile
+                            <a class="dropdown-item" href="javascript:;">
+                                <i class="las la-user-alt"></i> My Profile
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="change-password.php">
-                                <i class="las la-key me-2"></i>
-                                Change Password
+                            <a class="dropdown-item" href="{{ route('admin.editSetting') }}">
+                                <i class="las la-cog"></i> Setting
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:;">
+                                <i class="las la-key"></i> Change Password
                             </a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ route('admin.logout') }}">
-                                <i class="las la-sign-out-alt me-2"></i> 
-                                Logout
+                            <a class="dropdown-item" href="javascript:;"
+                                onclick="document.querySelector('form#admin-logout').submit()">
+                                <i class="las la-sign-out-alt"></i> Logout
                             </a>
                         </li>
                     </ul>

@@ -5,16 +5,7 @@
 <script src="{{ asset('admin-assets/vendors/choices.js/choices.min.js') }}"></script>
 <script src="{{ asset('admin-assets/js/form-element-select.js') }}"></script>
 
-<!-- Tag Inputs -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/@yaireo/tagify"></script>
-<script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
-<script>
-    // The DOM element you wish to replace with Tagify
-    var input = document.querySelector('input[name=ingredient_name]');
-    // initialize Tagify on the above input node reference
-    new Tagify(input)
-</script>
+
 
 <!-- xzoom -->
 <script src="{{ asset('admin-assets/vendors/xzoom/foundation.min.js') }}"></script>
@@ -35,6 +26,15 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script src="{{ asset('admin-assets/js/mazer.js') }}"></script>
+
+<!-- Tag Inputs -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/@yaireo/tagify"></script>
+<script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
+<script>
+    var input = document.querySelector('input[name=ingredient_name]');
+    new Tagify(input)
+</script> -->
 
 <script>
     const dataMarket = {
