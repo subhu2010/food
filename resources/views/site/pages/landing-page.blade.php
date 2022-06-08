@@ -7,6 +7,7 @@
 <!-- home main content -->
 <div id="main-home-content">
     <div class="fix-show">
+
         <div class="home-banner">
             <div class="container">
                 <div class="banner-carousel">
@@ -18,12 +19,14 @@
                                 aria-label="Slide 2"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item home-banner-img active">
-                                <img src="{{ asset('site-assets/images/back.png') }}" class="d-block w-100" alt="...">
+
+                            @foreach($data["banners"] as $banner)
+                            <div class="carousel-item home-banner-img @if($loop->first) active @endif">
+                                <img src="{{ asset('uploads/banners/'.$banner->pics) }}" 
+                                    class="d-block w-100" alt="{{ $banner->name }}">
                             </div>
-                            <div class="carousel-item home-banner-img">
-                                <img src="{{ asset('site-assets/images/sweets.png') }}" class="d-block w-100" alt="...">
-                            </div>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -46,6 +49,7 @@
                         </div>
                     </div>
                     <div class="owl-carousel owl-theme menu-carousel">
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -59,6 +63,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -72,6 +77,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -85,6 +91,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -98,6 +105,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -111,6 +119,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -124,6 +133,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -137,6 +147,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="menu-card-one">
                                 <a href="#">
@@ -150,6 +161,7 @@
                                 </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -203,15 +215,16 @@
                                 <div class="menu-card-label veg-label">
                                     <span></span>
                                 </div>
-                                <h5 class="menu-card-title fw-700" title="remaining essentially remaining">remaining
-                                    essentially remaining</h5>
-                                <p class="menu-card-text">remaining essentially remaining rema essentially
-                                    remaining</p>
+                                <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                    remaining essentially remaining
+                                </h5>
+                                <p class="menu-card-text">
+                                    remaining essentially remaining rema essentially remaining
+                                </p>
                                 <div class="menu-card-meta flex-center">
                                     <span class="price">Rs. 569</span>
                                     <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
-                                        data-bs-target="#addon">
-                                        add +
+                                        data-bs-target="#addon">add +
                                     </a>
                                 </div>
                             </div>
@@ -228,10 +241,12 @@
                                 <div class="menu-card-label non-label">
                                     <span></span>
                                 </div>
-                                <h5 class="menu-card-title fw-700" title="remaining essentially remaining">remaining
-                                    essentially remaining</h5>
-                                <p class="menu-card-text">remaining essentially remaining rema essentially
-                                    remaining</p>
+                                <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                    remaining essentially remaining
+                                </h5>
+                                <p class="menu-card-text">
+                                    remaining essentially remaining rema essentially remaining
+                                </p>
                                 <div class="menu-card-meta flex-center">
                                     <span class="price">Rs. 569</span>
                                     <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"

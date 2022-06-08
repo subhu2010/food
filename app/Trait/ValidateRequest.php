@@ -42,4 +42,18 @@ trait ValidateRequest{
 
 
 
+    public static function bannerValidation(Request $request, $action = "update", $id = ""){
+
+        return $request->validate([
+                        "name" => "required|string|max:191",
+                        "description" => "nullable",
+                        "link"   => "nullable|url|max:191",
+                        "status" => "required|in:Active,Banned",
+                        "pics"   => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:5000'
+                    ]);
+
+    }
+
+
+
 }

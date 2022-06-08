@@ -1,4 +1,7 @@
 @extends('admin.layouts.layout')
+    
+@section("page_title", "Banner List")
+
 @section('content')
 <div id="main-content">
     <div class="card">
@@ -32,33 +35,37 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($banners as $key => $banner)
+                    
+                    @forelse($data["banners"] as $key => $value)
                         <tr>
-                            <td>{{$key+1}}</td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $value->name }}</td>
                             <td>
-                                {{$banner->title}}
+                                {{ !empty($value->pics)?"Image Uploaded ! ! !":"Image Not Uploaded ! ! !"; }}
                             </td>
                             <td>
-                                <div class="avatar avatar-lg me-3">
-                                    <a href="{{asset('uploads/Banner/'.$banner->image)}}">
-                                        <img src="{{asset('uploads/Banner/'.$banner->image)}}" alt="{{$banner->image}}" srcset="">
-                                    </a>
-                                </div>
+                                @if($value->status == "Active")
+                                    <span class="text-success">{{ $value->status }}</span>
+                                @else
+                                    <span class="text-danger">{{ $value->status }}</span>
+                                @endif
                             </td>
-                            <td>{{$banner->status}}</td>
                             <td>
-                                <a href="{{route('admin.banner.edit',$banner->id)}}" class="btn icon btn-sm btn-primary"><i class="far fa-edit"></i></a>
-                                <a href="#" class="btn icon btn-sm btn-info"><i class="far fa-eye"></i></a>
-                                <form action="{{route('admin.banner.destroy',$banner->id)}}" method="POST" onsubmit="return confirm('Are you sure to delete?')">
+                                <a href="{{route('admin.banner.edit',$value->id)}}" class="btn icon btn-sm btn-primary">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <form action="{{ route('admin.banner.destroy',$value->id) }}" 
+                                    method="POST" onsubmit="return confirm('Are you sure to delete?')">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="btn icon btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                    <button class="btn icon btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
                                 </form>
                             </td>
                         </tr>
-                        @empty
-                        <p>There are currently no banners...</p>
-                        @endforelse
+                    @endforeach
+
                     </tbody>
                 </table>
             </div>

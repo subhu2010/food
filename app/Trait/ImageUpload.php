@@ -10,6 +10,22 @@ use File;
 trait ImageUpload{
 
 
+	public static function singleImageUpload($file, $path){
+
+		$ext  = $file->extension();
+		$pics = Image::make($file);
+
+		if(!File::exists($path)){ File::makeDirectory($path); }
+
+		$file_name = 'food-on-ways-image-'.strtolower(Str::random(30)).'.'.$ext;
+
+        $pics->save($path.$file_name);
+
+        return $file_name;
+
+	}
+
+
 	public static function singleImageUploadThumb($file, $path){
 
 		$ext  = $file->extension();
