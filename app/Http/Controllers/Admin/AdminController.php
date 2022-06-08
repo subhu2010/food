@@ -61,7 +61,9 @@ class AdminController extends Controller{
 
 		try{
 
-			if($setting = Setting::first()):
+			$setting = Setting::first()??new Setting;
+
+			if(isset($setting)):
 				$data = ["id" => $setting->id];
 			endif;
 
@@ -80,39 +82,31 @@ class AdminController extends Controller{
 
 			$logo = $request->file('logo');
 
-			if ($logo != null) :
+			if($logo != null):
 
-				if (!File::exists('uploads/logo')) {
-					File::makeDirectory('uploads/logo');
-				}
+				$old_logo = "uploads/logo/".$setting->logo;
 
-				$ext  = $logo->extension();
-				$path = "uploads/logo/" . isset($setting->logo) ?? "";
-				$data["logo"] = "logo." . $ext;
+				$data["logo"] = $this->logoUpload($logo);
 
-				$logo = Image::make($logo);
-				$logo->save("uploads/logo/" . $data["logo"]);
-
-				@unlink($path);
+				@unlink($old_logo);
 
 			endif;
 
-			if ($setting != null) :
-				Setting::find($setting->id)->update($data);
-			else :
-				Setting::Create($data);
-			endif;
+			Setting::updateOrCreate(["id" => $setting->id], $data);
 
+			$request->session()->flash("success", "Successfully Updated Setting ! ! !");
 
-			$request->session()->flash("success", "Successfully Updated Setting");
-			return redirect()->route("admin.editSetting");
-		} catch (\Exception $e) {
+			return redirect()->route("admin.setting");
 
-			@unlink("uploads/logo/" . $data["logo"]);
+		}catch(\Exception $error){
 
-			$request->session()->flash("error", "Setting Update Operation Failed ! ! !");
+			// $request->session()->flash("error", "Setting Update Operation Failed ! ! !");
+			$request->session()->flash("error", $error->getMessage());
+
 			return redirect()->back()->withInput($request->all());
+
 		}
+
 	}
 
 
