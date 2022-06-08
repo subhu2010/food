@@ -1,12 +1,10 @@
 @extends("admin.layouts.layout")
 
-@section("page_title")
-
+@section("page_title", "Admin Dashboard")
 
 @section("content")
 
 <div id="main-content">
-
 
     <!-- analytic card -->
     <div class="card">
@@ -492,7 +490,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    @forelse($tickets as $ticket)
+
+                    @forelse($data["tickets"] as $ticket)
                     <div class="support-list">
                         <div class="avatar avatar-lg me-3">
                             <img src="{{ asset('admin-assets/images/faces/2.jpg') }}" alt="" srcset="">
@@ -517,6 +516,7 @@
                     @empty
                     <p>There are currently no open tickets ...</p>
                     @endforelse
+                    
                     <div class="support-list">
                         <div class="avatar avatar-lg me-3">
                             <img src="{{ asset('admin-assets/images/faces/2.jpg') }}" alt="" srcset="">

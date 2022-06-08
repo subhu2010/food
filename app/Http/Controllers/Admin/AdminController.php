@@ -3,48 +3,36 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+// use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
-use App\Models\Admin;
-use App\Models\Setting;
-use Illuminate\Support\Facades\File;
-use Intervention\Image\Facades\Image;
-use App\Models\Roles;
-use App\Models\AdminRole;
-use App\Models\Product;
-use App\Models\Ticket;
+use App\Models\{Admin, AdminRole, Product, Roles, Setting, Ticket};
+use App\Trait\{ValidateRequest, ImageUpload};
 use Carbon\Carbon;
-use Illuminate\Validation\Rule;
+use File;
+use Image;
 
-class AdminController extends Controller
-{
+class AdminController extends Controller{
+
+	use ValidateRequest, ImageUpload;
 
 
-	public function __construct()
-	{
+	public function dashboard(){
 
-		$this->middleware("auth:admin");
+		$data["tickets"]   = Ticket::with('user')->where('status', 'opened')->get();
+
+		$data["trendings"] = Product::where('is_trending', true)->take(4)->get();
+
+		return view("admin.pages.page.dashboard", compact("data"));
+
 	}
 
 
-	public function dashboard()
-	{
-		$tickets = Ticket::with('user')->where('status', 'opened')->get();
-		$trendings = Product::where('is_trending', true)->take(4)->get();
-		return view("admin.pages.dashboard", [
-			'tickets' => $tickets,
-			'trendings' => $trendings
-		]);
+	public function profile(){
+		return view("admin.pages.page.profile");
 	}
 
 
-	public function profile()
-	{
-		return view("admin.pages.profile");
-	}
-
-
-	public function profileUpdate(Request $request)
-	{
+	public function profileUpdate(Request $request){
 
 		$request->validate([
 			"name"  => "required|max:191",
@@ -52,39 +40,28 @@ class AdminController extends Controller
 			"address" => "required|max:191",
 			"phone"   => "required"
 		]);
+
 	}
 
 
+	public function setting(){
 
-	public function editSetting()
-	{
+		$data["setting"] = Setting::first()??new Setting;
 
-		$setting = Setting::first();
+		return view("admin.pages.page.setting", compact("data"));
 
-		if ($setting != null) :
-			$data['setting'] = $setting;
-		else :
-			$data["setting"] = new Setting;
-		endif;
-
-		return view('admin.pages.setting', compact(['data']));
 	}
 
 
-	public function editSettingProcess(Request $request)
-	{
+	public function settingProcess(Request $request){
 
-
-		$this->validate($request, [
-			"name"        => "required|max:191",
-			"logo"        => "nullable|image|mimes:jpg,jpeg,gif,png"
-		]);
+		$this->validateSetting($request);
 
 		$data = [];
 
-		try {
+		try{
 
-			if ($setting = Setting::first()) :
+			if($setting = Setting::first()):
 				$data = ["id" => $setting->id];
 			endif;
 

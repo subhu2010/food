@@ -119,50 +119,56 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="sidebar-item  has-sub">
                     <a href="#" class="sidebar-link">
                         <i class="lab la-first-order"></i>
-                        <span>order</span>
+                        <span>orders</span>
                     </a>
                     <ul class="submenu ">
                         <li class="submenu-item ">
-                            <a href="order-list.php">Order List</a>
+                            <a href="javascript:;">
+                                <i class="las la-list"></i>
+                                Orders List
+                            </a>
+                        </li>
+
+                        <li class="submenu-item ">
+                            <a href="javascript:;">
+                                <i class="las la-list"></i>
+                                Recent Order
+                            </a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="recent-order.php">recent Order</a>
+                            <a href="javascript:;">
+                                <i class="las la-list"></i>
+                                Pending Order
+                            </a>
+                        </li>
+
+                        <li class="submenu-item ">
+                            <a href="javascript:;">
+                                <i class="las la-list"></i>
+                                Cancelled Order
+                            </a>
                         </li>
                     </ul>
                 </li>
+
                 <li class="sidebar-item  ">
                     <a href="{{route('admin.ticket.index')}}" class="sidebar-link">
                         <i class="las la-ticket-alt"></i>
                         <span>Support Ticket</span>
                     </a>
                 </li>
+
                 <li class="sidebar-item  ">
                     <a href="invoice.php" class="sidebar-link">
                         <i class="las la-file-invoice-dollar"></i>
                         <span>Invoice</span>
                     </a>
                 </li>
-                <li class="sidebar-item  ">
-                    <a href="complete-order.php" class="sidebar-link">
-                        <i class="lab la-first-order-alt"></i>
-                        <span>Complete Order</span>
-                    </a>
-                </li>
-                <li class="sidebar-item  ">
-                    <a href="pending-order.php" class="sidebar-link">
-                        <i class="lab la-first-order-alt"></i>
-                        <span>Pending Order</span>
-                    </a>
-                </li>
-                <li class="sidebar-item  ">
-                    <a href="#" class="sidebar-link">
-                        <i class="las la-cog"></i>
-                        <span>Setting</span>
-                    </a>
-                </li>
+
             </ul>
         </div>
         <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
