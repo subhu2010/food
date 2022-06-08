@@ -21,8 +21,8 @@ class RedirectIfAuthenticated{
 
                 if($guard === "admin"):
                     return redirect(RouteServiceProvider::ADMIN_DASH);
-                // elseif($guard === "web"):
-                //     return redirect(RouteServiceProvider::USER_DASH);
+                elseif($guard === "web"):
+                    return redirect(RouteServiceProvider::USER_DASH);
                 else:
                     return redirect('/user/dashboard');
                 endif;

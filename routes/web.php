@@ -122,22 +122,22 @@ Route::group([], function ($route) {
 		// 	->name('verification.resend');
 
 
+		$route->group(["middleware" => "auth"], function ($route) {
+
+
+			$route->get('/dashboard', 'UserController@dashboard')
+				->name('dashboard');
+
+			$route->get('profile', 'UserController@profile')
+				->name('profile');
+
+			$route->post('/change-password', 'Auth\UserLoginController@changePassword')
+				->name('changePassword');
+
+			$route->get('/logout', 'Auth\UserLoginController@logout')
+				->name('logout');
+		});
+
 	});
 
-
-	$route->group(["middleware" => "auth"], function ($route) {
-
-
-		$route->get('/dashboard', 'User\UserController@dashboard')
-			->name('dashboard');
-
-		$route->get('profile', 'User\UserController@profile')
-			->name('profile');
-
-		$route->post('/change-password', 'User\Auth\UserLoginController@changePassword')
-			->name('changePassword');
-
-		$route->get('/logout', 'User\Auth\UserLoginController@logout')
-			->name('logout');
-	});
 });

@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateSettingTable extends Migration{
     
-    public function up()    {
+    public function up(){
+
         Schema::create('setting', function(Blueprint $table){
             $table->bigIncrements('id');
             $table->string("name");
@@ -22,6 +23,7 @@ class CreateSettingTable extends Migration{
             $table->string("tiktok")->nullable();  
             $table->timestamps();
         });
+        
     }
  
     public function down(){

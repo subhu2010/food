@@ -1,14 +1,9 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Page Title -->
     <title>@yield("page_title")</title>
-
-    <!-- FavIcon Link -->
     <link rel="icon" type="image/ico" href="favicon.ico">
 
-    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -31,25 +26,14 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/owl/owl.carousel.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/owl/owl.theme.default.min.css') }}">
 
-
     <!-- Global CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/css/app.css') }}">
     <!-- <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/css/pricerange.css') }}"> -->
-
-
 
     <!-- xzoom -->
     <script src="{{asset('site-assets/xzoom/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('site-assets/xzoom/xzoom.min.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('site-assets/xzoom/xzoom.css')}}" media="all" />
-    <!-- 
-    <script src="{{ asset('site-assets/xzoom/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('site-assets/xzoom/xzoom.min.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('site-assets/xzoom/xzoom.css') }}" />
-    <script type="text/javascript" src="{{ asset('site-assets/xzoom/jquery.hammer.min.js') }}"></script> -->
-
-    <!-- cookiealert styles -->
-
 
 </head>
 
@@ -103,6 +87,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="header-middle clearfix">
                 <div class="header-middle-message">
@@ -113,47 +98,17 @@
                     </span>
                     <a href="tel:+977 9864235178" class="d-md-none"><i class="las la-phone"></i></a>
                 </div>
+
                 @include('site.includes.mb-nav')
 
                 @include('site.includes.header-middle')
 
             </div>
         </div>
+
         @include('site.includes.bottom-menu')
+
     </div>
-
-    <!-- <div class="sticky-icon">
-        <ul class="sticky-social-icon">
-            <li>
-                <a href='#' class='facebook' target='_blank'>
-                    <i class="lab la-facebook-f"></i>
-                    <p>Facebook</p>
-                </a>
-            </li>
-            <li>
-                <a href='#' class='twitter' target='_blank'>
-                    <i class="lab la-twitter"></i>
-                    <p>Twitter</p>
-                </a>
-            </li>
-
-            <li>
-                <a href='#' class='instagram' target='_blank'>
-                    <i class="lab la-instagram"></i>
-                    <p>Instagram</p>
-                </a>
-            </li>
-            <li>
-                <a href='#' class='youtube' target='_blank'>
-                    <i class="lab la-youtube"></i>
-                    <p>Youtube</p>
-                </a>
-            </li>
-        </ul>
-    </div> -->
-
-
-
 
     <!-- location Modal -->
     <div class="modal fade" id="location" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

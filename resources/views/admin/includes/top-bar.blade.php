@@ -49,7 +49,8 @@
                             </div>
                         </div>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;">
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" 
+                        style="min-width: 11rem;">
                         <li>
                             <h6 class="dropdown-header">Hello, {{ ucwords(auth()->user()->name) }}</h6>
                         </li>

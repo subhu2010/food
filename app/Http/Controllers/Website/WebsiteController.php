@@ -10,10 +10,9 @@ use App\Models\Setting;
 class WebsiteController extends Controller{
 
 
-
 	public function landingPage(){
 
-		$data["setting"] = Setting::first();
+		$data["setting"] = self::setting();
 
 		return view("site.pages.landing-page", compact("data"));
 
