@@ -31,6 +31,10 @@ Route::get('checkout-confirm', function () {
     return view('site.pages.checkout-confirm');
 });
 
+Route::get('cart', function () {
+    return view('site.pages.cart');
+});
+
 
 // user dashboard route
 Route::get('user-login', function () {

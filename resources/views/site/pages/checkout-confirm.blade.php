@@ -94,7 +94,7 @@
                     <div class="checkout-delivery-card">
                         <h5 class="delivery-card-head fw-800">Your Cart</h5>
                         <div class="list-item">
-                            <div class="list-item-card flex-center">
+                            <div class="list-item-card flex-center mb-2">
                                 <div class="item-name">
                                     <h5>Chicken Biryani</h5>
                                 </div>
@@ -102,7 +102,7 @@
                                     <input type="number" min="1" max="100" value="1" />
                                 </div>
                             </div>
-                            <div class="list-item-card flex-center">
+                            <div class="list-item-card flex-center mb-2">
                                 <div class="item-name">
                                     <h5>Chicken Biryani</h5>
                                 </div>
@@ -135,7 +135,7 @@
                                             <span class="add-note">Select Promo Code</span>
                                         </div>
                                     </div>
-                                    <div class="price" data-bs-toggle="modal" data-bs-target="#checkout">
+                                    <div class="price" data-bs-toggle="modal" data-bs-target="#checkout" style="cursor:pointer">
                                         View Offer
                                     </div>
                                 </div>
@@ -244,37 +244,5 @@
 </div>
 
 
-<script>
-(function($) {
-    $.fn.spinner = function() {
-        this.each(function() {
-            var el = $(this);
-
-            // add elements
-            el.wrap('<span class="spinner"></span>');
-            el.before('<span class="sub">-</span>');
-            el.after('<span class="add">+</span>');
-
-            // substract
-            el.parent().on('click', '.sub', function() {
-                if (el.val() > parseInt(el.attr('min')))
-                    el.val(function(i, oldval) {
-                        return --oldval;
-                    });
-            });
-
-            // increment
-            el.parent().on('click', '.add', function() {
-                if (el.val() < parseInt(el.attr('max')))
-                    el.val(function(i, oldval) {
-                        return ++oldval;
-                    });
-            });
-        });
-    };
-})(jQuery);
-
-$('input[type=number]').spinner();
-</script>
 
 @endsection
