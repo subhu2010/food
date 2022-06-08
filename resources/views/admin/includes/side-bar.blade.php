@@ -19,11 +19,8 @@
                 <li class="sidebar-title">
                     <h3>Food On Ways</h3>
                 </li>
-                <li class="sidebar-title">
-                    <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-                </li>
                 <li class="sidebar-item  ">
-                    <a href="{{route('landingPage')}}" class="sidebar-link">
+                    <a href="{{ route('landingPage') }}" class="sidebar-link" target="_blank">
                         <i class="las la-globe"></i>
                         <span>Website</span>
                     </a>
@@ -31,14 +28,14 @@
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i class="las la-image"></i>
-                        <span>Banner</span>
+                        <span>Manage Site</span>
                     </a>
                     <ul class="submenu ">
                         <li class="submenu-item ">
-                            <a href="{{route('admin.banner.create')}}">Add Banner</a>
+                            <a href="{{ route('admin.banner.create') }}">Add Banner</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.banner.index')}}">Banner List</a>
+                            <a href="{{ route('admin.banner.index') }}">Banner List</a>
                         </li>
                     </ul>
                 </li>
@@ -49,10 +46,10 @@
                     </a>
                     <ul class="submenu ">
                         <li class="submenu-item ">
-                            <a href="{{route('admin.staff.create')}}">Add Staff</a>
+                            <a href="{{ route('admin.staff.create') }}">Add Staff</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.staff.index')}}">Staff List</a>
+                            <a href="{{ route('admin.staff.index') }}">Staff List</a>
                         </li>
                     </ul>
                 </li>
@@ -66,19 +63,19 @@
                             <a href="">Menu Catalogue</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.menu.index')}}">Menu List</a>
+                            <a href="{{ route('admin.menu.index') }}">Menu List</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.product.index')}}">Product List</a>
+                            <a href="{{ route('admin.product.index') }}">Product List</a>
                         </li>
                         <li class="submenu-item ">
                             <a href="menu-grid.php">Menu Grid</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.menu.create')}}">Add Menu</a>
+                            <a href="{{ route('admin.menu.create') }}">Add Menu</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.product.create')}}">Add product</a>
+                            <a href="{{ route('admin.product.create') }}">Add product</a>
                         </li>
                     </ul>
                 </li>
@@ -89,16 +86,16 @@
                     </a>
                     <ul class="submenu ">
                         <li class="submenu-item ">
-                            <a href="{{route('admin.cakebanner.index')}}">Banner List</a>
+                            <a href="{{ route('admin.cakebanner.index') }}">Banner List</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.cake.index')}}">Cake List</a>
+                            <a href="{{ route('admin.cake.index') }}">Cake List</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.cake.create')}}">Add Cake</a>
+                            <a href="{{ route('admin.cake.create') }}">Add Cake</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{route('admin.cakebanner.create')}}">Add Banner</a>
+                            <a href="{{ route('admin.cakebanner.create') }}">Add Banner</a>
                         </li>
                     </ul>
                 </li>
@@ -155,7 +152,7 @@
                     </ul>
                 </li>
 
-                <li class="sidebar-item  ">
+                <!-- <li class="sidebar-item  ">
                     <a href="{{route('admin.ticket.index')}}" class="sidebar-link">
                         <i class="las la-ticket-alt"></i>
                         <span>Support Ticket</span>
@@ -167,7 +164,7 @@
                         <i class="las la-file-invoice-dollar"></i>
                         <span>Invoice</span>
                     </a>
-                </li>
+                </li> -->
 
             </ul>
         </div>

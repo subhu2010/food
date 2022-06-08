@@ -1,6 +1,6 @@
 @extends("site.layouts.layout")
 
-@section("page_title", $data['setting']->title)
+@section("page_title", $data['setting']->name)
 
 @section("content")
 

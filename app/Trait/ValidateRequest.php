@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 trait ValidateRequest{
 
 
-	public static function bannerValidate(Request $request, $action = "add", $id = ""){
+	public static function validateBanner(Request $request, $action = "add", $id = ""){
 
         $request->validate([    
             "name"   => ($action == 'update')?"required|max:191|unique:banners,name,".$id : 
@@ -19,18 +19,24 @@ trait ValidateRequest{
         ]);
 
     }
-    
 
-	public static function settingValidate(Request $request){
+
+	public static function validateSetting(Request $request){
 
         $request->validate([
             "name"  => "required|max:191",
             "email" => "nullable|email|max:191",
-            "logo"  => "nullable|image|mimes:jpg,jpeg,gif,png,webp",
+            "contact" => "nullable",
+            "phone"   => "nullable",
+            "address" => "nullable",
+            "logo"    => "nullable|image|mimes:jpg,jpeg,gif,png,webp",
             "facebook"  => "nullable|url|max:191",
             "instagram" => "nullable|url|max:191",
             "seo_title" => "nullable|max:191"
-        ]);
+        ],
+    	[
+    		"name.required" => "Name is required ! ! !"
+    	]);
 
     }
 
