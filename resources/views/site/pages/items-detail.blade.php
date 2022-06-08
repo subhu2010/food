@@ -148,7 +148,7 @@
                         <div class="quantity">
                             <input type="number" min="1" max="100" value="1" />
                         </div>
-                        <button type="submit" class="btn cart-btn">Order</button>
+                        <button type="submit" class="btn cart-btn">Add</button>
                         <div class="addon-wishlist">
                             <i class="lar la-heart"></i>
                         </div>
@@ -262,8 +262,8 @@
                             <strong>Rs 1412</strong>
                         </div>
                         <div class="cart-buttons clearfix">
-                            <a href="javascript:(0)" class="btn">view cart</a>
-                            <a href="javascript:(0)" class="btn">chechout</a>
+                            <a href="{{url('checkout-confirm')}}" class="btn">view cart</a>
+                            <a href="{{url('checkout-order')}}" class="btn">checkout</a>
                         </div>
                     </div>
                 </div>
