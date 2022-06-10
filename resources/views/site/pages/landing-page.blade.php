@@ -1452,8 +1452,8 @@
 </div>
 
 
-<div id="myLocation" class="modal locationmodal fade">
-    <div class="modal-dialog  modal-dialog-centered">
+<div id="myLocation" class="modal  fade">
+    <div class="modal-dialog  modal-dialog-centered locationmodal">
         <div class=" modal-content">
             <form action="">
                 <div class="location-detect">

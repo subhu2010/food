@@ -1,35 +1,41 @@
 @include("site.includes.header")
 
-    <div id="header" class="main-header-top">
+<div id="header" class="main-header-top">
 
-        @include("site.includes.top-nav-bar")
+    @include("site.includes.top-nav-bar")
 
-        @include("site.includes.mid-nav-bar")
+    @include("site.includes.mid-nav-bar")
 
-        @include("site.includes.menu-bar")
+    @include("site.includes.menu-bar")
 
-    </div>
+</div>
 
-    <!-- location Modal -->
-    <div class="modal fade" id="location" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="locationLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="locationLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- location Modal -->
+<div class="modal fade" id="topLocation" tabindex="-1" aria-labelledby="topLocationLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered locationmodal">
+        <div class=" modal-content">
+            <form action="">
+                <div class="location-detect">
+                    <h2>
+                        Pinpoint Your Location
+                    </h2>
                 </div>
-                <div class="modal-body">
-                    ...
+                <div class="form-group">
+                    <label for="" class="form-label">Address</label>
+                    <input type="text" class="form-control" placeholder="Enter Your Delivery Address">
+                    <span>
+                        <i class="las la-location-arrow"></i>
+                        OR DETECT MY CURRENT LOCATION
+                    </span>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                <div class="form-group">
+                    <button class="btn">start order</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
+</div>
 
-    @yield("content")
+@yield("content")
 
 @include("site.includes.footer")

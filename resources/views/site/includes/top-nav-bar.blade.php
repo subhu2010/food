@@ -37,7 +37,7 @@
                         <div class="location-input">
                             <i class="las la-map-marker"></i>
                             <input type="text" class="form-control" disabled readonly value="kathmandu, Nepal"
-                                data-bs-toggle="modal" data-bs-target="#location">
+                            data-bs-toggle="modal" data-bs-target="#topLocation">
                         </div>
                     </li>
                 </ul>
@@ -45,3 +45,4 @@
         </div>
     </div>
 </div>
+
