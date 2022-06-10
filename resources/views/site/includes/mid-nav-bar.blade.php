@@ -56,11 +56,11 @@
                                 </div>
                                 <hr>
                                 <div class="form-group mb-4 text-center">
-                                    <a href="#">
-                                        <img src="{{asset('site-assets/images/facebook.png')}}" class="img-fluid"></img>
+                                    <a href="{{ route('user.social.login', 'facebook') }}">
+                                        <img src="{{ asset('site-assets/images/facebook.png') }}" class="img-fluid"></img>
                                     </a>
-                                    <a href="#">
-                                        <img src="{{asset('site-assets/images/google.png')}}" class="img-fluid"></img>
+                                    <a href="{{ route('user.social.login', 'google') }}">
+                                        <img src="{{ asset('site-assets/images/google.png') }}" class="img-fluid"></img>
                                     </a>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-one mb-4">Login</button>

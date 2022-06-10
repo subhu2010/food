@@ -85,17 +85,15 @@ class AdminController extends Controller{
 			if($logo != null):
 
 				$old_logo = "uploads/logo/".$setting->logo;
-
 				$data["logo"] = $this->logoUpload($logo);
-
-				@unlink($old_logo);
 
 			endif;
 
 			Setting::updateOrCreate(["id" => $setting->id], $data);
 
-			$request->session()->flash("success", "Successfully Updated Setting ! ! !");
+			if($logo != null) @unlink($old_logo);
 
+			$request->session()->flash("success", "Successfully Updated Setting ! ! !");
 			return redirect()->route("admin.setting");
 
 		}catch(\Exception $error){
@@ -190,25 +188,25 @@ class AdminController extends Controller{
 
 			$profile = $request->file('profile');
 
-			$pro = "";
+			$backup = "";
 
 			if($profile != null):
 
 				$old_profile = "uploads/profiles/admins/".$admin->profile;
 				$pro = $admin->profile = $this->singleImageUpload($profile, "uploads/profiles/admins/");
 
-				@unlink($old_profile);
-
 			endif;
 
 			$admin->update();
+
+			if($profile != null) @unlink($old_profile);
 
 			$request->session()->flash('success', 'Successfully Updated Admin ! ! ! !');
 			return redirect()->route('admin.adminList');
 
 		}catch(\Exception $error){
 
-			@unlink("uploads/profiles/admins/".$pro);
+			@unlink("uploads/profiles/admins/".$backup);
 			$request->session()->flash("error", $error->getMessage());
 			return redirect()->back();
 

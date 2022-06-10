@@ -3,7 +3,7 @@
 use App\Http\Controllers\User\Auth\{UserLoginController};
 use App\Http\Controllers\Admin\Auth\{AdminLoginController, AdminForgotPasswordController, AdminResetPasswordController,
 			RolesAndPermissionsController};
-use App\Http\Controllers\Admin\{AdminController, TicketController, UserController};
+use App\Http\Controllers\Admin\{AdminController, NewsController, PageController, TicketController, UserController};
 use Illuminate\Support\Facades\Route;
 
 
@@ -163,6 +163,7 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 		$route->resource('/cakebanner', CakeBannerController::class);
 
 
+
 		/*************************************** User Route Controller ***********************************/
 		$route->get('/user-list', [UserController::class, "userList"])
 		->name("userList");
@@ -179,8 +180,51 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 		$route->post("/edit-user/{user}", [UserController::class, "editUserProcess"])
 		->name("editUserProcess");
 
-		$route->post('/delete-user/{id}', [UserController::class, "deleteUser"])
+		$route->post('/delete-user', [UserController::class, "deleteUser"])
 		->name("deleteUser");
+
+
+
+		/*************************************** Page Route Controller ***********************************/
+		$route->get('/page-list', [PageController::class, "pageList"])
+		->name("pageList");
+
+		$route->get('/add-page', [PageController::class, "addPage"])
+		->name("addPage");
+
+		$route->post('/add-page', [PageController::class, "addPageProcess"])
+		->name("addPageProcess");
+
+		$route->get("/edit-page/{page}", [PageController::class, "editPage"])
+		->name("editPage");
+
+		$route->post("/edit-page/{page}", [PageController::class, "editPageProcess"])
+		->name("editPageProcess");
+
+		$route->post('/delete-page', [PageController::class, "deletePage"])
+		->name("deletePage");
+
+
+
+		/*************************************** News Route Controller ***********************************/
+		$route->get('/news-list', [NewsController::class, "newsList"])
+		->name("newsList");
+
+		$route->get('/add-news', [NewsController::class, "addNews"])
+		->name("addNews");
+
+		$route->post('/add-news', [NewsController::class, "addNewsProcess"])
+		->name("addNewsProcess");
+
+		$route->get("/edit-news/{news}", [NewsController::class, "editNews"])
+		->name("editNews");
+
+		$route->post("/edit-news/{news}", [NewsController::class, "editNewsProcess"])
+		->name("editNewsProcess");
+
+		$route->post('/delete-news', [NewsController::class, "deleteNews"])
+		->name("deleteNews");
+
 
 	});
 

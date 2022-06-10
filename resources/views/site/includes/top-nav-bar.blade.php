@@ -22,8 +22,11 @@
                     <img src="{{ asset('site-assets/images/logo.png') }}" class="img-fluid"></img>
                 </a>
             </div>
+
             <div class="top-right-menu  d-none d-xl-block">
                 <ul class="top-menu">
+
+                    @if(Request::is('/'))
                     <li>
                         <div class="toogle-btn">
                             <span class="label">dine-in/takeaway</span>
@@ -33,6 +36,8 @@
                             </label>
                         </div>
                     </li>
+                    @endif
+                    
                     <li>
                         <div class="location-input">
                             <i class="las la-map-marker"></i>
@@ -42,6 +47,7 @@
                     </li>
                 </ul>
             </div>
+
         </div>
     </div>
 </div>

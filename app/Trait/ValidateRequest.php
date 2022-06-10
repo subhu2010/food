@@ -42,14 +42,43 @@ trait ValidateRequest{
 
 
 
-    public static function bannerValidation(Request $request, $action = "add", $id = ""){
+    public static function bannerValidation(Request $request, $action = "add"){
 
         return $request->validate([
                         "name" => "required|string|max:191",
                         "description" => "nullable",
                         "link"   => "nullable|url|max:191",
                         "status" => "required|in:Active,Banned",
-                        "pics"   => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:5000'
+                        "pics"   => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:2048',
+                    ]);
+
+    }
+
+
+    public static function validatePage(Request $request, $action = "add"){
+
+        return $request->validate([
+                        "parent" => "nullable|exists:pages,id",
+                        "name" => "required|string|max:191",
+                        "pics" => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:2048',
+                        "desc" => "nullable",
+                        "page"   => "required|max:191",
+                        "status" => "required|in:Active,Banned",
+                        "order"  => "required"
+                    ]);
+
+    }
+
+
+    public static function validateNews(Request $request, $action = "add"){
+
+        return $request->validate([
+                        "name" => "required|string|max:191",
+                        "pics" => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:2048',
+                        "description" => "required",
+                        "status"  => "required|in:Active,Banned",
+                        "post_by" => "required|max:191",
+                        "time"    => "required|max:191"
                     ]);
 
     }
@@ -62,10 +91,10 @@ trait ValidateRequest{
                             "name" => "required|string|max:191",
                             "email"    => 'required|email|max:191|unique:admins,email,'.($action == 'add'?'':$id),
                             "password" => ($action == 'update'?'nullable':'required'),
-                            "profile" => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:5000',
+                            "profile" => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:2048',
                             "address" => "nullable|max:191",
                             "phone"   => "required",
-                            "status"  => "required|in:Active,Banned",
+                            "status"  => "required|in:Active,Banned"
                         ]);
 
     }

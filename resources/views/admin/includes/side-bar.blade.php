@@ -37,6 +37,18 @@
                                 Banners
                             </a>
                         </li>
+                        <li class="submenu-item ">
+                            <a href="{{ route('admin.newsList') }}">
+                                <i class="las la-list"></i>
+                                News
+                            </a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="{{ route('admin.pageList') }}">
+                                <i class="las la-list"></i>
+                                Pages
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="sidebar-item  has-sub">
