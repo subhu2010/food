@@ -1,7 +1,7 @@
 <?php
 
-use File;
-use Image;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
 
 

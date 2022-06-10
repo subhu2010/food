@@ -7,7 +7,7 @@
                         <a href="javascript:;">cakes</a>
                     </li>
                     <li>
-                        <a href="javascript:;">foods</a>
+                        <a href="{{url('item-list')}}">foods</a>
                     </li>
                     <li>
                         <a href="javascript:;">foodonways Deals</a>

@@ -3456,24 +3456,16 @@ ul.top-menu > li > a:hover {
   height: 100%;
 }
 .user-sidebar .user-menu-link {
-  color: var(--text-color);
+  color: #000;
   font-size: 14px;
   text-transform: capitalize;
   font-weight: 600;
   margin-bottom: 10px;
 }
-
-.user-sidebar .user-sidebar .user-menu-link:hover,
-.user-sidebar .user-menu-link.active {
-  /*background: var(--secondary-color);*/
-  color: var(--primary-color);
+.user-sidebar .user-menu-linkhover, .user-sidebar .user-menu-link.active {
+  /*background: $green;*/
+  color: #F2002D;
 }
-
-.dashboard-link {
-  background: var(--secondary-color);
-  color: #fff !important;
-}
-
 .user-sidebar .user-menu-link i {
   margin-right: 10px;
 }
@@ -3486,81 +3478,72 @@ ul.top-menu > li > a:hover {
   margin-bottom: 30px;
 }
 
-.user-name {
+.user-dash-content .user-desc-section .user-desc .user-name {
   font-weight: 700;
   font-size: 18px;
 }
-
-.user-bio {
+.user-dash-content .user-desc-section .user-desc .user-bio {
   margin: 15px 0;
   font-size: 14px;
 }
-
-.user-social li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.user-social li a {
-  height: 30px;
-  width: 30px;
-  background: var(--secondary-color);
-  border-radius: 5px;
-  color: #fff;
-}
-
-.user-avatar img {
+.user-dash-content .user-desc-section .user-avatar-section .user-avatar img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   margin: auto;
-  border: 2px solid var(--primary-color);
+  border: 2px solid #F2002D;
 }
-
-.user-avatar-dtl .table tr td {
+.user-dash-content .user-desc-section .user-avatar-section .user-avatar-dtl {
+  width: calc(100% - 110px);
+}
+.user-dash-content .user-desc-section .user-avatar-section .user-avatar-dtl .user-social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.user-dash-content .user-desc-section .user-avatar-section .user-avatar-dtl .user-social li a {
+  height: 30px;
+  width: 30px;
+  background: #197c43;
+  border-radius: 5px;
+  color: #fff;
+}
+.user-dash-content .user-desc-section .user-avatar-section .user-avatar-dtl .table tr td {
   font-size: 14px;
 }
 
 .user-dashboard-title {
-  color: var(--primary-color);
+  color: #F2002D;
 }
 
-.user-overview-card h5 {
+.user-overview .user-overview-card h5 {
   text-transform: capitalize;
 }
-
-.user-total-count {
+.user-overview .user-overview-card .user-total-count {
   font-size: 35px;
   padding: 15px 0;
 }
 
-.review-list ol {
+.user-review .review-list ol {
   padding-left: 1rem;
 }
 
 .view-all {
   display: block;
-  color: var(--secondary-color);
+  color: #197c43;
   font-weight: 700;
   text-align: right;
 }
 
-.user-avatar-dtl {
-  width: calc(100% - 110px);
-}
-
 /*user account*/
+.user-profile .user-avatar {
+  position: relative;
+}
 .user-profile .user-avatar img {
   height: 150px;
   width: 150px;
 }
-
-.user-profile .user-avatar {
-  position: relative;
-}
-
 .user-profile .user-avatar span {
   position: absolute;
   top: 50%;
@@ -3575,11 +3558,10 @@ ul.top-menu > li > a:hover {
   transition: all 0.5s ease;
   border-radius: 5px;
 }
-
 .user-profile .user-avatar:hover span {
   visibility: visible;
   opacity: 1;
-  color: var(--primary-color);
+  color: #F2002D;
 }
 
 /*user wishlist*/
@@ -3597,17 +3579,17 @@ ul.top-menu > li > a:hover {
 .user-order .form-select,
 .user-order .input-group .form-control,
 .user-order .input-group button {
-  border: 1px solid var(--primary-color) !important;
+  border: 1px solid #F2002D !important;
 }
 
 .user-order .input-group button {
-  background: var(--primary-color);
+  background: #F2002D;
   color: #fff;
 }
 
 .user-order-table table {
   width: 100%;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid #197c43;
 }
 
 .user-order-table table tbody tr td,
@@ -3618,7 +3600,7 @@ ul.top-menu > li > a:hover {
 }
 
 .user-order-table table thead {
-  background: var(--secondary-color);
+  background: #197c43;
   color: #fff;
 }
 
@@ -3666,7 +3648,7 @@ ul.top-menu > li > a:hover {
 }
 
 .delivery-process-title {
-  color: var(--secondary-color);
+  color: #197c43;
   text-align: center;
   font-size: 18px;
   font-weight: 600;
