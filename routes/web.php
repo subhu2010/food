@@ -41,6 +41,24 @@ Route::get('cake', function(){
     return view('site.cake.pages.landing-page');
 });
 
+Route::get('cake-item-detail', function () {
+    return view('site.cake.pages.cake-item-detail');
+});
+
+Route::get('cake-cart', function () {
+    return view('site.cake.pages.cake-cart');
+});
+
+Route::get('cake-list', function () {
+    return view('site.cake.pages.cake-list');
+});
+
+
+// user dashboard route
+Route::get('user-dashboard', function () {
+    return view('site.pages.user-dashboard.user-dashboard');
+});
+
 
 // user dashboard route
 Route::get('user-login', function(){

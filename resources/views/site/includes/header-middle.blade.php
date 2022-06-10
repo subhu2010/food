@@ -38,7 +38,8 @@
                                 <label class="form-check-label" for="exampleCheck1">Remember me</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-one mb-4">Login</button>
+                        <a href="{{url('user-dashboard')}}" class="btn btn-primary btn-one mb-4">Login</button>
+                        <!-- <button type="submit" class="btn btn-primary btn-one mb-4">Login</button> -->
                         <div class="form-group">
                             <a href="#">Lost your password?</a>
                         </div>

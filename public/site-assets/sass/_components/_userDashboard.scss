@@ -1,0 +1,202 @@
+.user-sidebar {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 1px 1px 13px -2px rgb(0 0 0 / 12%);
+    height: 100%;
+    .user-menu-link {
+        color: var(--text-color);
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+.user-sidebar 
+.user-sidebar .user-menu-link:hover,
+.user-sidebar .user-menu-link.active {
+    /*background: var(--secondary-color);*/
+    color: var(--primary-color);
+}
+.dashboard-link {
+    background: var(--secondary-color);
+    color: #fff !important;
+}
+.user-sidebar .user-menu-link i {
+    margin-right: 10px;
+}
+.bs-space {
+    box-shadow: 1px 1px 13px -2px rgb(0 0 0 / 12%);
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.user-name {
+    font-weight: 700;
+    font-size: 18px;
+}
+.user-bio {
+    margin: 15px 0;
+    font-size: 14px;
+}
+.user-social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.user-social li a {
+    height: 30px;
+    width: 30px;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    color: #fff;
+}
+.user-avatar img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+    border: 2px solid var(--primary-color);
+}
+.user-avatar-dtl .table tr td {
+    font-size: 14px;
+}
+.user-dashboard-title {
+    color: var(--primary-color);
+}
+.user-overview-card h5 {
+    text-transform: capitalize;
+}
+.user-total-count {
+    font-size: 35px;
+    padding: 15px 0;
+}
+.review-list ol {
+    padding-left: 1rem;
+}
+
+.view-all {
+    display: block;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-align: right;
+}
+.user-avatar-dtl {
+    width: calc(100% - 110px);
+}
+
+/*user account*/
+.user-profile .user-avatar img {
+    height: 150px;
+    width: 150px;
+}
+.user-profile .user-avatar {
+    position: relative;
+}
+.user-profile .user-avatar span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 35px;
+    width: 35px;
+    background: #fff;
+    font-size: 25px;
+    visibility: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+.user-profile .user-avatar:hover span {
+    visibility: visible;
+    opacity: 1;
+    color: var(--primary-color);
+}
+/*user wishlist*/
+.user-wishlist .menu-card-two {
+    margin-bottom: 30px;
+}
+.payment-img img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.user-order .form-select,
+.user-order .input-group .form-control,
+.user-order .input-group button {
+    border: 1px solid var(--primary-color) !important;
+}
+.user-order .input-group button {
+    background: var(--primary-color);
+    color: #fff;
+}
+.user-order-table table {
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+}
+.user-order-table table tbody tr td,
+.user-order-table table thead tr th {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.user-order-table table thead {
+    background: var(--secondary-color);
+    color: #fff;
+}
+.user-order-table table thead tr th {
+    border-right: 1px solid #fff;
+    font-weight: 800;
+}
+.user-order-table table thead tr th:last-child {
+    border-right: none;
+}
+.user-order-table table tbody tr td {
+    font-size: 14px;
+}
+.user-dash-content {
+    padding:30px 40px 30px 30px;
+}
+.user-review-card .feedback-comment p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.delivery-process-img {
+    height: 250px;
+    width: 235px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+.delivery-process-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.delivery-process {
+    position: relative;
+}
+.delivery-process-title {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.video-content {
+    box-shadow: 0 1px 5px 1px rgb(0 0 0 / 15%);
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    background: #ee7700;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.video-content video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
