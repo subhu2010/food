@@ -3,47 +3,47 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
+Route::get('/', function(){
     return view('site.pages.landing-page');
 });
 
-Route::get('item-list', function () {
+Route::get('item-list', function(){
     return view('site.pages.item-list');
 });
 
-Route::get('old-item-list', function () {
+Route::get('old-item-list', function(){
     return view('site.pages.old-item-list');
 });
 
-Route::get('item-detail', function () {
+Route::get('item-detail', function(){
     return view('site.pages.items-detail');
 });
 
-Route::get('old-item-detail', function () {
+Route::get('old-item-detail', function(){
     return view('site.pages.old-items-detail');
 });
 
-Route::get('checkout-order', function () {
+Route::get('checkout-order', function(){
     return view('site.pages.checkout-order');
 });
 
-Route::get('checkout-confirm', function () {
+Route::get('checkout-confirm', function(){
     return view('site.pages.checkout-confirm');
 });
 
-Route::get('cart', function () {
+Route::get('cart', function(){
     return view('site.pages.cart');
 });
 
 
 // cake
-Route::get('cake', function () {
+Route::get('cake', function(){
     return view('site.cake.pages.landing-page');
 });
 
 
 // user dashboard route
-Route::get('user-login', function () {
+Route::get('user-login', function(){
 	return view('site.pages.user-dashboard.user-login');
 });
 Route::get('user-dashboard', function () {
@@ -53,16 +53,19 @@ Route::get('user-dashboard', function () {
 Route::get("/", "Website\WebsiteController@landingPage")
 	->name("landingPage");
 
-Route::group([], function ($route) {
-	// Socialite 
+Route::group([], function($route){
+
+
+	/**************************************** Socialite Login ******************************************/
 	$route->get('login/{client}', 'User\Auth\SocialiteLoginController@redirect')
 		->name('user.social.login');
 
 	$route->get('login/{client}/callback', 'User\Auth\SocialiteLoginController@callback');
 
-	$route->group(['namespace' => 'User', "prefix" => "user", "as" => "user."], function ($route) {
 
-		$route->group(["middleware" => "guest"], function ($route) {
+	$route->group(['namespace' => 'User', "prefix" => "user", "as" => "user."], function($route){
+
+		$route->group(["middleware" => "guest"], function($route){
 
 			$route->get('login', 'Auth\UserLoginController@showLoginForm')
 				->name('login');
@@ -85,7 +88,7 @@ Route::group([], function ($route) {
 				->name('logout');
 
 
-			/********************************************************************** Route For UserController ********************************************************/
+			/******************************* Route For UserController ***********************************/
 
 			$route->get('password/reset', 'Auth\UserForgotPasswordController@showLinkRequestForm')
 				->name('showLinkRequestForm');
@@ -106,6 +109,7 @@ Route::group([], function ($route) {
 
 			// $route->get('email/verify', 'Auth\VerificationController@show')
 			// 	->name('verification.notice');
+
 			$route->get('/profile', 'UserController@profile')
 				->name('profile');
 
@@ -132,8 +136,7 @@ Route::group([], function ($route) {
 		// 	->name('verification.resend');
 
 
-		$route->group(["middleware" => "auth"], function ($route) {
-
+		$route->group(["middleware" => "auth"], function($route){
 
 			$route->get('/dashboard', 'UserController@dashboard')
 				->name('dashboard');
@@ -147,6 +150,7 @@ Route::group([], function ($route) {
 			$route->get('/logout', 'Auth\UserLoginController@logout')
 				->name('logout');
 		});
+
 
 	});
 

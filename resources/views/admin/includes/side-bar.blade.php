@@ -32,10 +32,10 @@
                     </a>
                     <ul class="submenu ">
                         <li class="submenu-item ">
-                            <a href="{{ route('admin.banner.create') }}">Add Banner</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{ route('admin.banner.index') }}">Banner List</a>
+                            <a href="{{ route('admin.banner.index') }}">
+                                <i class="las la-list"></i>
+                                Banners
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -99,23 +99,6 @@
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
-                        <i class="las la-users"></i>
-                        <span>Customers</span>
-                    </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="customer-review.php">Customer Review</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{route('admin.customer.index')}}">Customer List</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="social-activity.php">Social Activity</a>
-                        </li>
-                    </ul>
-                </li>
 
                 <li class="sidebar-item  has-sub">
                     <a href="#" class="sidebar-link">
@@ -147,6 +130,27 @@
                             <a href="javascript:;">
                                 <i class="las la-list"></i>
                                 Cancelled Order
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="javascript:;" class='sidebar-link'>
+                        <i class="las la-users"></i>
+                        <span>User Management</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="{{ route('admin.adminList') }}">
+                                <i class="las la-user-shield"></i>
+                                Admins
+                            </a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="{{ route('admin.userList') }}">
+                                <i class="las la-user"></i>
+                                Customers
                             </a>
                         </li>
                     </ul>

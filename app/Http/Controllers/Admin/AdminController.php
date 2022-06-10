@@ -112,167 +112,160 @@ class AdminController extends Controller{
 
 
 
-	public function adminList()
-	{
+	public function adminList(){
 
-		$data['admins'] = Admin::paginate(10);
+		$data['admins'] = Admin::get();
 
-		return view('admin.pages.admin-list', compact(['data']));
+		return view('admin.pages.admin.admin-list', compact(['data']));
+
 	}
 
 
-	public function addAdmin()
-	{
-		return view('admin.pages.add-admin');
+	public function addAdmin(){
+		return view('admin.pages.admin.add-admin');
 	}
 
 
-	public function addAdminProcess(Request $request)
-	{
-		$data = $this->adminValidation($request);
-		try {
-			if ($request->profile) {
-				$image_name = $this->uploadImage($request->profile);
-				$data['profile'] = $image_name;
-			}
-			$success = Admin::create($data);
-			if ($success) {
-				$request->session()->flash('success', 'Admin Created Successfully !!!');
-			} else $request->session()->flash('error', 'Failed To Create Admin !!!');
+	public function addAdminProcess(Request $request){
+
+		$this->validateAdmin($request);
+
+		try{
+
+			$admin = new Admin;
+
+			$admin->name     = $request->name;
+			$admin->email    = $request->email;
+			$admin->password = bcrypt($request->password);
+			$admin->phone    = $request->phone;
+			$admin->address  = $request->address;
+			$admin->status   = $request->status;
+			//$admin->verified   = $request->verified;
+			$admin->updated_at = date('Y-m-d H:i:s');
+
+			$profile = $request->file('profile');
+
+			$pro = "";
+
+			if($profile != null) $pro = $admin->profile = $this->singleImageUpload($profile, "uploads/profiles/admins/");
+
+			$admin->save();
+
+			$request->session()->flash('success', 'Admin Created Successfully ! ! ! !');
 			return redirect()->route('admin.adminList');
-		} catch (\Exception $e) {
 
-			$request->session()->flash('error', 'Something Went Wrong, Try Again ! ! ! !');
-			return redirect()->back()->withInput($request->except(['password']));
-		}
-	}
+		}catch(\Exception $error){
 
-
-	public function editAdmin(Request $request, Admin $id)
-	{
-
-		$data['admin'] = $id;
-
-		return view('admin.pages.edit-admin', compact(['data']));
-	}
-
-
-	public function editAdminProcess(Request $request, Admin $id)
-	{
-		$data = $this->adminValidation($request, 'update', $id->id);
-		try {
-			$admin = Admin::findorfail($id->id);
-			if ($request->profile != null) {
-				$image_name = $this->uploadImage($request->profile);
-				$data['profile'] = $image_name;
-				//Delete Previous Uploaded Image
-				if ($admin->profile != null && file_exists(public_path() . "/uploads/profiles/admins/" . $admin->profile)) {
-					unlink(public_path() . "/uploads/profiles/admins/" . $admin->profile);
-				}
-			}
-			$success = $admin->update($data);
-			if ($success) {
-				$request->session()->flash('success', 'Admin Details Updated Successfully !!!');
-			} else $request->session()->flash('error', 'Failed To Update Admin Details !!!');
-
-			// 	$this->validate($request, [
-			// 		"name"     => "required|max:191",
-			// 		"email"    => "required|unique:admins,email," . $id->id,
-			// 		"pics"     => "image|mimes:jpg,jpeg,png,gif,svg|max:10240",
-			// 		"address"   => "max:191",
-			// 		"status"   => "required|in:Active,Banned|max:191",
-			// 		//"verified" => "required|max:191"
-			// 	]);
-
-			// 	try {
-
-
-			// 		$id->name     = $request->name;
-			// 		$id->email    = $request->email;
-			// 		$id->phone    = $request->phone;
-			// 		$id->address  = $request->address;
-			// 		$id->status   = $request->status;
-			// 		//$id->verified   = $request->verified;
-			// 		$id->updated_at = date('Y-m-d H:i:s');
-
-			// 		$file = $request->file('pics');
-
-			// 		if ($file != NULL) {
-
-			// 			$ext = $file->extension();
-			// 			$pics = Image::make($file);
-			// 			$pics->widen(250);
-			// 			$link = "uploads/profiles/admins/" . $id->pics;
-
-			// 			if (!File::exists('uploads/profiles/admins/')) {
-			// 				File::makeDirectory('uploads/profiles/admins/');
-			// 			}
-
-			// 			$id->pics = 'profile-pics-' . time() . '.' . $ext;
-			// 			$pics->save('uploads/profiles/admins/' . $id->pics);
-
-			// 			@unlink($link);
-			// 		}
-
-			// 		$id->update();
-
-			// 		$request->session()->flash('success', 'Successfully Updated Admin ! ! ! !');
-			return redirect()->route('admin.adminList');
-		} catch (\Exception $e) {
-
-			$request->session()->flash('error', 'Error Occur While Updating Admin ! ! ! !');
+			@unlink("uploads/profiles/admins/".$pro);
+			$request->session()->flash("error", $error->getMessage());
 			return redirect()->back();
+
 		}
+
+	}
+
+
+	public function editAdmin(Request $request, Admin $admin){
+
+		$data['admin'] = $admin;
+
+		return view('admin.pages.admin.edit-admin', compact(['data']));
+
+	}
+
+
+	public function editAdminProcess(Request $request, Admin $admin){
+
+		$this->validateAdmin($request, 'update', $admin->id);
+
+		try{
+
+			$admin->name     = $request->name;
+			$admin->email    = $request->email;
+			$admin->phone    = $request->phone;
+			$admin->address  = $request->address;
+			$admin->status   = $request->status;
+			//$admin->verified   = $request->verified;
+			$admin->updated_at = date('Y-m-d H:i:s');
+
+			$profile = $request->file('profile');
+
+			$pro = "";
+
+			if($profile != null):
+
+				$old_profile = "uploads/profiles/admins/".$admin->profile;
+				$pro = $admin->profile = $this->singleImageUpload($profile, "uploads/profiles/admins/");
+
+				@unlink($old_profile);
+
+			endif;
+
+			$admin->update();
+
+			$request->session()->flash('success', 'Successfully Updated Admin ! ! ! !');
+			return redirect()->route('admin.adminList');
+
+		}catch(\Exception $error){
+
+			@unlink("uploads/profiles/admins/".$pro);
+			$request->session()->flash("error", $error->getMessage());
+			return redirect()->back();
+
+		}
+
 	}
 
 
 
-	public function deleteAdmin(Request $request)
-	{
+	public function deleteAdmin(Request $request){
 
 		$id = trim($request->id);
 
-		try {
+		try{
 
 			$admin = Admin::find($id);
-			$link = "uploads/profiles/" . $admin->pics;
+			$link = "uploads/profiles/admins/".$admin->profile;
 
 			$admin->delete();
 			@unlink($link);
 
 			return response()->json([
-				"success" => true,
-				"message" => "Admin Deleted Successfully ! ! !"
-			]);
-		} catch (\Exception $e) {
+										"success" => true,
+										"message" => "Admin Deleted Successfully ! ! !"
+									]);
+
+		}catch(\Exception $error){
 
 			return response()->json([
-				"success" => false,
-				"message" => "Error Occur While Deleting Admin ! ! !"
-			]);
+										"success" => false,
+										"message" => "Error Occur While Deleting Admin ! ! !"
+									]);
+
 		}
+
 	}
 
 
-	public function adminAssign($id)
-	{
+	public function adminAssign($id){
 
 		$data['admin'] = Admin::select('id', 'name')->find($id);
 		$data['roles'] = Roles::all();
 		$assign = Admin::join('admin_role as ar', 'ar.admin_id', 'admins.id')
-			->select('ar.role_id')
-			->where('ar.admin_id', $id)
-			->get();
+						->select('ar.role_id')
+						->where('ar.admin_id', $id)
+						->get();
 
 		foreach ($assign as $asg) :
 			$data['assign'][] = $asg->role_id;
 		endforeach;
 
-		if (empty($data['assign'])) :
+		if(empty($data['assign'])):
 			$data['assign'][] = "";
 		endif;
 
 		return view('admin.pages.edit-admin-assign-role', compact(['data']));
+
 	}
 
 
@@ -297,28 +290,5 @@ class AdminController extends Controller{
 		}
 	}
 
-	public function uploadImage($image)
-	{
-		$path = public_path() . "/uploads/profiles/admins/";
-		if (!File::exists($path)) {
-			File::makeDirectory($path, 0777, true, true);
-		}
-		$filename = "Profile-" . Carbon::now()->timestamp . rand(0, 99) . "." . $image->extension();
-		$success  = Image::make($image)->widen(250)->save($path . $filename);
-		return $success ? $filename : false;
-	}
 
-	protected function adminValidation(Request $request, $option = 'add', $id = '')
-	{
-		return $this->validate($request, [
-			'name' => 'required|string|max:191',
-			'profile' => (($option == 'add') ? 'required' : 'sometimes') . '|image|max:10240',
-			'email' => 'required|email|unique:admins,email,' . $id,
-			//Regex for password needs 1 UpperCase, 1 Lowercase, 1 Special Character and 1 digit (0 - 9) atleast
-			'password' => (($option == 'add') ? 'required' : 'sometimes') . '|regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[@!$#%]).*$/|confirmed|min:6',
-			'phone' => 'sometimes|nullable|string',
-			'address' => 'sometimes|nullable|string',
-			'status' => 'required|in:Active,Banned',
-		]);
-	}
 }
