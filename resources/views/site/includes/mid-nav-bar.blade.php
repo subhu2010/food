@@ -4,12 +4,12 @@
         <div class="header-middle-message">
             <small class="d-block">Order Online or Call Now:</small>
             <span class="d-block">
-                <a href="tel:{{ $data['setting']->phone??'+977 98765432' }}">
+                <a href="tel:{{ $data['setting']->phone??'+977 987654321' }}">
                     <i class="las la-phone"></i>
-                    {{ $data['setting']->phone??'+977 98765432' }}
+                    {{ $data['setting']->phone??'+977 987654321' }}
                 </a>
             </span>
-            <a href="tel:{{ $data['setting']->phone??'+977 98765432' }}" class="d-md-none"><i class="las la-phone"></i></a>
+            <a href="tel:{{ $data['setting']->phone??'+977 987654321' }}" class="d-md-none"><i class="las la-phone"></i></a>
         </div>
 
         @include("site.includes.mobile-nav")
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group mb-4">
                                     <label>PASSWORD *</label>
-                                    <input class="form-control" id="password-input" type="password"><a href="#"
+                                    <input class="form-control"  type="password"><a href="#"
                                         class="password-control"></a></input>
 
                                 </div>
@@ -54,8 +54,16 @@
                                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
                                     </div>
                                 </div>
-                                <a href="{{ url('user-dashboard') }}" class="btn btn-primary btn-one mb-4">Login</a>
-                                <!-- <button type="submit" class="btn btn-primary btn-one mb-4">Login</button> -->
+                                <hr>
+                                <div class="form-group mb-4 text-center">
+                                    <a href="#">
+                                        <img src="{{asset('site-assets/images/facebook.png')}}" class="img-fluid"></img>
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{asset('site-assets/images/google.png')}}" class="img-fluid"></img>
+                                    </a>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-one mb-4">Login</button>
                                 <div class="form-group">
                                     <a href="#">Lost your password?</a>
                                 </div>
@@ -70,15 +78,23 @@
                                 </div>
                                 <div class="form-group mb-4">
                                     <label>PASSWORD *</label>
-                                    <input class="form-control" id="password-input" type="password"><a href="#"
+                                    <input class="form-control"  type="password"><a href="#"
+                                        class="password-control"></a></input>
+
+                                </div><div class="form-group mb-4">
+                                    <label>CONFIRM PASSWORD *</label>
+                                    <input class="form-control"  type="password"><a href="#"
                                         class="password-control"></a></input>
 
                                 </div>
-                                <div class="form-group ">
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input bg-dark" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                                    </div>
+                                <hr>
+                                <div class="form-group mb-4 text-center">
+                                    <a href="#">
+                                        <img src="{{asset('site-assets/images/facebook.png')}}" class="img-fluid"></img>
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{asset('site-assets/images/google.png')}}" class="img-fluid"></img>
+                                    </a>
                                 </div>
                                 <div class="form-group">
                                     Your personal data will be used to support your experience throughout this website, to

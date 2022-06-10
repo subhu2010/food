@@ -42,7 +42,7 @@ trait ValidateRequest{
 
 
 
-    public static function bannerValidation(Request $request, $action = "update", $id = ""){
+    public static function bannerValidation(Request $request, $action = "add", $id = ""){
 
         return $request->validate([
                         "name" => "required|string|max:191",
@@ -51,6 +51,22 @@ trait ValidateRequest{
                         "status" => "required|in:Active,Banned",
                         "pics"   => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:5000'
                     ]);
+
+    }
+
+
+
+    public static function validateAdmin(Request $request, $action = "add", $id = ""){
+
+        return $request->validate([
+                            "name" => "required|string|max:191",
+                            "email"    => 'required|email|max:191|unique:admins,email,'.($action == 'add'?'':$id),
+                            "password" => ($action == 'update'?'nullable':'required'),
+                            "profile" => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp|max:5000',
+                            "address" => "nullable|max:191",
+                            "phone"   => "required",
+                            "status"  => "required|in:Active,Banned",
+                        ]);
 
     }
 

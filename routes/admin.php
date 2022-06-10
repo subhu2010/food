@@ -3,7 +3,7 @@
 use App\Http\Controllers\User\Auth\{UserLoginController};
 use App\Http\Controllers\Admin\Auth\{AdminLoginController, AdminForgotPasswordController, AdminResetPasswordController,
 			RolesAndPermissionsController};
-use App\Http\Controllers\Admin\{AdminController, TicketController};
+use App\Http\Controllers\Admin\{AdminController, TicketController, UserController};
 use Illuminate\Support\Facades\Route;
 
 
@@ -74,10 +74,10 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 		$route->post('/add-admin', [AdminController::class, "addAdminProcess"])
 			->name('addAdminProcess');
 
-		$route->get('/edit-admin/{id}', [AdminController::class, "editAdmin"])
+		$route->get('/edit-admin/{admin}', [AdminController::class, "editAdmin"])
 			->name('editAdmin');
 
-		$route->post('/edit-admin/{id}', [AdminController::class, "editAdminProcess"])
+		$route->post('/edit-admin/{admin}', [AdminController::class, "editAdminProcess"])
 			->name('editAdminProcess');
 
 		$route->post('/delete-admin', [AdminController::class, "deleteAdmin"])
@@ -159,9 +159,28 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 		$route->resource('/staff', StaffController::class);
 		$route->resource('/product', ProductController::class);
 		$route->resource('/menu', MenuController::class);
-		$route->resource('/customer', CustomerController::class);
 		$route->resource('/cake', CakeController::class);
 		$route->resource('/cakebanner', CakeBannerController::class);
+
+
+		/*************************************** User Route Controller ***********************************/
+		$route->get('/user-list', [UserController::class, "userList"])
+		->name("userList");
+
+		$route->get('/add-user', [UserController::class, "addUser"])
+		->name("addUser");
+
+		$route->post('/add-user', [UserController::class, "addUser"])
+		->name("addUser");
+
+		$route->get("/edit-user/{user}", [UserController::class, "editUser"])
+		->name("editUser");
+
+		$route->post("/edit-user/{user}", [UserController::class, "editUserProcess"])
+		->name("editUserProcess");
+
+		$route->post('/delete-user/{id}', [UserController::class, "deleteUser"])
+		->name("deleteUser");
 
 	});
 
