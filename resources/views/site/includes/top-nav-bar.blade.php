@@ -4,16 +4,16 @@
             <div class="top-left-menu d-none d-xl-block">
                 <ul class="top-menu">
                     <li>
-                        <a href="javascript:;">cakes</a>
+                        <a href="{{url('cake')}}">cakes</a>
                     </li>
                     <li>
-                        <a href="javascript:;">foods</a>
+                        <a href="{{url('item-list')}}">foods</a>
                     </li>
                     <li>
-                        <a href="javascript:;">foodonways Deals</a>
+                        <a href="{{url('foodonways-deals')}}">foodonways Deals</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Contact</a>
+                        <a href="{{url('contact-us')}}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@
                         <div class="location-input">
                             <i class="las la-map-marker"></i>
                             <input type="text" class="form-control" disabled readonly value="kathmandu, Nepal"
-                                data-bs-toggle="modal" data-bs-target="#location">
+                            data-bs-toggle="modal" data-bs-target="#topLocation">
                         </div>
                     </li>
                 </ul>
@@ -51,3 +51,4 @@
         </div>
     </div>
 </div>
+

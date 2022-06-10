@@ -72,36 +72,6 @@ $(function (e) {
     });
 });
 
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 50) {
-            $("#user-sidebar").css("position", "fixed");
-            $("#user-sidebar").css("top", "95px");
-            $("#user-sidebar").css("width", "inherit");
-            $("#user-sidebar").css("padding-right", "15px");
-            $("#user-sidebar").css("z-index", "0");
-        } else if ($(window).scrollTop() <= 95) {
-            $("#user-sidebar").css("position", "");
-            $("#user-sidebar").css("top", "");
-            $("#user-sidebar").css("width", "");
-            $("#user-sidebar").css("padding-right", "");
-            $("#user-sidebar").css("z-index", "");
-        }
-        if (
-            $("#user-sidebar").offset().top + $("#user-sidebar").height() >
-            $("#footer").offset().top
-        ) {
-            $("#user-sidebar").css(
-                "top",
-                -(
-                    $("#user-sidebar").offset().top +
-                    $("#user-sidebar").height() -
-                    $("#footer").offset().top
-                )
-            );
-        }
-    });
-});
 
 $(".filter-active").on("click", function (e) {
     e.preventDefault();

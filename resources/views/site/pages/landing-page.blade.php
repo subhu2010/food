@@ -1069,7 +1069,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="blog-card">
-                        <a href="blog-detail.php">
+                        <a href="{{url('blog-detail')}}">
                             <div class="blog-card-img">
                                 <img src="{{ asset('site-assets/images/5.jpg') }}" class="img-fluid" alt="food on ways">
                             </div>
@@ -1094,7 +1094,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="blog-card">
-                        <a href="blog-detail.php">
+                        <a href="{{url('blog-detail')}}">
                             <div class="blog-card-img">
                                 <img src="{{ asset('site-assets/images/2.jpg') }}" class="img-fluid" alt="food on ways">
                             </div>
@@ -1119,7 +1119,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="blog-card">
-                        <a href="blog-detail.php">
+                        <a href="{{url('blog-detail')}}">
                             <div class="blog-card-img">
                                 <img src="{{ asset('site-assets/images/8.jpg') }}" class="img-fluid" alt="food on ways">
                             </div>
@@ -1452,8 +1452,8 @@
 </div>
 
 
-<div id="myLocation" class="modal locationmodal fade">
-    <div class="modal-dialog  modal-dialog-centered">
+<div id="myLocation" class="modal  fade">
+    <div class="modal-dialog  modal-dialog-centered locationmodal">
         <div class=" modal-content">
             <form action="">
                 <div class="location-detect">

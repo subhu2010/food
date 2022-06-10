@@ -114,7 +114,7 @@
                 </a>
             </div>
             <div class="cart-icon">
-                <a href="#">
+                <a href="{{url('cart')}}">
                     <i class="las la-shopping-cart"></i>
                     <span class="count">0</span>
                 </a>

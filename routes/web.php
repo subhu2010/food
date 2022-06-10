@@ -31,8 +31,28 @@ Route::get('checkout-confirm', function(){
     return view('site.pages.checkout-confirm');
 });
 
+Route::get('checkout-surprise', function(){
+    return view('site.pages.checkout-surprise');
+});
+
 Route::get('cart', function(){
     return view('site.pages.cart');
+});
+
+Route::get('about-us', function(){
+    return view('site.pages.about-us');
+});
+
+Route::get('blog-detail', function(){
+    return view('site.pages.blog-detail');
+});
+
+Route::get('foodonways-deals', function(){
+    return view('site.pages.foodonways-deals');
+});
+
+Route::get('contact-us', function(){
+    return view('site.pages.contact');
 });
 
 
