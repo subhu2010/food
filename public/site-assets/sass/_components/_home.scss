@@ -2560,3 +2560,29 @@
 	}
 }
 /*blog detail end*/
+
+
+
+// deals start
+.deal-tabs {
+    .nav-pills {
+        .nav-item {
+            margin-right: .9375rem;
+            .nav-link {
+                background-color: $white !important;
+                border-radius: 100px;
+                color: $darkBlack;
+                font-weight: 600;
+                box-shadow: $shadow;
+                &.active {
+                    background-color: $darkYellow !important;
+                }
+                &:hover {
+                    background-color: $hoverColor !important;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+// deals end

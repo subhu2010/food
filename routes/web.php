@@ -47,6 +47,10 @@ Route::get('blog-detail', function(){
     return view('site.pages.blog-detail');
 });
 
+Route::get('foodonways-deals', function(){
+    return view('site.pages.foodonways-deals');
+});
+
 
 // cake
 Route::get('cake', function(){

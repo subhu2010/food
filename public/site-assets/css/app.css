@@ -3658,6 +3658,24 @@ ul.top-menu > li > a:hover {
 }
 
 /*blog detail end*/
+.deal-tabs .nav-pills .nav-item {
+  margin-right: 0.9375rem;
+}
+.deal-tabs .nav-pills .nav-item .nav-link {
+  background-color: #fff !important;
+  border-radius: 100px;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+}
+.deal-tabs .nav-pills .nav-item .nav-link.active {
+  background-color: #ffca3c !important;
+}
+.deal-tabs .nav-pills .nav-item .nav-link:hover {
+  background-color: #F2002D !important;
+  color: #fff;
+}
+
 .user-sidebar {
   background: #fff;
   padding: 20px;

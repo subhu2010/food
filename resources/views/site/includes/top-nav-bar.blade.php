@@ -10,7 +10,7 @@
                         <a href="{{url('item-list')}}">foods</a>
                     </li>
                     <li>
-                        <a href="javascript:;">foodonways Deals</a>
+                        <a href="{{url('foodonways-deals')}}">foodonways Deals</a>
                     </li>
                     <li>
                         <a href="javascript:;">Contact</a>
