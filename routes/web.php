@@ -51,6 +51,10 @@ Route::get('foodonways-deals', function(){
     return view('site.pages.foodonways-deals');
 });
 
+Route::get('contact-us', function(){
+    return view('site.pages.contact');
+});
+
 
 // cake
 Route::get('cake', function(){

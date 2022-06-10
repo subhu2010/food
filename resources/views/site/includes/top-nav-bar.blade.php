@@ -13,7 +13,7 @@
                         <a href="{{url('foodonways-deals')}}">foodonways Deals</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Contact</a>
+                        <a href="{{url('contact-us')}}">Contact</a>
                     </li>
                 </ul>
             </div>
