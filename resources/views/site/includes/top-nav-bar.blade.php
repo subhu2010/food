@@ -4,7 +4,7 @@
             <div class="top-left-menu d-none d-xl-block">
                 <ul class="top-menu">
                     <li>
-                        <a href="javascript:;">cakes</a>
+                        <a href="{{url('cake')}}">cakes</a>
                     </li>
                     <li>
                         <a href="{{url('item-list')}}">foods</a>

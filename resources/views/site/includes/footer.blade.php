@@ -10,7 +10,7 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="javascript:void(0)">Our history</a>
+							<a href="{{url('about-us')}}">Our history</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">Join Us</a>
