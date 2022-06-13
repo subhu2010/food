@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\Auth\{UserLoginController, UserRegisterController, UserForgotPasswordController,
+		UserResetPasswordController, SocialiteLoginController, ConfirmPasswordController, VerificationController};
+use App\Http\Controllers\User\{UserController};
 
 
 Route::get('/', function(){
@@ -99,97 +102,99 @@ Route::group([], function($route){
 
 
 	/**************************************** Socialite Login ******************************************/
-	$route->get('login/{client}', 'User\Auth\SocialiteLoginController@redirect')
+	$route->get('login/{client}', [SocialiteLoginController::class, "redirect"])
 		->name('user.social.login');
 
-	$route->get('login/{client}/callback', 'User\Auth\SocialiteLoginController@callback');
+	$route->get('login/{client}/callback', [SocialiteLoginController::class, "callback"]);
 
 
 	$route->group(['namespace' => 'User', "prefix" => "user", "as" => "user."], function($route){
 
 		$route->group(["middleware" => "guest"], function($route){
 
-			$route->get('login', 'Auth\UserLoginController@showLoginForm')
+			$route->get('login', [UserLoginController::class, "showLoginForm"])
 				->name('login');
 
-			$route->post('login', 'Auth\UserLoginController@login')
+			$route->post('login', [UserLoginController::class, "login"])
 				->name('loginProcess');
 
-			$route->post('logout', 'Auth\UserLoginController@logout')
+			$route->post('logout', [UserLoginController::class, "logout"])
 				->name('logout');
 
-			$route->get('register', 'Auth\UserRegisterController@showRegistrationForm')
+			$route->get('register', [UserRegisterController::class, "showRegistrationForm"])
 				->name('register');
 
-			$route->post('register', 'Auth\UserRegisterController@register')
+			$route->post('register', [UserRegisterController::class, "register"])
 				->name('registerProcess');
-			$route->post('/change-password', 'Auth\UserLoginController@changePassword')
-				->name('changePassword');
+			
 
-			$route->get('/logout', 'Auth\UserLoginController@logout')
-				->name('logout');
-
+		
 
 			/******************************* Route For UserController ***********************************/
 
-			$route->get('password/reset', 'Auth\UserForgotPasswordController@showLinkRequestForm')
+			$route->get('password/reset', [UserForgotPasswordController::class, "showLinkRequestForm"])
 				->name('showLinkRequestForm');
 
-			$route->post('password/email', 'Auth\UserForgotPasswordController@sendResetLinkEmail')
+			$route->post('password/email', [UserForgotPasswordController::class, "sendResetLinkEmail"])
 				->name('sendResetLinkEmail');
 
-			$route->get('password/reset/{token}', 'Auth\UserResetPasswordController@showResetForm')
+			$route->get('password/reset/{token}', [UserResetPasswordController::class, "showResetForm"])
 				->name('showResetForm');
 
-			$route->post('password/reset', 'Auth\UserResetPasswordController@reset')
+			$route->post('password/reset', [UserResetPasswordController::class, "reset"])
 				->name('reset');
 
-			// $route->get('password/confirm', 'Auth\ConfirmPasswordController@showConfirmForm')
+			// $route->get('password/confirm', [ConfirmPasswordController::class, "showConfirmForm"])
 			// 	->name('password.confirm');
 
-			// $route->post('password/confirm', 'Auth\ConfirmPasswordController@confirm');
+			// $route->post('password/confirm', [ConfirmPasswordController::class, "confirm"]);
 
-			// $route->get('email/verify', 'Auth\VerificationController@show')
+			// $route->get('email/verify', [VerificationController::class, "show"])
 			// 	->name('verification.notice');
 
-			$route->get('/profile', 'UserController@profile')
-				->name('profile');
-
-			$route->post('/profile', 'UserController@updateProfile')
-				->name('updateProfile');
-
-			$route->get('/my-orders', 'UserController@myOrders')
-				->name('myOrders');
-
-			$route->get('/my-reviews', 'UserController@myReviews')
-				->name('myReviews');
-
-			$route->get('/my-wishlist', 'UserController@myWishlist')
-				->name('myWishlist');
-
-			$route->get('/history', 'UserController@history')
-				->name('history');
+			
 		});
 
-		// $route->get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')
+		// $route->get('email/verify/{id}/{hash}', [VerificationController::class, "verify"])
 		// 	->name('verification.verify');
 
-		// $route->post('email/resend', 'Auth\VerificationController@resend')
+		// $route->post('email/resend', [VerificationController::class, "resend"])
 		// 	->name('verification.resend');
 
 
 		$route->group(["middleware" => "auth"], function($route){
 
-			$route->get('/dashboard', 'UserController@dashboard')
-				->name('dashboard');
-
-			$route->get('profile', 'UserController@profile')
+			$route->get('/profile', [UserController::class, "profile"])
 				->name('profile');
 
-			$route->post('/change-password', 'Auth\UserLoginController@changePassword')
+			$route->post('/profile', [UserController::class, "updateProfile"])
+				->name('updateProfile');
+
+			$route->get('/my-orders', [UserController::class, "orders"])
+				->name('orders');
+
+			$route->get('/my-reviews', [UserController::class, "reviews"])
+				->name('reviews');
+
+			$route->get('/my-wishlist', [UserController::class, "wishlist"])
+				->name('wishlist');
+
+			$route->get('/my-cartlist', [UserController::class, "cartlist"])
+				->name('cartlist');
+
+			$route->get('/history', [UserController::class, "history"])
+				->name('history');
+
+			$route->get('/dashboard', [UserController::class, "dashboard"])
+				->name('dashboard');
+
+			$route->get('profile', [UserController::class, "profile"])
+				->name('profile');
+
+			$route->post('/change-password', [UserLoginController::class, "changePassword"])
 				->name('changePassword');
 
-			$route->get('/logout', 'Auth\UserLoginController@logout')
+			$route->post('/logout', [UserLoginController::class, "logout"])
 				->name('logout');
 		});
 

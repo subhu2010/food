@@ -26,7 +26,7 @@
             <div class="top-right-menu  d-none d-xl-block">
                 <ul class="top-menu">
 
-                    @if(Request::is('/'))
+                    @if(request()->is('/'))
                     <li>
                         <div class="toogle-btn">
                             <span class="label">dine-in/takeaway</span>

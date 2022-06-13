@@ -63,29 +63,38 @@ class UserController extends Controller{
 	}
 
 
-	public function myOrders(){
+	public function orders(){
 
-		$data['active'] = "my-orders";
+		$data['active'] = "orders";
 
-		return view("user.pages.my-orders", compact("data"));
-
-	}
-
-
-	public function myReviews(){
-
-		$data['active'] = "my-reviews";
-
-		return view("user.pages.my-reviews", compact("data"));
+		return view("user.pages.orders", compact("data"));
 
 	}
 
 
-	public function myWishlist(){
+	public function reviews(){
 
-		$data['active'] = "my-wishlist";
+		$data['active'] = "reviews";
 
-		return view("user.pages.my-wishlist", compact("data"));
+		return view("user.pages.reviews", compact("data"));
+
+	}
+
+
+	public function wishlist(){
+
+		$data['active'] = "wishlist";
+
+		return view("user.pages.wishlist", compact("data"));
+
+	}
+
+
+	public function cartlist(){
+
+		$data['active'] = "cartlist";
+
+		return view("user.pages.cartlist", compact("data"));
 
 	}
 
