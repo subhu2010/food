@@ -14,7 +14,7 @@
 <section class="section-padding ma-tb">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="offset-lg-2 col-lg-8">
                 <form class="form_validate ajax_submit form_alert" action="sendmail.php" method="post"
                     enctype="multipart/form-data" novalidate="novalidate">
                     <div class="row">

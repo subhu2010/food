@@ -1,349 +1,51 @@
 @import "_cakeComponent/variable";
 @import "_cakeComponent/global";
 @import "_cakeComponent/header";
+@import "_cakeComponent/footer";
+@import "_cakeComponent/home";
+@import "_cakeComponent/mq";
 
 
-
-
-/*header ends*/
-
-
-
-/*footer start*/
-footer {
-    background: #2a2a2a;
-    padding-top: 5rem;
-    padding-bottom: 2.5rem;
-}
-.footer-title h4 {
-    text-transform: capitalize;
-    font-weight: 800;
-    margin-bottom: 1.5625rem;
-    color: #fff;
-}
-.footer-more {
-    color: #fff;
-    text-transform: capitalize;
-    font-size: .875rem;
-    display: block;
-    font-weight: 600;
-}
-.footer-more i {
-    margin-left: .625rem;
-    transition: all 0.5s ease;
-}
-.footer-more:hover {
-    color: #fff;
-}
-.footer-more:hover i {
-    margin-left: .9375rem;
-}
-.footer-widget {
-    position: relative;
-}
-.footer-list li {
-    margin-bottom: .75rem;
-}
-.footer-list li a {
-    display: block;
-    text-transform: capitalize;
-    font-size: .9375rem;
-    transition: all 0.5s ease;
-    color: #fff;
-}
-.footer-list li:hover a {
-    color: $primary-color;
-    margin-left: .625rem;
-}
-/*.footer-about-dtl {
-    padding-right: 50px;
-    padding-left: 0;
-}*/
-.footer-about-dtl p {
-    color: #fff;
-}
-.footer-resources.footer-widget:before {
-    display: none;
-}
-.footer-social {
-    border-bottom: .0625rem solid #ddd;
-    padding: 1.5625rem 0 2rem 0;
-}
-.footer-social ul li {
-    display: inline-block;
-    margin-right: .9375rem;
-}
-.footer-social ul li a {
-    color: #555;
-    font-size: 1.375rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2.1875rem;
-    width: 2.1875rem;
-    background: #fff;
-    border-radius: 50%;
-}
-.footer-social ul li a:hover {
-    color: #fff;
-}
-.footer-social ul li a.facebook:hover {
-    background: #3b5998;
-}
-.footer-social ul li a.twitter:hover {
-    background: #55acee;
-}
-.footer-social ul li a.twitter:hover {
-    background: #55acee;
-}
-.footer-social ul li a.youtube:hover {
-    background: #bb0000;
-}
-.footer-social ul li a.instagram:hover {
-    background: radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-    );
-}
-.footer-social .mobile-content span img {
-    height: 3.125rem;
-    width: auto;
-    object-fit: contain;
-}
-.footer-social .mobile-content span:first-child {
-    margin-right: .9375rem;
-}
-.copyright {
-    padding-top: 1.875rem;
-    color: #747474;
-}
-.copyright p {
-    margin-bottom: 0;
-}
-.footer-nav .menu-link {
-    padding: 0 !important;
-    color: #555;
-    margin-right: 2.1875rem;
-    text-transform: capitalize;
-    color: #eee;
-}
-.footer-nav .nav-item:last-child .menu-link {
-    margin-right: 0;
-}
-.back-to-top {
-    position: fixed;
-    bottom: 1.5625rem;
-    right: 1.5625rem;
-    display: none;
-    z-index: 2;
-    background: $yellow-color;
-    border: .0625rem solid #fff;
-    color: $primary-color;
-}
-.back-to-top i {
-    color: #fff;
-}
-.back-to-top:hover i {
-    color: $primary-color;
-}
-.back-to-top:hover {
-    background: #fff;
-    border-color: $secondary-color;
-    color: #fff;
-}
-/*footer ends*/
-
-
-/*owl nav button start*/
-.owl-carousel {
-    position: relative;
-}
-.owl-nav {
-    margin: 0 !important;
-}
-.owl-nav button span {
-    display: none;
-}
-.owl-nav button {
-    height: 1.875rem;
-    width: 1.875rem;
-    border-radius: 50% !important;
-    background: #fff !important;
-    border: .0625rem solid #707070 !important;
-    margin: 0 !important;
-    position: absolute;
-}
-.owl-nav button:hover {
-    color: $primary-color !important;
-}
-.owl-nav button:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f104";
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: 900;
-    font-size: 1.5625rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.owl-nav button.owl-next:before {
-    transform: translate(-50%,-50%) rotate(180deg);
-}
-.owl-nav button.owl-prev {
-    left: 0;
-    bottom: 0;
-}
-.owl-nav button.owl-next {
-    right: 0;
-    bottom: 0;
-}
-/*owl nav button end*/
-
-
-
-/*home start*/
-/*carousel start*/
-
-.home-show .home-carousel-banner {
-    flex: 1;
-    height: 100%;
-}
-.main-carousel-content {
-    padding: 0 6rem;
-}
-h2.border-title {
-    font-size: 2.5rem;  
-    position: relative; 
-    padding-left: 1.875rem;
-    margin-bottom: 1.25rem;
-    color: #000;
-}
-h2.border-title:before {
-    content: '';
-    width: .25rem;
-    height: 100%;
-    background: $primary-color;
-    position: absolute;
-    left: 0;
-}
-.main-carousel-img {
-   height: 100vh;
-   display: flex;
-   flex-flow: column nowrap;
-   width: 100%;
-   overflow: hidden;
-}
-.cake-main-carousel .owl-nav button {
-    height: 2.5rem;
-    width: 2.5rem;
-    bottom: 1rem;
-}
-.cake-main-carousel .owl-nav button.owl-next {
-    right: 1rem;
-}
-.cake-main-carousel .owl-nav button.owl-prev {
-    left: auto;
-    right: 4.5rem;
-}
 
 /*cake tab start*/
 .popular-section,
 .cake-tab {
     background: $bg-color;
     margin-top: 10px;
-}
-.cake-carousel .item {
-    padding: .3125rem;
-}
-.cake-tab .nav-item {
-    margin-right: 3rem;
-}
-.cake-tab .nav-item:last-child {
-    margin-right: 0px;
-}
-.cake-tab .cake-tab-link {
-    background: transparent !important;
-    color: #000 !important;
-    text-transform: capitalize;
-    border-radius: 0 !important;
-    padding: 0;
-    font-weight: 700;
-}
-/*.cake-tab .cake-tab-link.active {
-    font-weight: 800;
-    border-bottom: .1875rem solid #000;
-}*/
-.cake-tab .cake-tab-link.active,
-.cake-tab .cake-tab-link:hover {
-    color: $hover-color !important;
-    border-bottom: .1875rem solid $hover-color;
-
-}
-.cake-card {
-    position: relative;
-    /*border: .0625rem solid #21246a;*/
-    transition: all 0.5s ease;
-    box-shadow: .0625rem .0625rem .8125rem -.125rem rgb(0 0 0 / 5%);
-}
-.cake-card .cake-card-img {
-    height: 15.625rem;
-    width: 100%;
-    overflow: hidden;
-    transition: all 0.5s ease;
-}
-.cake-card .cake-card-content {
-    padding: .9375rem;
-    background: #fff;
-}
-.cake-card .cake-card-content h4 {
-    color: #000;
-    font-size: 1.25rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
+    .nav {
+        .nav-item {
+            margin-right: 3rem;
+            &:last-child {
+                margin-right: 0px;
+            }
+            .cake-tab-link {
+                background: transparent !important;
+                color: #000 !important;
+                text-transform: capitalize;
+                border-radius: 0 !important;
+                padding: 0;
+                font-weight: 700;
+                &.active,
+                &:hover {
+                    color: $hover-color !important;
+                    border-bottom: 0.1875rem solid $hover-color;
+                }
+            }
+        }
+    }
+    .cake-carousel {
+        .item {
+            padding: 0.3125rem;
+        }
+    }
 }
 
-.cake-card:hover {
-    border-color: transparent;
-    box-shadow: .0625rem .0625rem .8125rem -.125rem rgb(0 0 0 / 12%);
-    transform: scale(1.01);
-}
-.cake-tab .cake-card:hover .cake-card-img {
-    height: 16.25rem;
-}
-.cake-card:hover .cake-card-content h4 {
-    color: $hover-color;
-}
-.cake-card-wish .round-icon,
-.card-meta-cart .round-icon {
-    background: #fff;
-    border: .0625rem solid #707070;
-}
-.card-meta-cart:hover .round-icon,
-.cake-card-wish:hover .round-icon {
-    color: #fff;
-    background: $hover-color;
-    border-color: $hover-color;
-}
-.cake-card-wish {
-    position: absolute;
-    top: .9375rem;
-    right: .9375rem;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-.cake-card:hover .cake-card-wish {
-    visibility: visible;
-    opacity: 1;
-}
+
+
+
+
+
+
 .popular-section .cake-card {
     margin-bottom: 1.875rem;
 }
@@ -370,10 +72,10 @@ h2.border-title:before {
 /*about start*/
 .cake-about h2.border-title {
     padding-left: 0;
-    padding-bottom: .9375rem;
+    padding-bottom: 0.9375rem;
 }
 .cake-about h2.border-title:before {
-    height: .25rem;
+    height: 0.25rem;
     width: 50%;
     top: auto;
     left: 0;
@@ -407,7 +109,7 @@ h2.border-title:before {
     height: 12.5rem;
     width: 100%;
     overflow: hidden;
-    margin-bottom: .9375rem;
+    margin-bottom: 0.9375rem;
 }
 .menu-card .menu-card-title h3 {
     font-weight: 700;
@@ -428,13 +130,14 @@ h2.border-title:before {
     height: 100%;
 }
 .home-policies:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(0deg, rgba(225,225,225,0.5), rgba(225,225,225,0.5)), url(../cake-images/image/25.png);
+    background: linear-gradient(0deg, rgba(225, 225, 225, 0.5), rgba(225, 225, 225, 0.5)),
+        url(../cake-images/image/25.png);
     background-position: center center;
     background-repeat: repeat;
     background-size: cover;
@@ -457,11 +160,11 @@ h2.border-title:before {
 .mobile-content h2 {
     font-weight: 700;
     font-size: 2.1875rem;
-    margin-bottom: .9375rem;
+    margin-bottom: 0.9375rem;
     color: #000;
 }
 .mobile-content p {
-    margin-bottom: .9375rem;
+    margin-bottom: 0.9375rem;
 }
 .mobile-content ul {
     display: flex;
@@ -479,8 +182,8 @@ h2.border-title:before {
     object-fit: contain;
 }
 .email-section {
-    background: rgba(255,255,255,.9);
-    padding: .9375rem 1.875rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.9375rem 1.875rem;
     border-radius: 10px;
 }
 .email-section .form-check-input:checked {
@@ -491,12 +194,12 @@ h2.border-title:before {
     position: absolute;
     bottom: 0;
     font-size: 2.1875rem;
-    padding-left: .9375rem;
+    padding-left: 0.9375rem;
 }
 .alternative span:before {
     content: "";
     height: 100%;
-    width: .125rem;
+    width: 0.125rem;
     position: absolute;
     left: 0;
     background: #555;
@@ -504,24 +207,22 @@ h2.border-title:before {
 /*mobile section end*/
 /*home end*/
 
-
-
 /*cake page start*/
 .custom-carousel-item {
     height: 100vh;
     width: 100%;
     overflow: hidden;
 }
-#cake-page-carousel .carousel-indicators button{
-    height: .9375rem !important;
-    width: .9375rem !important;
+#cake-page-carousel .carousel-indicators button {
+    height: 0.9375rem !important;
+    width: 0.9375rem !important;
     border-radius: 50%;
 }
 .cake-type-card {
     display: flex;
     align-items: center;
-    border: .125rem solid #ddd;
-    padding: .625rem 1.25rem;
+    border: 0.125rem solid #ddd;
+    padding: 0.625rem 1.25rem;
 }
 .cake-type-card .cake-type-img {
     height: 6.25rem;
@@ -540,7 +241,7 @@ h2.border-title:before {
     font-size: 1.25rem;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 .cake-type-carousel .owl-nav button {
@@ -553,7 +254,7 @@ h2.border-title:before {
 .cake-list-card {
     position: relative;
     overflow: hidden;
-    border: .0625rem solid $primary-color;
+    border: 0.0625rem solid $primary-color;
     border-radius: 1.875rem;
     background: #fff;
     margin-bottom: 1.875rem;
@@ -584,10 +285,10 @@ h2.border-title:before {
 }
 .cake-list-content .address {
     font-size: 1rem;
-    margin-bottom: .3125rem;
+    margin-bottom: 0.3125rem;
 }
 .icon-star span {
-    color: #B5B5B5;
+    color: #b5b5b5;
 }
 .icon-star span.checked {
     color: $hover-color;
@@ -596,7 +297,7 @@ h2.border-title:before {
     color: $third-color;
     font-weight: 800;
     font-size: 1.25rem;
-    margin-bottom: .3125rem;
+    margin-bottom: 0.3125rem;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -606,17 +307,17 @@ h2.border-title:before {
     color: #000;
 }
 .cake-list-content .open-hrs {
-    font-size: .875rem;
+    font-size: 0.875rem;
     color: #000;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 .cake-list-content .open-hrs span {
-    font-size: .875rem;
+    font-size: 0.875rem;
     color: #000;
 }
 .cake-list-footer {
-    border-top: .0625rem solid $primary-color;
-    padding: .5rem 1.25rem;
+    border-top: 0.0625rem solid $primary-color;
+    padding: 0.5rem 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -635,10 +336,10 @@ h2.border-title:before {
 }
 .cake-list-card:hover {
     border-color: transparent;
-    box-shadow: 0 .625rem 1.875rem rgb(0 0 0 / 7%);
+    box-shadow: 0 0.625rem 1.875rem rgb(0 0 0 / 7%);
 }
 .festive-text p {
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
 }
 .festive-title {
     font-weight: 800;
@@ -648,12 +349,12 @@ h2.border-title:before {
     color: $primary-color;
     font-weight: 800;
     position: relative;
-    padding-right: .625rem;
+    padding-right: 0.625rem;
 }
 .festive-option:before {
-    content: '';
+    content: "";
     height: 100%;
-    width: .125rem;
+    width: 0.125rem;
     background: #ddd;
     position: absolute;
     right: 0;
@@ -663,27 +364,25 @@ h2.border-title:before {
 }
 /*cake page end*/
 
-
-
 /*product list section start*/
 .product-list-section {
     background: $bg-color;
-} 
+}
 .sidebar-box {
-    box-shadow: 0 .625rem 1.875rem rgb(214 148 35 / 7%);
+    box-shadow: 0 0.625rem 1.875rem rgb(214 148 35 / 7%);
     background: #fffcd08a;
-    padding: .9375rem;
+    padding: 0.9375rem;
     margin-bottom: 1.875rem;
     border: 1px solid $primary-color;
 }
 .sidebar-box .accordion-item {
-        background: #fefae0;
+    background: #fefae0;
 }
 .custom-checkbox {
     display: block;
     position: relative;
     padding-left: 2.1875rem;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 700;
@@ -710,8 +409,8 @@ h2.border-title:before {
     height: 1.5625rem;
     width: 1.5625rem;
     background-color: $primary-color;
-    border: .0625rem solid $primary-color;
-    border-radius: .3125rem;
+    border: 0.0625rem solid $primary-color;
+    border-radius: 0.3125rem;
 }
 .checkmark:after {
     content: "";
@@ -722,12 +421,12 @@ h2.border-title:before {
     display: block;
 }
 .custom-checkbox .checkmark:after {
-    left: .5625rem;
-    top: .3125rem;
-    width: .3125rem;
-    height: .625rem;
+    left: 0.5625rem;
+    top: 0.3125rem;
+    width: 0.3125rem;
+    height: 0.625rem;
     border: solid #fff;
-    border-width: 0 .1875rem .1875rem 0;
+    border-width: 0 0.1875rem 0.1875rem 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -744,15 +443,15 @@ h2.border-title:before {
 .sidebar-box .accordion .accordion-button:focus {
     color: inherit;
     background: transparent;
-    border-color:transparent ;
+    border-color: transparent;
     box-shadow: none;
 }
 .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
 }
 .food-filter {
-    margin-bottom: 1.875rem;    
-    border-top: .0625rem solid #ddd;
+    margin-bottom: 1.875rem;
+    border-top: 0.0625rem solid #ddd;
     padding-top: 1.875rem;
 }
 .food-filter li {
@@ -763,11 +462,11 @@ h2.border-title:before {
     margin-right: 0;
 }
 .food-filter .food-btn {
-    border: .0625rem solid $third-color;
+    border: 0.0625rem solid $third-color;
     background: #fff;
     border-radius: 1.875rem;
     font-weight: 700;
-    padding: .625rem 1.875rem;
+    padding: 0.625rem 1.875rem;
     color: $text-color;
     margin-right: 1.25rem;
     transition: all 0.5s ease;
@@ -786,18 +485,18 @@ h2.border-title:before {
     color: $text-color;
     font-weight: 800;
     transition: all 0.5s ease;
-    margin-left: .3125rem !important;
+    margin-left: 0.3125rem !important;
 }
 .pagination .page-item:last-child .page-link {
     background: $secondary-color;
     color: #fff;
-    border-radius: .3125rem;
+    border-radius: 0.3125rem;
 }
 .pagination .page-item .page-link:hover,
 .pagination .page-item.active .page-link {
     background: $primary-color;
     color: #fff;
-    border-radius: .3125rem;
+    border-radius: 0.3125rem;
 }
 .sort-cuisines {
     position: relative;
@@ -811,19 +510,18 @@ h2.border-title:before {
     color: #fff;
     font-size: 1.375rem;
     font-weight: 700;
-    padding: .625rem 1.25rem;
+    padding: 0.625rem 1.25rem;
 }
 .filter-active {
     cursor: pointer;
     font-weight: 800;
-    margin-top: .9375rem;
+    margin-top: 0.9375rem;
     color: $hover-color;
 }
 .filter-wrapper {
     display: none;
 }
 /*product list section end*/
-
 
 .cake-offer-content {
     background-image: linear-gradient(to bottom, #fba7a5, #ffac92, #ffb67b, #ffc562, #ffd74c);
@@ -835,14 +533,14 @@ h2.border-title:before {
     color: #000;
     text-align: center;
     position: relative;
-    padding-bottom: .625rem;
+    padding-bottom: 0.625rem;
     display: -webkit-box;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 .cake-offer-content h5:before {
-    content: '';
-    height: .125rem;
+    content: "";
+    height: 0.125rem;
     width: 50%;
     background: #000;
     position: absolute;
@@ -851,8 +549,8 @@ h2.border-title:before {
     transform: translateX(-50%);
 }
 .cake-offer-content p {
-    font-size: .875rem;
-    margin-top: .625rem;
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
     padding-left: 1.875rem;
     color: #000;
     margin-bottom: 0;
@@ -879,7 +577,6 @@ h2.offer-title {
     width: 100%;
 }
 
-
 /*product detail start*/
 .page-banner {
     position: relative;
@@ -896,13 +593,13 @@ h2.offer-title {
 .page-banner .breadcrumb {
     position: absolute;
     top: 6.25rem;
-    left: .625rem;
+    left: 0.625rem;
     background: #262626;
     color: #fff;
-    padding: .9375rem 1.25rem;
-    border-radius: .625rem;
+    padding: 0.9375rem 1.25rem;
+    border-radius: 0.625rem;
 }
-.breadcrumb-item+.breadcrumb-item::before,
+.breadcrumb-item + .breadcrumb-item::before,
 .page-banner .breadcrumb .breadcrumb-item,
 .page-banner .breadcrumb .breadcrumb-item a {
     color: #fff;
@@ -912,7 +609,7 @@ h2.offer-title {
 .checkout-login-section,
 .product-content {
     background: #fff;
-    box-shadow: 0 .625rem 1.875rem rgb(0 0 0 / 7%);
+    box-shadow: 0 0.625rem 1.875rem rgb(0 0 0 / 7%);
     padding: 5rem 2.5rem 2.5rem 2.5rem;
     position: relative;
     top: -5rem;
@@ -939,22 +636,22 @@ h2.offer-title {
     font-size: 1.875rem;
     text-transform: capitalize;
     color: #000;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
 }
 .product-dtl-head .subtitle {
     color: $text-color;
     text-transform: capitalize;
 }
 .product-dtl-body {
-    margin-top: .625rem;
+    margin-top: 0.625rem;
 }
 .quantity {
     display: inline-block;
     background: #fff;
-    border: .125rem solid $yellow-color;
+    border: 0.125rem solid $yellow-color;
     border-radius: 1.875rem;
 }
-.quantity input[type=number] {
+.quantity input[type="number"] {
     width: 4.375rem;
     padding: 0;
     text-transform: uppercase;
@@ -973,8 +670,8 @@ h2.offer-title {
     -webkit-user-select: none;
     -webkit-touch-callout: none;
 }
-.quantity span.spinner>.sub,
-.quantity span.spinner>.add {
+.quantity span.spinner > .sub,
+.quantity span.spinner > .add {
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
@@ -983,38 +680,38 @@ h2.offer-title {
     font-size: 1.2em;
     line-height: 2.1875rem;
     border-right: 0;
-    border-radius: .125rem 0 0 .125rem;
+    border-radius: 0.125rem 0 0 0.125rem;
     cursor: pointer;
     transition: 0.1s linear;
-    color: #03A9F4;
+    color: #03a9f4;
     -o-transition: 0.1s linear;
     -ms-transition: 0.1s linear;
     -moz-transition: 0.1s linear;
     -webkit-transition: 0.1s linear;
 }
-.quantity span.spinner>.sub {
-    border-right: .125rem $yellow-color solid;
+.quantity span.spinner > .sub {
+    border-right: 0.125rem $yellow-color solid;
 }
-.quantity span.spinner>.add {
+.quantity span.spinner > .add {
     top: 0;
-    border-left: .125rem $yellow-color solid;
-    border-radius: 0 .125rem .125rem 0;
+    border-left: 0.125rem $yellow-color solid;
+    border-radius: 0 0.125rem 0.125rem 0;
 }
-.quantity span.spinner>.sub:hover,
-.quantity span.spinner>.add:hover {
+.quantity span.spinner > .sub:hover,
+.quantity span.spinner > .add:hover {
     /*background: $primary-color;*/
     color: $primary-color;
 }
-.quantity input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.quantity input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 .price-bg span {
     background: $hover-color;
     color: #fff;
-    padding: .5rem 1.875rem;
+    padding: 0.5rem 1.875rem;
     display: inline-block;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     font-weight: 800;
     font-size: 1.125rem;
 }
@@ -1029,14 +726,14 @@ input[type=number]::-webkit-outer-spin-button {
     width: 6.25rem;
     overflow: hidden;
     object-fit: cover;
-    border-radius: .625rem;
+    border-radius: 0.625rem;
 }
 .product-size {
     border-radius: 0.9375rem;
     border: 0.125rem solid $yellow-color;
 }
 .product-size-card {
-    padding: .625rem;
+    padding: 0.625rem;
     border-right: 0.125rem solid $yellow-color;
 }
 .product-size-card span {
@@ -1054,9 +751,9 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: space-between;
     align-items: center;
 }
-.product-tab-header .nav-pills .nav-link.active, 
+.product-tab-header .nav-pills .nav-link.active,
 .product-tab-header .nav-pills .nav-link,
-.product-tab-header .nav-pills .show>.nav-link {
+.product-tab-header .nav-pills .show > .nav-link {
     background: none;
     color: $primary-color;
     text-transform: capitalize;
@@ -1065,9 +762,9 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
 }
 .product-tab-header .nav-item {
-    border-bottom: .25rem solid $third-color;
+    border-bottom: 0.25rem solid $third-color;
     padding-right: 3.125rem;
-    padding-bottom: .625rem;
+    padding-bottom: 0.625rem;
 }
 .product-tab-header .nav-item:last-child {
     padding-right: 0px;
@@ -1078,12 +775,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .product-tab-header .nav-pills .nav-link.active:before {
-    content: '';
-    height: .25rem;
+    content: "";
+    height: 0.25rem;
     width: 100%;
     background: $secondary-color;
     position: absolute;
-    bottom: -.875rem;
+    bottom: -0.875rem;
     left: 0;
 }
 .product-tab-header form .form-control {
@@ -1099,7 +796,7 @@ input[type=number]::-webkit-outer-spin-button {
 /*other food card*/
 .other-food-card {
     border-radius: 1.875rem;
-    border: .0625rem solid $secondary-color;
+    border: 0.0625rem solid $secondary-color;
     position: relative;
     transition: all 0.5s ease;
 }
@@ -1113,8 +810,8 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 50%;
     overflow: hidden;
     margin: auto;
-    border: .125rem solid $primary-color;
-    padding: .125rem;
+    border: 0.125rem solid $primary-color;
+    padding: 0.125rem;
     background: #fff;
     margin-top: -7.8125rem;
 }
@@ -1132,18 +829,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .food-card-content h4 {
     font-weight: 800;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
     transition: all 0.5s ease;
 }
 .food-card-content p {
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 .other-food-card .food-plus {
@@ -1170,7 +867,7 @@ input[type=number]::-webkit-outer-spin-button {
     border-color: $primary-color;
 }
 .other-food-card:hover .food-img {
-    border:.1875rem solid $secondary-color;
+    border: 0.1875rem solid $secondary-color;
 }
 .other-food-card:hover .food-img img {
     transform: scale(1.1);
@@ -1180,7 +877,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /*feedbak*/
 .product-feedback {
-    border-bottom: .0625rem solid $secondary-color;
+    border-bottom: 0.0625rem solid $secondary-color;
     margin-bottom: 1.25rem;
     background: #fff;
     padding: 0.625rem;
@@ -1201,13 +898,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .product-feedback-content {
     width: calc(100% - 6.25rem);
-    padding: 0 .9375rem;
+    padding: 0 0.9375rem;
 }
 .feedback-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
 }
 .feedback-user h5 {
     color: #000;
@@ -1222,17 +919,17 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 2.5rem;
 }
 .modal-checkout .modal-header {
-    border-bottom: .0625rem solid #98CE56;
-    padding-bottom: .625rem !important;
+    border-bottom: 0.0625rem solid #98ce56;
+    padding-bottom: 0.625rem !important;
 }
-.modal-title{
+.modal-title {
     color: $primary-color;
     font-weight: 700;
 }
 .modal-header .btn-close {
     background: $primary-color;
-    height: .9375rem;
-    width: .9375rem;
+    height: 0.9375rem;
+    width: 0.9375rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1249,31 +946,31 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .list-item-card {
     justify-content: space-between;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
 }
 .list-item-card:last-child {
     margin-bottom: 0;
 }
 .item-name h5 {
     font-weight: 700;
-    margin-bottom: .3125rem;
+    margin-bottom: 0.3125rem;
 }
 .item-meta span {
     font-weight: 600;
     color: $third-color;
-    margin-right: .9375rem;
+    margin-right: 0.9375rem;
 }
 .item-meta span i {
     color: $primary-color;
 }
 .modal-footer {
-    border-top: .0625rem solid #98CE56;
+    border-top: 0.0625rem solid #98ce56;
 }
 .modal-checkout-subtotal,
 .modal-checkout-total {
-    border-top: .0625rem solid #98CE56;
-    padding-top: .625rem;
-    margin-top: .9375rem;
+    border-top: 0.0625rem solid #98ce56;
+    padding-top: 0.625rem;
+    margin-top: 0.9375rem;
 }
 .modal-checkout-total .price,
 .modal-checkout-total h5 {
@@ -1284,7 +981,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*surprise food start*/
 .surprise-food-cart {
-    border-bottom: .0625rem solid #98CE56;
+    border-bottom: 0.0625rem solid #98ce56;
     padding-bottom: 1.25rem;
     margin-bottom: 1.25rem;
 }
@@ -1299,29 +996,29 @@ input[type=number]::-webkit-outer-spin-button {
 .special-list-item {
     background: #fff;
     padding: 1.25rem;
-    box-shadow: 0 .625rem 1.875rem rgb(0 0 0 / 7%);
-    margin-top: .9375rem;
+    box-shadow: 0 0.625rem 1.875rem rgb(0 0 0 / 7%);
+    margin-top: 0.9375rem;
 }
 .special-list-item .form-check {
     position: relative;
     padding-left: 0;
 }
-.special-list-item  .form-check p {
+.special-list-item .form-check p {
     position: absolute;
     right: 0;
     top: 0;
     margin-bottom: 0;
 }
-.special-list-item  .form-check p .radio-input {
+.special-list-item .form-check p .radio-input {
     float: right;
     margin-right: 0px;
     margin-left: 1.25rem;
 }
-.special-list-item  .form-check .radio-label {
+.special-list-item .form-check .radio-label {
     padding-left: 0;
     font-weight: 700;
 }
-.special-list-item  .form-check p .radio-input:checked {
+.special-list-item .form-check p .radio-input:checked {
     background-color: $primary-color;
     border-color: $primary-color;
 }
@@ -1342,7 +1039,7 @@ input[type=number]::-webkit-outer-spin-button {
 /*checkout start*/
 .checkout-login-section h4 {
     font-weight: 800;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
 }
 .checkout-login-section p {
     font-weight: 700;
@@ -1355,46 +1052,45 @@ input[type=number]::-webkit-outer-spin-button {
     display: block;
 }
 
-
 /*cart start*/
 .cart-img {
     height: 25rem;
     width: 100%;
     overflow: hidden;
-} 
+}
 .cart-img img {
     object-fit: contain;
 }
 .cake-cart-section .product-dtl-body {
-    border-radius: .625rem;
-    border: .0625rem solid #000;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid #000;
     padding: 1.25rem;
 }
 .cake-cart-section .product-dtl-body h5 {
     color: #000;
     font-weight: 600;
     text-transform: capitalize;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 .cake-cart-section .product-dtl-body p {
-    margin-bottom: .625rem;
-}  
+    margin-bottom: 0.625rem;
+}
 .cake-cart-section .product-dtl-body span {
     color: $secondary-color;
-}  
+}
 .cart-dtl-section {
-    border-radius: .625rem;
-    border: .0625rem solid #000;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid #000;
     padding: 1.25rem;
 }
 .cart-dtl-section-head h5 {
     color: $secondary-color;
     font-weight: 600;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
 }
 .cart-dtl-section-head h5 span {
     color: $primary-color;
@@ -1404,9 +1100,9 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
 }
 .cart-dtl-note-body ul li:before {
-    content: '';
-    height: .625rem;
-    width: .625rem;
+    content: "";
+    height: 0.625rem;
+    width: 0.625rem;
     background: #ddd;
     border-radius: 3.125rem;
     position: absolute;
@@ -1429,36 +1125,36 @@ input[type=number]::-webkit-outer-spin-button {
 .cake-delivery-text .stocks {
     background: $secondary-color;
     color: #fff;
-    padding: .3125rem .625rem;
-    margin-left: .625rem;
+    padding: 0.3125rem 0.625rem;
+    margin-left: 0.625rem;
 }
 .cake-delivery-text .out-stocks {
     background: $primary-color;
     color: #fff;
-    padding: .3125rem .625rem;
-    margin-left: .625rem;
+    padding: 0.3125rem 0.625rem;
+    margin-left: 0.625rem;
 }
 .cake-coupn input.form-control {
-    padding: .625rem;
+    padding: 0.625rem;
     border-color: $secondary-color;
 }
 .cake-coupn input.form-control::placeholder {
     color: $primary-color;
 }
 .cake-total {
-    border-top: .0625rem solid #ddd;
+    border-top: 0.0625rem solid #ddd;
 }
 .cake-total h3 {
     font-weight: 700;
     color: $hover-color;
 }
 .cake-total h3 > span {
-    font-size: .875rem;
+    font-size: 0.875rem;
     color: $secondary-color;
 }
 .cart-dtl-section .cake-proceed-btn {
-    margin-top: .9375rem;
-    padding-top: .9375rem;
-    border-top: .0625rem solid #ddd;
+    margin-top: 0.9375rem;
+    padding-top: 0.9375rem;
+    border-top: 0.0625rem solid #ddd;
 }
 /*cart end*/

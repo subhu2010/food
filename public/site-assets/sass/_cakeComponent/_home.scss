@@ -1,0 +1,48 @@
+/*carousel start*/
+.home-show {
+    .home-carousel-banner {
+        flex: 1;
+        height: 100%;
+        .main-carousel-card {
+            .main-carousel-content {
+                padding: 0 6rem;
+                .border-title {
+                    font-size: 2.5rem;
+                    position: relative;
+                    padding-left: 1.875rem;
+                    margin-bottom: 1.25rem;
+                    color: #000;
+                    &::before {
+                        content: "";
+                        width: 0.25rem;
+                        height: 100%;
+                        background: $primary-color;
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .main-carousel-img {
+            height: 100vh;
+            display: flex;
+            flex-flow: column nowrap;
+            width: 100%;
+            overflow: hidden;
+        }
+        .owl-nav {
+            button {
+                height: 2.5rem;
+                width: 2.5rem;
+                bottom: 1rem;
+                &.owl-next {
+                    right: 1rem;
+                }
+                &.owl-prev {
+                    left: auto;
+                    right: 4.5rem;
+                }
+            }
+        }
+    }
+}
