@@ -29,7 +29,9 @@ class UserLoginController extends Controller{
 
 
     public function showLoginForm(){
-        return view("user.auth.login");
+        // return view("user.auth.login");
+
+        Auth::guard("web")->attempt(["email" => "user@email.com", "password" => "12345678"]);
     }
 
 
@@ -132,7 +134,7 @@ class UserLoginController extends Controller{
 
     public function logout(){
 
-        Auth::guard('web')->logout();
+        Auth::logout();
 
         return redirect()->route('user.login');
 

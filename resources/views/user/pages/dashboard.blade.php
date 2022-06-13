@@ -5,6 +5,21 @@
 
 @section('content')
 
+<section class="breadcrumb-banner">
+    <img src="{{ asset('site-assets/images/3.jpg') }}" class="img-fluid" style="height: 50vh;">
+    <div class="banner-content">
+        <h1>User DAshboard</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb d-flex align-items-center justify-content-center">
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/') }}">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
 <div class="dashboard-section">
     <div class="dashboard-section-space">
         <div class="row g-0">
