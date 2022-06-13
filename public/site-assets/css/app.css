@@ -3676,6 +3676,65 @@ ul.top-menu > li > a:hover {
   color: #fff;
 }
 
+.faq-accordion .accordion {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.faq-accordion .accordion .accordion-item {
+  display: block;
+  margin-bottom: 15px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ffca3c;
+  border-radius: 0;
+}
+.faq-accordion .accordion .accordion-item:last-child {
+  margin-bottom: 0;
+}
+.faq-accordion .accordion .accordion-item .accordion-title {
+  padding: 20px 0 17px 0;
+  color: #197c43;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-right: 3.125rem;
+}
+.faq-accordion .accordion .accordion-item .accordion-title span {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 25px;
+  transition: 0.5s;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  color: #F2002D;
+  border: 1px solid #F2002D;
+  text-align: center;
+  line-height: 40px;
+  background-color: transparent;
+}
+.faq-accordion .accordion .accordion-item .accordion-title.active i {
+  transform: rotate(180deg);
+  top: 15px;
+}
+.faq-accordion .accordion .accordion-item .accordion-content {
+  display: none;
+  position: relative;
+  margin-top: -5px;
+  padding-bottom: 10px;
+}
+.faq-accordion .accordion .accordion-item .accordion-content p {
+  line-height: 1.8;
+  font-size: 0.875rem;
+}
+.faq-accordion .accordion .accordion-item .accordion-content.show {
+  display: block;
+}
+
 .user-sidebar {
   background: #fff;
   padding: 20px;

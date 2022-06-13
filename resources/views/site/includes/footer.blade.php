@@ -70,7 +70,7 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="javascript:void(0)">FAQ</a>
+							<a href="{{url('faq')}}">FAQ</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">Customer Service</a>
