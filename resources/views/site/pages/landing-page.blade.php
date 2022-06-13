@@ -22,8 +22,8 @@
 
                             @foreach($data["banners"] as $banner)
                             <div class="carousel-item home-banner-img @if($loop->first) active @endif">
-                                <img src="{{ asset('uploads/banners/'.$banner->pics) }}" 
-                                    class="d-block w-100" alt="{{ $banner->name }}">
+                                <img src="{{ asset('uploads/banners/'.$banner->pics) }}" class="d-block w-100"
+                                    alt="{{ $banner->name }}">
                             </div>
                             @endforeach
 
@@ -1344,6 +1344,402 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="">
+        <div class="category-section pa-tb special-card">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="section-title">
+                            <h3>Dinner</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="default-btn text-end">
+                            <a href="#" class="btn see-btn">see all <i class="las la-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0 g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/1.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label non-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        omelette</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/3.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label non-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        Chicken MOMO</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/2.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label veg-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        omelette</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/4.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label non-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        Noddles</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/5.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label veg-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        omelette</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/6.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label veg-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        Samosa</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="addvertise-section pa-tb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-title">
+                            <h3>Food on ways deals of the day</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <img src="{{ asset('site-assets/images/add/add3.png') }}" class="img-fluid" alt="food on ways">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="{{ asset('site-assets/images/add/add2.png') }}" class="img-fluid" alt="food on ways">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="category-section pa-tb special-card">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="section-title">
+                            <h3>Breakfast</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="default-btn text-end">
+                            <a href="#" class="btn see-btn">see all <i class="las la-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0 g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/1.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label non-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        omelette</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/3.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label non-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        Chicken MOMO</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/2.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label veg-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        omelette</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/4.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label non-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        Noddles</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/5.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label veg-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        omelette</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menu-card-two">
+                            <a href="{{ url('item-detail') }}">
+                                <div class="menu-card-img">
+                                    <img src="{{ asset('site-assets/images/6.jpg') }}" class="img-fluid"
+                                        alt="food on ways">
+                                </div>
+                                <div class="menu-card-content">
+                                    <div class="menu-card-label veg-label">
+                                        <span></span>
+                                    </div>
+                                    <h5 class="menu-card-title fw-700" title="remaining essentially remaining">
+                                        Samosa</h5>
+                                    <p class="menu-card-text">remaining essentially remaining rema essentially
+                                        remaining</p>
+                                    <div class="menu-card-meta flex-center">
+                                        <span class="price">Rs. 569</span>
+                                        <a href="#" class="selling-card-cart btn" data-bs-toggle="modal"
+                                            data-bs-target="#addon">
+                                            add +
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="addvertise-section pa-tb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-title">
+                            <h3>Food on ways deals of the day</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <img src="{{ asset('site-assets/images/add/add3.png') }}" class="img-fluid" alt="food on ways">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="{{ asset('site-assets/images/add/add2.png') }}" class="img-fluid" alt="food on ways">
                     </div>
                 </div>
             </div>
