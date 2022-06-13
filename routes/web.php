@@ -58,6 +58,10 @@ Route::get('contact-us', function(){
     return view('site.pages.contact');
 });
 
+Route::get('faq', function(){
+    return view('site.pages.faq');
+});
+
 
 // cake
 Route::get('cake', function(){

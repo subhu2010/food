@@ -2586,3 +2586,67 @@
     }
 }
 // deals end
+
+// faq stat
+.faq-accordion {
+    .accordion {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        .accordion-item {
+            display: block;
+            margin-bottom: 15px;
+            border:none;
+            background-color: transparent;
+            border-bottom: 1px solid $darkYellow;
+            border-radius: 0;
+            &:last-child {
+                margin-bottom: 0
+            }
+            .accordion-title {
+                padding: 20px 0 17px 0;
+                color: $green;
+                text-decoration: none;
+                position: relative;
+                display: block;
+                font-size: 1rem;
+                font-weight: 700;
+                padding-right: 3.125rem;
+                span {
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    font-size: 25px;
+                    transition: .5s;
+                    font-size: 24px;
+                    width: 40px;
+                    height: 40px;
+                    color: $hoverColor;
+                    border: 1px solid $hoverColor;
+                    text-align: center;
+                    line-height: 40px;
+                    background-color: transparent
+                }
+                &.active i {
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                    top: 15px
+                }
+            }
+            .accordion-content {
+                display: none;
+                position: relative;
+                margin-top: -5px;
+                padding-bottom: 10px;
+                p {
+                    line-height: 1.8;
+                    font-size: .875rem;
+                }
+                &.show {
+                    display: block
+                }
+            }
+        }
+    }
+ }
+// faq end
