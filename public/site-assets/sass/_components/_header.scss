@@ -422,6 +422,13 @@ ul.top-menu {
             text-transform: capitalize;
             transition: all 0.3s ease 0s;
             font-weight: 700;
+            &.has-mega {
+                img {
+                    height: 40px;
+                    width: 40px;
+                    object-fit: contain;
+                }
+            }
         }
     }
 }

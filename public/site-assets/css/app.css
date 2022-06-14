@@ -1063,6 +1063,12 @@ ul.top-menu > li > a:hover {
   transition: all 0.3s ease 0s;
   font-weight: 700;
 }
+.bottom-menu-nav > li > a.has-mega img {
+  height: 40px;
+  width: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 #header.headerSticky {
   transition: all 0.3s;
