@@ -114,34 +114,6 @@
                                         </div>
                                     </form>
                                 </div>
-<<<<<<< HEAD
-                            </div>
-                            <hr class="bg-white">
-                            <div class="form-group mb-4 text-center">
-                                <a href="{{ route('user.social.login', 'facebook') }}">
-                                    <img src="{{ asset('site-assets/images/facebook.png') }}" class="img-fluid"></img>
-                                </a>
-                                <a href="{{ route('user.social.login', 'google') }}">
-                                    <img src="{{ asset('site-assets/images/google.png') }}" class="img-fluid"></img>
-                                </a>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-one mb-4">Login</button>
-                            <div class="form-group">
-                                <a href="#">Lost your password?</a>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <form>
-                        <div class="form-group mb-4">
-                            <label>USERNAME OR EMAIL ADDRESS *</label>
-                            <input class="form-control"></input>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label>PASSWORD *</label>
-                            <input class="form-control" type="password"><a href="#"
-                            class="password-control"></a></input>
-=======
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                     aria-labelledby="pills-profile-tab">
                                     <form>
@@ -153,7 +125,6 @@
                                             <label>PASSWORD *</label>
                                             <input class="form-control" type="password"><a href="#"
                                                 class="password-control"></a></input>
->>>>>>> 69fca59aead6628c40bebf34720743982bf8e7c1
 
                                         </div>
                                         <div class="form-group mb-4">
