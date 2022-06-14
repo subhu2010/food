@@ -1,7 +1,7 @@
 .wrapper {
     box-shadow: 0 0.625rem 1.875rem rgb(0 0 0 / 7%);
     background: rgba(225, 225, 225, 0.6);
-    .sticky {
+    &.sticky {
         position: fixed;
         top: 0px;
         width: 100%;
