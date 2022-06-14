@@ -3,7 +3,8 @@
 use App\Http\Controllers\User\Auth\{UserLoginController};
 use App\Http\Controllers\Admin\Auth\{AdminLoginController, AdminForgotPasswordController, AdminResetPasswordController,
 			RolesAndPermissionsController};
-use App\Http\Controllers\Admin\{AdminController, NewsController, PageController, TicketController, UserController};
+use App\Http\Controllers\Admin\{AdminController, CategoryController, ProductController, NewsController, PageController, 
+			TicketController, UserController};
 use Illuminate\Support\Facades\Route;
 
 
@@ -146,6 +147,58 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 
 		// $route->post('/delete-permission', [RolesAndPermissionsController::class, "deletePermission"])
 		// 	->name('deletePermission');
+
+
+		/*************************************** Category Route Controller ***********************************/
+		$route->get('/category-list', [CategoryController::class, "categoryList"])
+		->name('categoryList');
+
+		$route->get('/add-category', [CategoryController::class, "addCategory"])
+		->name('addCategory');
+
+		$route->post('/add-category', [CategoryController::class, "addCategoryProcess"])
+		->name('addCategoryProcess');
+
+		$route->get('/edit-category/{category}', [CategoryController::class, "editCategory"])
+		->name('editCategory');
+
+		$route->post('/edit-category/{category}', [CategoryController::class, "editCategoryProcess"])
+		->name('editCategoryProcess');
+
+		$route->post('/delete-category', [CategoryController::class, "deleteCategory"])
+		->name('deleteCategory');
+
+
+
+		/********************************** Product Route Controller ********************************/
+
+		$route->get('/product-list', [ProductController::class, "productList"])
+		->name('productList');
+
+		$route->get('/add-product', [ProductController::class, "addProduct"])
+		->name('addProduct');
+
+		$route->post('/add-product', [ProductController::class, "addProductProcess"])
+		->name('addProductProcess');
+
+		$route->get('/edit-product/{product}', [ProductController::class, "editProduct"])
+		->name('editProduct');
+
+		$route->get("/update-product-gallery/{product}", [ProductController::class, "updateProductGallery"])
+		->name("updateProductGallery");
+
+		$route->post("/update-product-gallery/{product}", [ProductController::class, "updateProductGalleryProcess"])
+		->name("updateProductGalleryProcess");
+
+		$route->post('/edit-product/{product}', [ProductController::class, "editProductProcess"])
+		->name('editProductProcess');
+
+		$route->post('/delete-product', [ProductController::class, "deleteProduct"])
+		->name('deleteProduct');
+
+		$route->post('/delete-product-gallery', [ProductController::class, "deleteProductGallery"])
+		->name("deleteProductGallery");
+
 
 
 		// Routes for TicketCotroller

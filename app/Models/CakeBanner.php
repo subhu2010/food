@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CakeBanner extends Model
-{
-    protected $fillable = ['title', 'image', 'status', 'description'];
+class CakeBanner extends Model{
+    
     use HasFactory;
+
+    protected $fillable = ['title', 'image', 'status', 'description'];
+    
 }

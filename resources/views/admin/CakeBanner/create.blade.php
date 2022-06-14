@@ -1,4 +1,7 @@
 @extends('admin.layouts.layout')
+    
+@section("page_title", "Submit Cake Banner")
+
 @section('content')
 <div id="main-content">
     <div class="card">
@@ -12,7 +15,9 @@
             </nav>
         </div>
     </div>
-    <!-- recent placed order -->
+
+    @include("admin.includes.errors")
+
     <div class="recent-placed-order">
         <div class="card">
             <div class="card-header">
@@ -30,7 +35,7 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="title">Title</label>
-                                    <input type="text" name="title" class="form-control" id="title" value="{{$cakebanner->title??''}}" placeholder="Enter Banner Title" required>
+                                    <input type="text" name="title" class="form-control" id="title" value="{{$cakebanner->title??''}}" placeholder="Enter Banner Title" >
                                     @if($errors->has('title'))
                                     <span class="text-danger">{{ $errors->first('title') }}</span>
                                     @endif
@@ -45,18 +50,21 @@
                                 <div class="product-status mt-2">
                                     <div class="form-check form-switch ps-0">
                                         <label class="form-check-label fw-bold" for="flexSwitchCheckChecked">Status Available</label>
-                                        @if(isset($cakebanner) && $cakebanner->status == "active")
-                                        <input class="form-check-input" name="status" type="checkbox" id="flexSwitchCheckChecked" checked=''>
-                                        @else
-                                        <input class="form-check-input" name="status" type="checkbox" id="flexSwitchCheckChecked">
-                                        @endif
+
+                                        <input class="form-check-input" name="status" type="checkbox" 
+                                            id="flexSwitchCheckChecked" value="inactive" checked >
+
+                                        <input class="form-check-input" name="status" type="checkbox" 
+                                            id="flexSwitchCheckChecked" value="active" 
+                                            @if(isset($cakebanner) && $cakebanner->status == "active") checked @endif >
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="center">
                                     @if(isset($cakebanner))
-                                    <img src="{{asset('uploads/CakeBanner/'.$cakebanner->image)}}" alt="{{$cakebanner->title}}" class="img img-thumbnail img-responsive" width="25%" required>
+                                    <img src="{{asset('uploads/cakebanners/'.$cakebanner->image)}}" alt="{{$cakebanner->title}}" class="img img-thumbnail img-responsive" width="25%" >
                                     @endif
                                     <div class="form-input card">
                                         <div class="preview">

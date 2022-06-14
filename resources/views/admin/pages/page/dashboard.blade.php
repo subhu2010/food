@@ -491,7 +491,7 @@
                 </div>
                 <div class="card-body">
 
-                    @forelse($data["tickets"] as $ticket)
+                    {{-- @forelse($data["tickets"] as $ticket)
                     <div class="support-list">
                         <div class="avatar avatar-lg me-3">
                             <img src="{{ asset('admin-assets/images/faces/2.jpg') }}" alt="" srcset="">
@@ -515,7 +515,7 @@
                     </div>
                     @empty
                     <p>There are currently no open tickets ...</p>
-                    @endforelse
+                    @endforelse --}}
                     
                     <div class="support-list">
                         <div class="avatar avatar-lg me-3">

@@ -1,6 +1,6 @@
 @extends("site.cake.layouts.layout")
 
-@section("page_title", "Food On Ways")
+@section("page_title", "Food on Ways Cake")
 
 @section("content")
 
@@ -8,44 +8,30 @@
 <div class="home-show">
     <div class="home-carousel-banner">
         <div class="owl-carousel owl-theme cake-main-carousel">
+
+            @foreach($data['cakebanners'] as $cake)
             <div class="item">
                 <div class="main-carousel-card">
                     <div class="row align-items-center">
                         <div class="col-xl-5 col-lg-5 col-md-5">
                             <div class="container">
                                 <div class="main-carousel-content">
-                                    <h2 class="border-title fw-800">Confectionery & <br> Bakery Shop</h2>
-                                    <p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need</p>
+                                    <h2 class="border-title fw-800">{{ $cake->title }}</h2>
+                                    <p>{{ $cake->description }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-7 col-md-7">
                             <div class="main-carousel-img">
-                                <img src="{{ asset('site-assets/cake-images/image/19.png') }}" class="img-fluid" alt="food on ways">
+                                <img src="{{ asset('site-assets/cake-images/image/19.png') }}" \
+                                    class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="main-carousel-card">
-                    <div class="row align-items-center">
-                        <div class="col-xl-5 col-lg-5 col-md-5">
-                            <div class="container">
-                                <div class="main-carousel-content">
-                                    <h2 class="border-title fw-800">Confectionery & <br> Bakery Shop</h2>
-                                    <p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-7 col-md-7">
-                            <div class="main-carousel-img">
-                                <img src="{{ asset('site-assets/cake-images/image/22.png') }}" class="img-fluid" alt="food on ways">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </div>

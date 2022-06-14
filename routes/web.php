@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\Auth\{UserLoginController, UserRegisterController, UserForgotPasswordController,
 		UserResetPasswordController, SocialiteLoginController, ConfirmPasswordController, VerificationController};
 use App\Http\Controllers\User\{UserController};
+use App\Http\Controllers\Website\{WebsiteController, CakeWebsiteController};
 
 
 Route::get('/', function(){
@@ -63,11 +64,6 @@ Route::get('faq', function(){
 });
 
 
-// cake
-Route::get('cake', function(){
-    return view('site.cake.pages.landing-page');
-});
-
 Route::get('cake-item-detail', function () {
     return view('site.cake.pages.cake-item-detail');
 });
@@ -95,10 +91,17 @@ Route::get('user-dashboard', function () {
 	return view('site.pages.user-dashboard.user-dashboard');
 });
 
-Route::get("/", "Website\WebsiteController@landingPage")
-	->name("landingPage");
 
 Route::group([], function($route){
+
+	/*********************************** Route For Website Controller ********************************/
+	$route->get("/", [WebsiteController::class, "landingPage"])
+		->name("site.landingPage");
+
+
+	/**********************************  Route For Cake Website Controller *****************************/
+	$route->get("/cake", [CakeWebsiteController::class, "cakeLandingPage"])
+		->name("site.cakeLandingPage");
 
 
 	/**************************************** Socialite Login ******************************************/

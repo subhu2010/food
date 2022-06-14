@@ -4,25 +4,34 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\{ProductGallery, Category};
 
-class Product extends Model
-{
-    protected $fillable = ['name', 'primary_image', 'price', 'description', 'status', 'is_trending', 'is_recommended', 'sub_category_id', 'discount', 'is_veg'];
 
-    public function subCategory()
-    {
-        return $this->belongsTo(SubCategory::class);
-    }
-
-    public function productImages()
-    {
-        return $this->hasMany(ProductImage::class);
-    }
-
-    public function ingredients()
-    {
-        return $this->hasMany(Ingredient::class);
-    }
+class Product extends Model{
 
     use HasFactory;
+
+    protected $table = "products";
+
+
+    protected $fillable = [
+                            "category_id", "type", "name", "slug", "description", "status", "price", "discount", "surprise",
+                            "trending", "recommended", "veg", "created_at", "updated_at"
+                        ];
+
+
+    public function category(){
+        return $this->belongsTo(Category::class, "category_id");
+    }
+
+
+    public function gallery(){
+        return $this->hasMany(ProductGallery::class, "product_id");
+    }
+
+
+    public function ingredients(){
+        return $this->hasMany(Ingredient::class, "product_id");
+    }
+
 }

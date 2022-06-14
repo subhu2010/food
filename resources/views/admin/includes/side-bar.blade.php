@@ -20,7 +20,7 @@
                     <h3>Food On Ways</h3>
                 </li>
                 <li class="sidebar-item  ">
-                    <a href="{{ route('landingPage') }}" class="sidebar-link" target="_blank">
+                    <a href="{{ route('site.landingPage') }}" class="sidebar-link" target="_blank">
                         <i class="las la-globe"></i>
                         <span>Website</span>
                     </a>
@@ -53,41 +53,21 @@
                 </li>
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
-                        <i class="las la-user-alt"></i>
-                        <span>Staff</span>
-                    </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="{{ route('admin.staff.create') }}">Add Staff</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{ route('admin.staff.index') }}">Staff List</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
                         <i class="las la-clipboard-list"></i>
                         <span>Menus</span>
                     </a>
                     <ul class="submenu ">
                         <li class="submenu-item ">
-                            <a href="">Menu Catalogue</a>
+                            <a href="{{ route('admin.categoryList') }}">
+                                <i class="las la-list"></i>
+                                Menu Catalogue
+                            </a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="{{ route('admin.menu.index') }}">Menu List</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{ route('admin.product.index') }}">Product List</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="menu-grid.php">Menu Grid</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{ route('admin.menu.create') }}">Add Menu</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{ route('admin.product.create') }}">Add product</a>
+                            <a href="{{ route('admin.productList') }}">
+                                <i class="las la-list"></i>
+                                Products
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -163,6 +143,12 @@
                             <a href="{{ route('admin.userList') }}">
                                 <i class="las la-user"></i>
                                 Customers
+                            </a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="{{ route('admin.staff.index') }}">
+                                <i class="las la-user"></i>
+                                Staffs
                             </a>
                         </li>
                     </ul>

@@ -18,11 +18,11 @@ class AdminController extends Controller{
 
 	public function dashboard(){
 
-		$data["tickets"]   = Ticket::with('user')->where('status', 'opened')->get();
+		// $data["tickets"]   = Ticket::with('user')->where('status', 'opened')->get();
 
-		$data["trendings"] = Product::where('is_trending', true)->take(4)->get();
+		// $data["trendings"] = Product::where('is_trending', true)->take(4)->get();
 
-		return view("admin.pages.page.dashboard", compact("data"));
+		return view("admin.pages.page.dashboard");
 
 	}
 

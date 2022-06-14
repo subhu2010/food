@@ -3,39 +3,44 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
-use App\Models\SubCategory;
+use App\Models\{Category};
 use Illuminate\Http\Request;
+use App\Trait\{ValidateRequest, ImageUpload};
 
-class MenuController extends Controller
-{
+class MenuController extends Controller{
 
-    public function __construct()
-    {
-        $this->middleware('auth:admin');
+    use ValidateRequest, ImageUpload;
+
+
+    public function index(){
+
+        $data["categories"] = Category::get();
+
+        return view('admin.pages.menu.menu-list', compact("data"));
+
+    }
+    
+
+    public function addCategory(){
+
+        $data["categories"] = Category::get();
+
+        return view('admin.pages.menu.add-menu', compact("data"));
+
     }
 
-    public function index()
-    {
-        $menus = SubCategory::all();
-        return view('admin.Menu.index', ['menus' => $menus]);
-    }
 
-    public function create()
-    {
-        $categories = Category::all();
-        return view('admin.Menu.create', ['categories' => $categories]);
-    }
+    public function store(Request $request){
 
-    public function store(Request $request)
-    {
         $data = $this->menuValidation($request);
+
         if ($request->image) {
             $data['image'] = uploadImage($request->image, "Menu", 350, 350);
         }
         $success = SubCategory::create($data);
         $success ? $request->session()->flash('success', 'Menu added successfully !!!') : $request->session()->flash('error', 'Failed to add menu !!!');
         return redirect()->route('admin.menu.index');
+        
     }
 
     public function show(SubCategory $menu)

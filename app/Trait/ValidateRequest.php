@@ -85,6 +85,22 @@ trait ValidateRequest{
 
 
 
+    public static function validateCategory(Request $request, $action = "add", $id = ""){
+
+        $request->validate([    
+            "name"   => ($action == 'update')?"required|max:191|unique:categories,name,".$id : 
+                            "required|max:191|unique:categories",
+            "parent" => (!is_null($request->parent))?"required|exists:categories,id":"",
+            "icon"   => ($action == 'update'?'nullable':'required').'|image|mimes:png,jpg,jpeg,webp,svg|max:2048',  
+            "pics"   => "nullable|image|mimes:jpg,jpeg,gif,png,webp",
+            "order"  => "required",
+            "status" => "required|in:Active,Banned"   
+        ]);
+
+    }
+
+
+
     public static function validateAdmin(Request $request, $action = "add", $id = ""){
 
         return $request->validate([
@@ -98,6 +114,9 @@ trait ValidateRequest{
                         ]);
 
     }
+
+
+
 
 
 
