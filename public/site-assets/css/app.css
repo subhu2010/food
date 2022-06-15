@@ -1189,12 +1189,19 @@ ul.top-menu > li > a:hover {
   border-bottom-color: #fff !important;
   color: #fff !important;
 }
-.mb-canvas .offcanvas-body .login-section form .form-group {
-  color: #fff;
-}
 .mb-canvas .offcanvas-body .login-section form .form-group a,
 .mb-canvas .offcanvas-body .login-section form .form-group label {
   color: #fff;
+}
+
+.password {
+  position: relative;
+}
+.password .form-alert-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.625rem;
+  transform: translateY(-50%);
 }
 
 .fix-show {

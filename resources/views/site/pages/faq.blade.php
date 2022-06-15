@@ -7,7 +7,7 @@
 <section class="breadcrumb-banner">
     <img src="{{ asset('site-assets/images/3.jpg') }}" class="img-fluid">
     <div class="banner-content">
-        <h1>Foodonways Deals</h1>
+        <h1>Frequently Asked Question</h1>
     </div>
 </section>
 
