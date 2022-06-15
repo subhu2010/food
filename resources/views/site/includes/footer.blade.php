@@ -22,7 +22,7 @@
 							<a href="javascript:void(0)">Our Strength</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Blog</a>
+							<a href="{{url('blog-list')}}">Blog</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">Corporate Order</a>
@@ -52,10 +52,10 @@
 							<a href="javascript:void(0)">Payments & Security</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Privacy Policy</a>
+							<a href="{{url('terms-policy')}}">Privacy Policy</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Terms & Conditions</a>
+							<a href="{{url('terms-policy')}}">Terms & Conditions</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">Offers</a>
@@ -70,7 +70,7 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="{{url('faq')}}">FAQ</a>
+							<a href="{{url('help-support')}}">Help Support</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">Customer Service</a>
@@ -82,7 +82,7 @@
 							<a href="javascript:void(0)">My Wishlist</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Contact Us</a>
+							<a href="{{url('contact-us')}}">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -94,7 +94,7 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="javascript:void(0)">frequently asked question's</a>
+							<a href="{{url('faq')}}">frequently asked question's</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">donations</a>
@@ -103,7 +103,7 @@
 							<a href="javascript:void(0)">feedbacks</a>
 						</li>
 						<li>
-							<a href="privacy.php">terms & policy</a>
+							<a href="{{url('terms-policy')}}">terms & policy</a>
 						</li>
 					</ul>
 				</div>
