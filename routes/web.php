@@ -11,9 +11,6 @@ Route::get('/', function(){
     return view('site.pages.landing-page');
 });
 
-Route::get('item-list', function(){
-    return view('site.pages.item-list');
-});
 
 Route::get('old-item-list', function(){
     return view('site.pages.old-item-list');
@@ -97,6 +94,9 @@ Route::group([], function($route){
 	/*********************************** Route For Website Controller ********************************/
 	$route->get("/", [WebsiteController::class, "landingPage"])
 		->name("site.landingPage");
+
+	$route->get("/category/{category}", [WebsiteController::class, "categoryDetail"])
+		->name('site.categoryDetail');
 
 
 	/**********************************  Route For Cake Website Controller *****************************/

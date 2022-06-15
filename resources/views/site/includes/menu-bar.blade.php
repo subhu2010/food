@@ -4,7 +4,7 @@
 
             @foreach($data['menus'] as $men)
             <li>
-                <a href="javascript:;" class="has-mega" title="{{ $men->name }}">
+                <a href="{{ route('site.categoryDetail', $men->slug) }}" class="has-mega" title="{{ $men->name }}">
                     <img src="{{ asset('uploads/categories/'.$men->icon) }}">
                     <span>{{ $men->name }}</span>
                 </a>
