@@ -557,7 +557,7 @@ ul.top-menu {
             }
             form {
                 .form-group {
-                    color: $white;
+                    // color: $white;
                     a,
                     label {
                         color: #fff;
@@ -565,5 +565,15 @@ ul.top-menu {
                 }
             }
         }
+    }
+}
+
+.password {
+    position: relative;
+    .form-alert-icon {
+        position: absolute;
+        top: 50%;
+        right: .625rem;
+        transform: translateY(-50%);
     }
 }
