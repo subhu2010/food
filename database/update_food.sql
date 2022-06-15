@@ -120,7 +120,7 @@ CREATE TABLE `banners` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,6 +129,7 @@ CREATE TABLE `banners` (
 
 LOCK TABLES `banners` WRITE;
 /*!40000 ALTER TABLE `banners` DISABLE KEYS */;
+INSERT INTO `banners` VALUES (1,'Banner 1','banner-1-iyzyx','food-on-ways-image-kjav6wknbqsq2m0ayd0ui4vnmg9qhd.png','This is Banner 1',NULL,'Active','2022-06-14 06:24:06','2022-06-14 06:24:06'),(2,'Banner 2','banner-2-jsozi','food-on-ways-image-noykaqjoz9gmgo0enheszqovfwwwbi.png','This is Banner 2',NULL,'Active','2022-06-14 06:26:49','2022-06-14 06:26:49');
 /*!40000 ALTER TABLE `banners` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +149,7 @@ CREATE TABLE `cake_banners` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,6 +158,7 @@ CREATE TABLE `cake_banners` (
 
 LOCK TABLES `cake_banners` WRITE;
 /*!40000 ALTER TABLE `cake_banners` DISABLE KEYS */;
+INSERT INTO `cake_banners` VALUES (1,'Cake Banner 1','This is Cake Banner 1','food-on-ways-image-gayriromwmlnsmsun1u83wslfzfmsg.png','active','2022-06-14 06:25:24','2022-06-14 06:29:21'),(2,'Cake Banner 2','This is Cake Banner 2','food-on-ways-image-lwmf8d5ofvssqtfizhyoo8watgto12.png','active','2022-06-14 06:25:45','2022-06-14 06:27:38');
 /*!40000 ALTER TABLE `cake_banners` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -475,14 +477,14 @@ CREATE TABLE `products` (
   `status` enum('Active','Banned') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Banned',
   `surprise` enum('Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'No',
   `trending` enum('Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'No',
-  `recommended` enum('Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'No',
+  `recommend` enum('Yes','No') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'No',
   `veg` enum('Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'No',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `products_category_id_foreign` (`category_id`),
   CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -491,6 +493,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,10,'lunch','Burger King','burger-king-cx0yy','food-on-ways-thumb-lqjzpfodow7sucf9x8jty7waug9xfs.png','food-on-ways-image-6fceh3a51lwryhggwtkn73akv3wayt.png','This is burger description',550,50,'Active','Yes','Yes','Yes','Yes','2022-06-14 06:04:46','2022-06-14 06:04:46'),(2,9,'lunch','Tuscan Pizza','tuscan-pizza-2toqm','food-on-ways-thumb-dcaijsdn6zdin3ghy0mngx0ufahxvs.jpg','food-on-ways-image-vyppw1ausfwkzujblfrrtrbivurdxb.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with lettuce, tomato, house BBQ & ranch.',1500,150,'Active','Yes','Yes','Yes','No','2022-06-14 06:10:18','2022-06-14 06:10:18'),(3,9,'lunch','Margharita Pizza','margharita-pizza-ffvne','food-on-ways-thumb-lnj0gstzzzhrysf1l3yymfho8t6mnz.jpg','food-on-ways-image-hloqcq15tqpigipvqmcjzwrdjqtcfx.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with lettuce, tomato, house BBQ & ranch.',1300,130,'Active','Yes','Yes','No','Yes','2022-06-14 06:11:46','2022-06-14 06:11:46'),(4,9,'lunch','Pizza Napoletana','pizza-napoletana-vmkm9','food-on-ways-thumb-nglrprycibzydplq5tvdrm0nvxzcuq.jpg','food-on-ways-image-o4lyobkq5piandfhm3qe93env38yyk.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with lettuce, tomato, house BBQ & ranch.',1100,75,'Active','Yes','Yes','Yes','No','2022-06-14 06:14:05','2022-06-14 06:14:05'),(5,10,'dinner','Bacon Cheeseburger','bacon-cheeseburger-cgwij','food-on-ways-thumb-lmopa7rntl9jvjkvpczpjyjphiarmo.jpg','food-on-ways-image-6oqaiuurlyquhavdwuh6e2xzansr7b.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with lettuce, tomato, house BBQ & ranch.',750,55,'Active','Yes','No','Yes','Yes','2022-06-14 06:15:49','2022-06-14 06:15:49'),(6,10,'dinner','Big Brekkie BBQ Burger','big-brekkie-bbq-burger-ulwty','food-on-ways-thumb-98cdm3s49hjvr8sg67exgjht5cc3se.jpg','food-on-ways-image-zmyw0mqgc4ecvgce3o8mkjrnbulexh.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with lettuce, tomato, house BBQ & ranch.',1250,250,'Active','Yes','No','Yes','No','2022-06-14 06:16:56','2022-06-14 06:16:56'),(7,10,'lunch','Original Angus Burger','original-angus-burger-sfkjl','food-on-ways-thumb-aefzxsfywl7jcgqjrcderhvybvselt.jpg','food-on-ways-image-6htig7qfn9d0wiimxvhn0tbxinwpiu.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with lettuce, tomato, house BBQ & ranch.',750,150,'Active','Yes','Yes','Yes','No','2022-06-14 06:17:59','2022-06-14 06:17:59'),(8,6,'dinner','Chocolate Fudge Cake','chocolate-fudge-cake-4el1y','food-on-ways-thumb-m3c0vbnskmanchzbxf5vtddgjdckfz.jpg','food-on-ways-image-smtcs9pnyuzqvaytpryzpuao6pfudz.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar.',550,65,'Active','Yes','Yes','Yes','Yes','2022-06-14 06:20:43','2022-06-14 06:20:43'),(9,6,'dinner','Chocolate Fudge Cake','chocolate-fudge-cake-br0xv','food-on-ways-thumb-pfg4khfjhibolfehszwmzeodiknpq4.jpg','food-on-ways-image-joaqcefnqjo317rmp7qxegutl8np0z.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar.',990,85,'Active','Yes','Yes','Yes','Yes','2022-06-14 06:21:44','2022-06-14 06:21:44'),(10,6,'lunch','Hand-Scooped Ice Cream','hand-scooped-ice-cream-pxjxk','food-on-ways-thumb-ukqpin0xwx3usnxecmba39mjkzq3lo.jpg','food-on-ways-image-ymyp3vhrcq4wpjtyzd7zidquuzvpzw.jpg','Smoked brisket, tender ribs, smoked sausage, bacon & cheddar.',650,55,'Active','Yes','Yes','Yes','Yes','2022-06-14 06:22:46','2022-06-14 06:22:46');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -638,4 +641,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-14 15:53:33
+-- Dump completed on 2022-06-15 10:40:44

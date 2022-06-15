@@ -33,7 +33,7 @@ trait ImageUpload{
 
 		if(!File::exists($path)){ File::makeDirectory($path); }
 
-		$file_name = 'food-on-ways-image-'.strtolower(Str::random(30)).'.'.$ext;
+		$file_name = 'food-on-ways-thumb-'.strtolower(Str::random(30)).'.'.$ext;
 
         $pics->save($path.$file_name);
 

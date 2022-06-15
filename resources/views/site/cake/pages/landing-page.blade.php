@@ -23,7 +23,7 @@
                         </div>
                         <div class="col-xl-7 col-lg-7 col-md-7">
                             <div class="main-carousel-img">
-                                <img src="{{ asset('site-assets/cake-images/image/19.png') }}" \
+                                <img src="{{ asset('uploads/cakebanners/'.$cake->image) }}" 
                                     class="img-fluid" alt="">
                             </div>
                         </div>

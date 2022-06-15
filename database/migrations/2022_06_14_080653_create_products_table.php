@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration{
             $table->enum("status", ["Active", "Banned"])->default("Banned");
             $table->enum("surprise", ["Yes", "No"])->default("No");
             $table->enum("trending", ["Yes", "No"])->default("No");
-            $table->enum("recommended", ["Yes", "No"])->default("No");
+            $table->enum("recommend", ["Yes", "No"])->default("No");
             $table->enum("veg", ["Yes", "No"])->default("No");
             $table->timestamps();
 

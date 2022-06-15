@@ -26,5 +26,18 @@ class WebsiteController extends Controller{
 	
 
 
+	public function categoryDetail(){
+
+		$data["setting"] = self::setting();
+		$data["menus"]   = Category::select(["name", "slug", "icon", "pics"])
+									->status()->orderBy("order")
+									->whereNull("category_id")
+									->take(6)
+									->get();
+
+		return view("site.pages.category-detail", compact("data"));
+
+	}
+
     
 }
