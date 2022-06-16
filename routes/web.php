@@ -48,6 +48,10 @@ Route::get('blog-detail', function(){
     return view('site.pages.blog-detail');
 });
 
+Route::get('blog-list', function(){
+    return view('site.pages.blog-list');
+});
+
 Route::get('foodonways-deals', function(){
     return view('site.pages.foodonways-deals');
 });
@@ -58,6 +62,16 @@ Route::get('contact-us', function(){
 
 Route::get('faq', function(){
     return view('site.pages.faq');
+});
+
+Route::get('help-support', function(){
+    return view('site.pages.help-support');
+});
+Route::get('terms-condition', function(){
+    return view('site.pages.terms-condition');
+});
+Route::get('terms-policy', function(){
+    return view('site.pages.terms-policy');
 });
 
 
