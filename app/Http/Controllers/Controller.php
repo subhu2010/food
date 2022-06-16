@@ -7,7 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
-use App\Models\Setting;
+use App\Models\{Category, Setting};
 
 
 class Controller extends BaseController{
@@ -20,28 +20,18 @@ class Controller extends BaseController{
     }
 
 
-    public function intialData(){
+    public function initialData(){
 
         $data["setting"] = self::setting();
+
+        $data["menus"]   = Category::select(["name", "slug", "icon", "pics"])
+                                    ->status()->orderBy("order")
+                                    ->whereNull("category_id")
+                                    ->take(6)->get();
 
         return $data;
 
     }
 
-
-    public function sluggable($text){
-
-    	$text = preg_replace('~[^\pL\d]+~u', '-', $text);
-        $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
-        $text = preg_replace('~[^-\w]+~', '', $text);
-        $text = trim($text, '-');
-        $text = preg_replace('~-+~', '-', $text);
-        $text = strtolower($text);
-
-        if(empty($text)){ return 'n-a'; }
-
-        return $text;
-
-    }
 
 }

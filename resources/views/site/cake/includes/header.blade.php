@@ -46,101 +46,122 @@
 <body>
 
 <div class="wrapper fixed-top" id="myHeader">
-        <div class="container-fluid">
-            <nav>
-                <input type="checkbox" id="show-menu" class="d-none">
-                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-                <div class="content">
-                    <div class="logo">
-                        <a href="{{ url('cake') }}">
-                            <img src="{{ asset('site-assets/images/logo.png') }}" class="img-fluid" alt="food on ways">
-                        </a>
-                    </div>
-
-                    <ul class="links">
-                        <li><a href="{{ url('cake') }}">Home</a></li>
-                        <li><a href="{{url('#')}}">Weeding Cake</a></li>
-                        <li><a href="{{url('#')}}">Birthday Cake</a></li>
-                        <li><a href="{{url('#')}}" target="_blank">Farewell Cake</a></li>
-                        <li class="navcart-icon mobile-icon d-lg-none">
-                            <a href="login.php" class="header-search">
-                                <span class="d-lg-none">Login</span>
-                                <span class="icon-box">
-                                    <i class="las la-user-alt"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="navcart-icon mobile-icon d-lg-none">
-                            <a href="#" class="header-search">
-                                <span class="d-lg-none">Cart</span>
-                                <span class="icon-box">
-                                    <i class="las la-shopping-cart"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="navcart-icon mobile-icon d-lg-none">
-                            <a href="#" class="header-search js-searchOpen">
-                                <span class="d-lg-none">Search</span>
-                                <span class="icon-box"><i class="las la-search"></i></span>
-                            </a>
-                            <section class="search-overlay">
-                                <form class="search-form">
-                                    <a href="#" class="btn-search js-searchClose">
-                                        <i class="fa fa-4x fa-times" aria-hidden="true"></i>
-                                    </a>
-                                    
-                                    <input class="search" type="search" placeholder="Search" />
-                                </form>
-                            </section>
-                        </li>
-                    </ul>
-                    <ul class="links d-none d-lg-flex">
-                        <li class="navcart-icon mobile-icon">
-                            <a href="#" class="header-search js-searchOpen">
-                                <span class="d-lg-none">Search</span>
-                                <span class="icon-box"><i class="las la-search"></i></span>
-                            </a>
-                        </li>
-                        <li class="navcart-icon mobile-icon">
-                            <a href="#" class="header-search">
-                                <span class="d-lg-none">Login</span>
-                                <span class="icon-box">
-                                    <i class="las la-user-alt"></i>
-                                </span>
-                            </a>
-                            <ul class="login-menu"style="min-width: 11rem;">
-                                <li>
-                                    <h6 class="fw-700 mb-2">Hello, John!</h6>
-                                <li>
-                                    <a class="" href="login.php"><i class="las la-user-alt me-2"></i> Login</a>
-                                </li>
-                                </li>
-                                <li>
-                                    <a class="" href="user-dashboard.php"><i class="las la-user-alt me-2"></i> My Profile</a>
-                                </li>
-                                <li>
-                                    <a class="" href="user-wishlist.php"><i class="las la-heart me-2"></i> Wishlist</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="" href="#"><i class="las la-sign-out-alt me-2"></i> Logout</a></li>
-                            </ul>
-                        </li>
-                        <li class="navcart-icon mobile-icon">
-                            <a href="#" class="header-search">
-                                <span class="d-lg-none">Cart</span>
-                                <span class="icon-box">
-                                    <i class="las la-shopping-cart"></i>
-                                </span>
-                                <small>1</small>
-                            </a>
-                        </li>
-                    </ul>
+    <div class="container-fluid">
+        <nav>
+            <input type="checkbox" id="show-menu" class="d-none">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                <div class="logo">
+                    <a href="{{ route('site.landingPage') }}">
+                        <img src="{{ asset('uploads/logo/'.$data['setting']->logo) }}" 
+                            class="img-fluid" alt="{{ $data['setting']->name }}">
+                    </a>
                 </div>
+                <ul class="links">
+                    <li><a href="{{ url('cake') }}">Home</a></li>
+                    <li><a href="{{ url('#') }}">Weeding Cake</a></li>
+                    <li><a href="{{ url('#') }}">Birthday Cake</a></li>
+                    <li><a href="{{ url('#') }}" target="_blank">Farewell Cake</a></li>
+                    <li class="navcart-icon mobile-icon d-lg-none">
+                        <a href="login.php" class="header-search">
+                            <span class="d-lg-none">Login</span>
+                            <span class="icon-box">
+                                <i class="las la-user-alt"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="navcart-icon mobile-icon d-lg-none">
+                        <a href="#" class="header-search">
+                            <span class="d-lg-none">Cart</span>
+                            <span class="icon-box">
+                                <i class="las la-shopping-cart"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="navcart-icon mobile-icon d-lg-none">
+                        <a href="#" class="header-search js-searchOpen">
+                            <span class="d-lg-none">Search</span>
+                            <span class="icon-box"><i class="las la-search"></i></span>
+                        </a>
+                        <section class="search-overlay">
+                            <form class="search-form">
+                                <a href="#" class="btn-search js-searchClose">
+                                    <i class="fa fa-4x fa-times" aria-hidden="true"></i>
+                                </a>
+                                
+                                <input class="search" type="search" placeholder="Search" />
+                            </form>
+                        </section>
+                    </li>
+                </ul>
+                <ul class="links d-none d-lg-flex">
+                    <li class="navcart-icon mobile-icon">
+                        <a href="#" class="header-search js-searchOpen">
+                            <span class="d-lg-none">Search</span>
+                            <span class="icon-box"><i class="las la-search"></i></span>
+                        </a>
+                    </li>
+                    <li class="navcart-icon mobile-icon">
+                        <a href="#" class="header-search">
+                            <span class="d-lg-none">Login</span>
+                            <span class="icon-box">
+                                <i class="las la-user-alt"></i>
+                            </span>
+                        </a>
+                        <ul class="login-menu"style="min-width: 11rem;">
+                            <li>
+                                @auth
+                                <h6 class="fw-700 mb-2">Hello, {{ auth()->user()->name }}!</h6>
+                                @endauth
+
+                                @guest
+                                <li>
+                                    <a class="" href="login.php">
+                                        <i class="las la-user-alt me-2"></i> Login
+                                    </a>
+                                </li>
+                                @endguest
+
+                            </li>
+                            @auth
+                            <li>
+                                <a class="" href="{{ route('user.dashboard') }}">
+                                    <i class="las la-user-alt me-2"></i> My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="" href="{{ route('user.wishlist') }}">
+                                    <i class="las la-heart me-2"></i> Wishlist
+                                </a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <form id="user-logout" method="POST" action="{{ route('user.logout') }}">@csrf</form>
+                            <li>
+                                <a href="javascript:;" onclick="document.querySelector('form#user-logout').submit()">
+                                    <i class="las la-sign-out-alt me-2"></i> Logout
+                                </a>
+                            </li>
+                            @endauth
+
+                        </ul>
+                    </li>
+                    <li class="navcart-icon mobile-icon">
+                        <a href="{{ route('user.cartlist') }}" class="header-search">
+                            <span class="d-lg-none">Cart</span>
+                            <span class="icon-box">
+                                <i class="las la-shopping-cart"></i>
+                            </span>
+                            <small>0</small>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
 
 
 <div class="sticky-icon">

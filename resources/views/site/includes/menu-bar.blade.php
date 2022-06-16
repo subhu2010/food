@@ -2,16 +2,18 @@
     <div class="container">
         <ul class="bottom-menu-nav">
 
-            {{-- @foreach($data['menus'] as $men)
+            @if(isset($data['menus']))
+            @foreach($data['menus'] as $men)
             <li>
                 <a href="{{ route('site.categoryDetail', $men->slug) }}" class="has-mega" title="{{ $men->name }}">
                     <img src="{{ asset('uploads/categories/'.$men->icon) }}">
                     <span>{{ $men->name }}</span>
                 </a>
             </li>
-            @endforeach --}}
+            @endforeach
+            @endif
 
-            {{-- <div class="row mega-menu g-0">
+            <!-- <div class="row mega-menu g-0">
                 <div class="col-3">
                     <a href="#">
                         <div class="menu-item">
@@ -44,7 +46,7 @@
                         </div>
                     </a>
                 </div>
-            </div>  --}}
+            </div> -->
 
         </ul>
     </div>

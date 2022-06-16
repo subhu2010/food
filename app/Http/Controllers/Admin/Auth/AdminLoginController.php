@@ -127,7 +127,7 @@ class AdminLoginController extends Controller{
 
 
 
-    public function logout(Request $request){
+    public function adminLogout(Request $request){
 
         Auth::guard('admin')->logout();
 

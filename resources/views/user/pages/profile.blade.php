@@ -23,218 +23,220 @@
     </div>
 </section>
 
-<div class="dashboard-section">
-    <div class="dashboard-section-space">
-        <div class="row g-0">
-            <div class="col-lg-3 col-md-3">
+<div class="container">
+    <div class="dashboard-section">
+        <div class="dashboard-section-space">
+            <div class="row g-0">
+                <div class="col-lg-3 col-md-3">
 
-                @include("user.includes.side-bar")
+                    @include("user.includes.side-bar")
 
-            </div>
-            <div class="col-lg-9 col-md-9">
-                <div class="user-dash-content">
-                    <h4 class="user-dashboard-title fw-700">Profile</h4>
-                    <div class="user-profile bs-space mt-3">
-                        <div class="form-container">
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <div class="user-dash-content">
+                        <h4 class="user-dashboard-title fw-700">Profile</h4>
+                        <div class="user-profile bs-space mt-3">
+                            <div class="form-container">
 
-                            @if($message = Session::get('success'))
-                                <div class="alert alert-success" role="alert">
-                                  {{ $message }}
-                                </div>
-                            @endif
+                                @if($message = Session::get('success'))
+                                    <div class="alert alert-success" role="alert">
+                                      {{ $message }}
+                                    </div>
+                                @endif
 
-                            @if($message = Session::get('error'))
-                                <div class="alert alert-danger" role="alert">
-                                  {{ $message }}
-                                </div>
-                            @endif
+                                @if($message = Session::get('error'))
+                                    <div class="alert alert-danger" role="alert">
+                                      {{ $message }}
+                                    </div>
+                                @endif
 
-                            <form class="formbox row align-items-center" id="myform" action="{{ route('user.updateProfile') }}" method="POST">
+                                <form class="formbox row align-items-center" id="myform" action="{{ route('user.updateProfile') }}" method="POST">
 
-                                @csrf
+                                    @csrf
 
-                                <div class="col-lg-6">
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-user-alt"></i> 
-                                                </span>
-                                                Full Name
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="text" name="name" class="form-control" placeholder="Full Name" 
-                                            value="{{ auth()->user('web')->name }}" >
-                                        @if($errors->has('name'))
-                                            <span class="text-danger name" >{{ $errors->first('name') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-envelope"></i> 
-                                                </span>
-                                                Email Address
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="email" class="form-control" placeholder="Email" 
-                                            name="email" value="{{ auth()->user('web')->email }}">
-                                        @if($errors->has('email'))
-                                            <span class="text-danger email" >{{ $errors->first('email') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-mobile"></i>
-                                                </span>
-                                                Mobile
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="number" class="form-control"  placeholder="Contact" 
-                                            name="contact" value="{{ auth()->user('web')->contact_number }}">
-                                        @if($errors->has('contact'))
-                                            <span class="text-danger contact" >{{ $errors->first('contact') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="lar la-address-card"></i>
-                                                </span>
-                                                Address
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="text" class="form-control" placeholder="Address" 
-                                            value="{{ auth()->user('web')->address }}" name="address">
-                                        @if($errors->has('address'))
-                                            <span class="text-danger address" >{{ $errors->first('address') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-mobile"></i>
-                                                </span>
-                                                Facebook
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="text" class="form-control"  placeholder="Facebook" 
-                                            name="facebook" value="{{ auth()->user('web')->facebook }}">
-                                        @if($errors->has('facebook'))
-                                            <span class="text-danger facebook" >{{ $errors->first('facebook') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-mobile"></i>
-                                                </span>
-                                                Instagram
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="text" class="form-control"  placeholder="Instagram" 
-                                            name="instagram" value="{{ auth()->user('web')->instagram }}">
-                                        @if($errors->has('instagram'))
-                                            <span class="text-danger instagram" >{{ $errors->first('instagram') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-mobile"></i>
-                                                </span>
-                                                Twitter
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="text" class="form-control"  placeholder="Twitter" 
-                                            name="twitter" value="{{ auth()->user('web')->twitter }}">
-                                        @if($errors->has('twitter'))
-                                            <span class="text-danger twitter" >{{ $errors->first('twitter') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-mobile"></i>
-                                                </span>
-                                                Youtube
-                                            </div>
-                                        </label>
-                                        <input disabled id="editInput" type="text" class="form-control"  placeholder="Youtube" 
-                                            name="youtube" value="{{ auth()->user('web')->youtube }}">
-                                        @if($errors->has('youtube'))
-                                            <span class="text-danger youtube" >{{ $errors->first('youtube') }}</span>
-                                        @endif
-                                    </div>
-                                    <!-- <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-birthday-cake"></i>
-                                                </span>
-                                                Date OF Birth
-                                            </div>
-                                        </label>
-                                        <div class="d-flex justify-content-between">
-                                            <input disabled id="editInput" type="" class="form-control me-3" value="10/23/2048" name="">
-                                            <input disabled id="editInput" type="" class="form-control" value="02/06/1992" name="">
+                                    <div class="col-lg-6">
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-user-alt"></i> 
+                                                    </span>
+                                                    Full Name
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="text" name="name" class="form-control" placeholder="Full Name" 
+                                                value="{{ auth()->user('web')->name }}" >
+                                            @if($errors->has('name'))
+                                                <span class="text-danger name" >{{ $errors->first('name') }}</span>
+                                            @endif
                                         </div>
-                                    </div> -->
-                                    <!-- <div class="formbox-textbox d-flex align-items-center mb-3">
-                                        <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
-                                            <div>
-                                                <span>
-                                                    <i class="las la-user-friends"></i> 
-                                                </span>
-                                                Gender
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-envelope"></i> 
+                                                    </span>
+                                                    Email Address
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="email" class="form-control" placeholder="Email" 
+                                                name="email" value="{{ auth()->user('web')->email }}">
+                                            @if($errors->has('email'))
+                                                <span class="text-danger email" >{{ $errors->first('email') }}</span>
+                                            @endif
+                                        </div>
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-mobile"></i>
+                                                    </span>
+                                                    Mobile
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="number" class="form-control"  placeholder="Contact" 
+                                                name="contact" value="{{ auth()->user('web')->contact_number }}">
+                                            @if($errors->has('contact'))
+                                                <span class="text-danger contact" >{{ $errors->first('contact') }}</span>
+                                            @endif
+                                        </div>
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="lar la-address-card"></i>
+                                                    </span>
+                                                    Address
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="text" class="form-control" placeholder="Address" 
+                                                value="{{ auth()->user('web')->address }}" name="address">
+                                            @if($errors->has('address'))
+                                                <span class="text-danger address" >{{ $errors->first('address') }}</span>
+                                            @endif
+                                        </div>
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-mobile"></i>
+                                                    </span>
+                                                    Facebook
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="text" class="form-control"  placeholder="Facebook" 
+                                                name="facebook" value="{{ auth()->user('web')->facebook }}">
+                                            @if($errors->has('facebook'))
+                                                <span class="text-danger facebook" >{{ $errors->first('facebook') }}</span>
+                                            @endif
+                                        </div>
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-mobile"></i>
+                                                    </span>
+                                                    Instagram
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="text" class="form-control"  placeholder="Instagram" 
+                                                name="instagram" value="{{ auth()->user('web')->instagram }}">
+                                            @if($errors->has('instagram'))
+                                                <span class="text-danger instagram" >{{ $errors->first('instagram') }}</span>
+                                            @endif
+                                        </div>
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-mobile"></i>
+                                                    </span>
+                                                    Twitter
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="text" class="form-control"  placeholder="Twitter" 
+                                                name="twitter" value="{{ auth()->user('web')->twitter }}">
+                                            @if($errors->has('twitter'))
+                                                <span class="text-danger twitter" >{{ $errors->first('twitter') }}</span>
+                                            @endif
+                                        </div>
+                                        <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-mobile"></i>
+                                                    </span>
+                                                    Youtube
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="text" class="form-control"  placeholder="Youtube" 
+                                                name="youtube" value="{{ auth()->user('web')->youtube }}">
+                                            @if($errors->has('youtube'))
+                                                <span class="text-danger youtube" >{{ $errors->first('youtube') }}</span>
+                                            @endif
+                                        </div>
+                                        <!-- <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-birthday-cake"></i>
+                                                    </span>
+                                                    Date OF Birth
+                                                </div>
+                                            </label>
+                                            <div class="d-flex justify-content-between">
+                                                <input disabled id="editInput" type="" class="form-control me-3" value="10/23/2048" name="">
+                                                <input disabled id="editInput" type="" class="form-control" value="02/06/1992" name="">
                                             </div>
-                                        </label>
-                                        <input disabled id="editInput" type="text" class="form-control" value="Male" name="">
-                                    </div> -->
-                                    <div class="formbox-submit">
-                                        <button id="edit" type="button" class="btn btn-one" style="background: var(--primary-color);">Edit</button>
-                                        <button type="submit" class="btn btn-one">Update</button>
+                                        </div> -->
+                                        <!-- <div class="formbox-textbox d-flex align-items-center mb-3">
+                                            <label class="form-label col-4 d-flex justify-content-between align-items-center mb-0">
+                                                <div>
+                                                    <span>
+                                                        <i class="las la-user-friends"></i> 
+                                                    </span>
+                                                    Gender
+                                                </div>
+                                            </label>
+                                            <input disabled id="editInput" type="text" class="form-control" value="Male" name="">
+                                        </div> -->
+                                        <div class="formbox-submit">
+                                            <button id="edit" type="button" class="btn btn-one" style="background: var(--primary-color);">Edit</button>
+                                            <button type="submit" class="btn btn-one">Update</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 flex-center flex-column">
-                                    <div class="user-avatar">
-                                        <a href="#">
-                                            <img class="img-fluid" alt="{{ auth()->user('web')->name }}" src="{{ asset('uploads/profiles/users') }}/{{ !empty(auth()->user('web')->profile)?auth()->user('web')->profile:'default-profile.jpg' }}" >
-                                            <span class="flex-center"><i class="las la-edit"></i></span>
-                                        </a>
+                                    <div class="col-lg-6 flex-center flex-column">
+                                        <div class="user-avatar">
+                                            <a href="#">
+                                                <img class="img-fluid" alt="{{ auth()->user('web')->name }}" src="{{ asset('uploads/profiles/users') }}/{{ !empty(auth()->user('web')->profile)?auth()->user('web')->profile:'default-profile.jpg' }}" >
+                                                <span class="flex-center"><i class="las la-edit"></i></span>
+                                            </a>
+                                        </div>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-one mt-4 d-block" data-bs-toggle="modal" data-bs-target="#passwordModal">
+                                          <i class="las la-key"></i> Change password
+                                      </button>
                                     </div>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-one mt-4 d-block" data-bs-toggle="modal" data-bs-target="#passwordModal">
-                                      <i class="las la-key"></i> Change password
-                                  </button>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <h4 class="user-dashboard-title fw-700">My payment option</h4>
-                    <div class="user-profile bs-space mt-3">
-                        <div class="user-payment">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="payment-img p-4">
-                                        <a href="#">
-                                            <img src="{{ asset('site-assets/images/payment/esewa.png') }}" class="img-fluid" alt="food on ways">
-                                        </a>
+                        <h4 class="user-dashboard-title fw-700">My payment option</h4>
+                        <div class="user-profile bs-space mt-3">
+                            <div class="user-payment">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="payment-img p-4">
+                                            <a href="#">
+                                                <img src="{{ asset('site-assets/images/payment/esewa.png') }}" class="img-fluid" alt="food on ways">
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="payment-img p-4">
-                                        <a href="#">
-                                            <img src="{{ asset('site-assets/images/payment/khalti.svg') }}" class="img-fluid" alt="food on ways">
-                                        </a>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="payment-img p-4">
+                                            <a href="#">
+                                                <img src="{{ asset('site-assets/images/payment/khalti.svg') }}" class="img-fluid" alt="food on ways">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

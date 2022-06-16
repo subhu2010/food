@@ -94,16 +94,16 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="javascript:void(0)">frequently asked question's</a>
+							<a href="javascript:;">frequently asked question's</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">donations</a>
+							<a href="javascript:;">donations</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">feedbacks</a>
+							<a href="javascript:;">feedbacks</a>
 						</li>
 						<li>
-							<a href="privacy.php">terms & policy</a>
+							<a href="javascript:;">terms & policy</a>
 						</li>
 					</ul>
 				</div>
@@ -114,22 +114,22 @@
 				<div class="col-sm-6">
 					<ul>
 						<li>
-							<a href='#' class='facebook' target='_blank'>
+							<a href="{{ $data['setting']->facebook }}" class='facebook' target='_blank'>
 								<i class="lab la-facebook-f"></i>
 							</a>
 						</li>
 						<li>
-							<a href='#' class='twitter' target='_blank'>
-								<i class="lab la-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href='#' class='instagram' target='_blank'>
+							<a href="{{ $data['setting']->instagram }}" class='instagram' target='_blank'>
 								<i class="lab la-instagram"></i>
 							</a>
 						</li>
 						<li>
-							<a href='#' class='youtube' target='_blank'>
+							<a href="{{ $data['setting']->tiktok }}" class='twitter' target='_blank'>
+								<i class="lab la-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="{{ $data['setting']->youtube }}" class='youtube' target='_blank'>
 								<i class="lab la-youtube"></i>
 							</a>
 						</li>
@@ -138,13 +138,15 @@
 				<div class="col-sm-6">
 					<div class="mobile-content text-sm-end">
 						<span>
-							<a href="javascript:void(0)" target="_blank">
-								<img src="{{ asset('site-assets/images/google-play.svg') }}" class="img-fluid" alt="food on ways">
+							<a href="javascript:void;" target="_blank">
+								<img src="{{ asset('site-assets/images/google-play.svg') }}" 
+									class="img-fluid" alt="food on ways">
 							</a>
 						</span>
 						<span>
-							<a href="javascript:void(0)" target="_blank">
-								<img src="{{ asset('site-assets/images/appstore.svg') }}" class="img-fluid" alt="food on ways">
+							<a href="javascript:;" target="_blank">
+								<img src="{{ asset('site-assets/images/appstore.svg') }}" 
+									class="img-fluid" alt="food on ways">
 							</a>
 						</span>
 					</div>
@@ -156,25 +158,25 @@
 				<div class="col-lg-612">
 					<ul class="nav footer-nav">
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="privacy.php">privacy (Updated)</a>
+							<a class="nav-link menu-link" href="javascript:;">privacy (Updated)</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="terms.php">terms & condition</a>
+							<a class="nav-link menu-link" href="javascript:;">terms & condition</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#">accessibility</a>
+							<a class="nav-link menu-link" href="javascript:;">accessibility</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#">my personal information</a>
+							<a class="nav-link menu-link" href="javascript:;">my personal information</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#">© 2021 - 2022</a>
+							<a class="nav-link menu-link" href="javascript:;">© 2021 - 2022</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#">all rights reserved</a>
+							<a class="nav-link menu-link" href="javascript:;">all rights reserved</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#">cookie setting</a>
+							<a class="nav-link menu-link" href="javascript:;">cookie setting</a>
 						</li>
 					</ul>
 				</div>

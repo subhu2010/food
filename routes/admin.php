@@ -44,16 +44,11 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 
 	$route->group(["middleware" => "auth:admin"], function($route){
 
-		$route->get('/logout', [AdminLoginController::class, "logout"])
-			->name('logout');
+		$route->post('/logout', [AdminLoginController::class, "logout"])
+			->name('adminLogout');
 
 		$route->post('/change-password', [AdminLoginController::class, "changePassword"])
 			->name('changePassword');
-
-		$route->post('/logout', [AdminLoginController::class, "logout"])
-			->name('logout');
-
-
 
 
 		/********************************** Admin Route ********************************/
@@ -224,8 +219,8 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 		$route->get('/add-user', [UserController::class, "addUser"])
 		->name("addUser");
 
-		$route->post('/add-user', [UserController::class, "addUser"])
-		->name("addUser");
+		$route->post('/add-user', [UserController::class, "addUserProcess"])
+		->name("addUserProcess");
 
 		$route->get("/edit-user/{user}", [UserController::class, "editUser"])
 		->name("editUser");

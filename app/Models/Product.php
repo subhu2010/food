@@ -35,4 +35,30 @@ class Product extends Model{
         return $this->hasMany(Ingredient::class, "product_id");
     }
 
+
+    public function scopeStatus($query, $value = "Active"){
+        return $query->whereStatus($value);
+    }
+
+
+    public function scopeTrending($query, $value = "Yes"){
+        return $query->whereTrending($value);
+    }
+
+
+    public function scopeSurprise($query, $value = "Yes"){
+        return $query->whereSurprise($value);
+    }
+
+
+    public function scopeRecommend($query, $value = "Yes"){
+        return $query->whereRecommend($value);
+    }
+
+
+    public function scopeVeg($query, $value = "Yes"){
+        return $query->whereVeg($value);
+    }
+
+
 }

@@ -11,15 +11,22 @@
                     <a class="offcanvas-title active" id="pills-menu-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-menu" role="tab" aria-controls="pills-menu" aria-selected="true">Menu</a>
                 </li>
+
+                @guest
                 <li class="nav-item" role="presentation">
                     <a class="offcanvas-title" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login"
-                        role="tab" aria-controls="pills-login" aria-selected="false"><i class="lar la-user"></i></a>
+                        role="tab" aria-controls="pills-login" aria-selected="false">
+                        <i class="lar la-user"></i>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a href="#" class="offcanvas-title" id="pills-cart-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-cart" role="tab" aria-controls="pills-cart" aria-selected="false"><i
-                            class="las la-shopping-cart"></i></a>
+                        data-bs-target="#pills-cart" role="tab" aria-controls="pills-cart" aria-selected="false">
+                        <i class="las la-shopping-cart"></i>
+                    </a>
                 </li>
+                @endguest
+
                 <li class="nav-item" role="presentation">
                     <a type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
                         <i class="las la-times"></i>
@@ -33,27 +40,27 @@
                     <nav class="sidebar mb-nav card py-2 mb-4">
                         <ul class="nav flex-column" id="nav_accordion">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Home </a>
+                                <a class="nav-link" href="{{ route('site.landingPage') }}"> Home </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> About </a>
+                                <a class="nav-link" href="javascript:;"> About </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Cakes </a>
+                                <a class="nav-link" href="javascript:;"> Cakes </a>
                             </li>
                             <li class="nav-item has-submenu">
-                                <a class="nav-link" href="#"> our menu </a>
+                                <a class="nav-link" href="javascript:;"> our menu </a>
                                 <ul class="submenu collapse">
-                                    <li><a class="nav-link" href="#">pizza </a></li>
-                                    <li><a class="nav-link" href="#">burger </a></li>
-                                    <li><a class="nav-link" href="#">momo </a> </li>
-                                    <li><a class="nav-link" href="#">sizzler </a> </li>
-                                    <li><a class="nav-link" href="#">chicken roast </a> </li>
-                                    <li><a class="nav-link" href="#">french fries </a> </li>
+                                    <li><a class="nav-link" href="javascript:;">pizza </a></li>
+                                    <li><a class="nav-link" href="javascript:;">burger </a></li>
+                                    <li><a class="nav-link" href="javascript:;">momo </a> </li>
+                                    <li><a class="nav-link" href="javascript:;">sizzler </a> </li>
+                                    <li><a class="nav-link" href="javascript:;">chicken roast </a> </li>
+                                    <li><a class="nav-link" href="javascript:;">french fries </a> </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Cart </a>
+                                <a class="nav-link" href="{{ route('user.cartlist') }}"> Cart </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"> Contact </a>
@@ -61,6 +68,8 @@
                         </ul>
                     </nav>
                 </div>
+
+                @guest
                 <div class="tab-pane fade" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
                     <div class="login-section ">
                         <div>
@@ -191,6 +200,8 @@
                         </div>
                     </div>
                 </div>
+                @endguest
+
             </div>
         </div>
     </div>

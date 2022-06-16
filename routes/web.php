@@ -98,6 +98,9 @@ Route::group([], function($route){
 	$route->get("/category/{category}", [WebsiteController::class, "categoryDetail"])
 		->name('site.categoryDetail');
 
+	$route->get("/product/{slug}", [WebsiteController::class, "productDetail"])
+		->name('site.productDetail');
+
 
 	/**********************************  Route For Cake Website Controller *****************************/
 	$route->get("/cake", [CakeWebsiteController::class, "cakeLandingPage"])

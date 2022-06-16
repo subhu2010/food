@@ -16,13 +16,19 @@
         @include('site.includes.mobile-nav')
 
         <div class="header-middle-cart clearfix">
+
+            @guest
             <div class="user-icon" id="loginBtn">
-                <a href="#">
+                <a href="javascript:;">
                     <i class="lar la-user"></i>
                 </a>
             </div>
+            @endguest
+
             <div class="login-section ">
                 <div>
+
+                    @guest
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link login-btn active" id="pills-home-login-tab" data-bs-toggle="pill"
@@ -35,6 +41,8 @@
                                 aria-controls="pills-home-register" aria-selected="false">Register</button>
                         </li>
                     </ul>
+                    @endguest
+
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home-login" role="tabpanel"
                             aria-labelledby="pills-home-login-tab">
@@ -155,13 +163,13 @@
                 </div>
             </div>
             <div class="cart-icon">
-                <a href="#">
+                <a href="{{ route('user.wishlist') }}">
                     <i class="lar la-heart"></i>
                     <span class="count">0</span>
                 </a>
             </div>
             <div class="cart-icon">
-                <a href="{{ url('cart') }}">
+                <a href="{{ route('user.cartlist') }}">
                     <i class="las la-shopping-cart"></i>
                     <span class="count">0</span>
                 </a>

@@ -7,19 +7,19 @@
                         <a href="{{ route('site.cakeLandingPage') }}">cakes</a>
                     </li>
                     <li>
-                        <a href="{{url('item-list')}}">foods</a>
+                        <a href="{{ url('item-list') }}">foods</a>
                     </li>
                     <li>
-                        <a href="{{url('foodonways-deals')}}">foodonways Deals</a>
+                        <a href="{{ url('foodonways-deals') }}">foodonways Deals</a>
                     </li>
                     <li>
-                        <a href="{{url('contact-us')}}">Contact</a>
+                        <a href="{{ url('contact-us') }}">Contact</a>
                     </li>
                 </ul>
             </div>
             <div id="logo">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('site-assets/images/logo.png') }}" class="img-fluid"></img>
+                    <img src="{{ asset('uploads/logo/'.$data['setting']->logo) }}" class="img-fluid"></img>
                 </a>
             </div>
 

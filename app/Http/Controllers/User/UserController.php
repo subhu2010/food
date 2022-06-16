@@ -15,7 +15,8 @@ class UserController extends Controller{
 
 	public function dashboard(){
 
-		$data['active'] = 'dashboard';
+		$data = self::initialData();
+		$data['active']  = 'dashboard';
 
 		return view("user.pages.dashboard", compact("data"));
 
@@ -25,7 +26,8 @@ class UserController extends Controller{
 
 	public function profile(){
 
-		$data['active'] = 'profile';
+		$data = self::initialData();
+		$data['active']  = 'profile';
 
 		return view("user.pages.profile", compact("data"));
 
@@ -65,7 +67,8 @@ class UserController extends Controller{
 
 	public function orders(){
 
-		$data['active'] = "orders";
+		$data = self::initialData();
+		$data['active']  = "orders";
 
 		return view("user.pages.orders", compact("data"));
 
@@ -74,7 +77,8 @@ class UserController extends Controller{
 
 	public function reviews(){
 
-		$data['active'] = "reviews";
+		$data = self::initialData();
+		$data['active']  = "reviews";
 
 		return view("user.pages.reviews", compact("data"));
 
@@ -83,7 +87,8 @@ class UserController extends Controller{
 
 	public function wishlist(){
 
-		$data['active'] = "wishlist";
+		$data = self::initialData();
+		$data['active']  = "wishlist";
 
 		return view("user.pages.wishlist", compact("data"));
 
@@ -92,7 +97,8 @@ class UserController extends Controller{
 
 	public function cartlist(){
 
-		$data['active'] = "cartlist";
+		$data = self::initialData();
+		$data['active']  = "cartlist";
 
 		return view("user.pages.cartlist", compact("data"));
 
@@ -101,7 +107,8 @@ class UserController extends Controller{
 
 	public function history(){
 
-		$data['active'] = "history";
+		$data = self::initialData();
+		$data['active']  = "history";
 
 		return view("user.pages.history", compact("data"));
 

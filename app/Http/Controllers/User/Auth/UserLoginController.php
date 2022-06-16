@@ -16,7 +16,7 @@ use Auth;
 class UserLoginController extends Controller{
 
 
-    // use AuthenticatesUsers;
+    use AuthenticatesUsers;
 
 
     protected $redirectTo = RouteServiceProvider::USER_DASH;
@@ -132,11 +132,11 @@ class UserLoginController extends Controller{
     }
 
 
-    public function logout(){
+    public function userLogout(){
 
-        Auth::logout();
+        Auth::guard('web')->logout();
 
-        return redirect()->route('user.login');
+        return redirect()->route('site.landingPage');
 
     }
 

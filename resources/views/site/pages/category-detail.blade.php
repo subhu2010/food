@@ -43,7 +43,7 @@
                                 </div>
                                 <ul class="product-category-list mt-2">
                                     <li class="category-list">
-                                        <a href="#">Asian <span class="count">9</span></a>
+                                        <a href="#">Chicken <span class="count">9</span></a>
                                         <ul class="category-list-child">
                                             <li class="category-list">
                                                 <a href="#">Apple dumpling <span class="count">2</span></a>
