@@ -25,6 +25,14 @@
             </div>
             @endguest
 
+            @auth
+            <div class="user-icon" >
+                <a href="{{ route('user.dashboard') }}">
+                    <i class="lar la-user"></i>
+                </a>
+            </div>
+            @endauth
+
             <div class="login-section ">
                 <div>
 
@@ -46,15 +54,16 @@
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home-login" role="tabpanel"
                             aria-labelledby="pills-home-login-tab">
-                            <form>
+                            <form method="POST" action="{{ route('user.loginProcess') }}">
+
+                                @csrf
+
                                 <div class="form-group mb-4">
                                     <label>USERNAME OR EMAIL ADDRESS *</label>
-                                    <input class="form-control"></input>
+                                    <input class="form-control" type="email" name="email" placeholder="Enter Email"></input>
                                 </div>
                                 <div class="form-group mb-4">
                                     <label>PASSWORD *</label>
-                                    {{-- <input class="form-control" id="password-input" type="password"><a href="#"
-                                        class="password-control"></a></input> --}}
                                     <div class="password">
                                         <input class="form-control" name="password" type="password" id="password"
                                             placeholder="Password">

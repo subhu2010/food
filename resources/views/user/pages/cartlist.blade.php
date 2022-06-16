@@ -118,7 +118,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="{{url('checkout-confirm')}}" class="btn checkout">Proceed to checkout</a>
+                        <a href="{{ url('/user/checkout-confirm') }}" class="btn checkout">Proceed to checkout</a>
                     </div>
                 </div>
             </div>

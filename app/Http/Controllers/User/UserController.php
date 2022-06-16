@@ -4,7 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\{Product, User};
 use Auth;
 use Image;
 use File;
@@ -111,6 +111,17 @@ class UserController extends Controller{
 		$data['active']  = "history";
 
 		return view("user.pages.history", compact("data"));
+
+	}
+
+
+	public function checkoutConfirm(){
+
+		$data = self::initialData();
+
+		$data["similar"] = Product::status()->inRandomOrder()->take(5)->get();
+
+		return view("user.pages.checkout-confirm", compact("data"));
 
 	}
 

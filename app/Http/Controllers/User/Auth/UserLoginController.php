@@ -32,6 +32,8 @@ class UserLoginController extends Controller{
         // return view("user.auth.login");
 
         Auth::guard("web")->attempt(["email" => "user@email.com", "password" => "12345678"]);
+
+        return redirect()->route("user.dashboard");
     }
 
 

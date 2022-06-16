@@ -216,6 +216,13 @@ Route::group([], function($route){
 
 			$route->post('/logout', [UserLoginController::class, "logout"])
 				->name('logout');
+
+
+
+			$route->get("/checkout-confirm", [UserController::class, "checkoutConfirm"])
+				->name("checkoutConfirm");
+
+
 		});
 
 

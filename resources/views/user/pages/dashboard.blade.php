@@ -2,6 +2,9 @@
 
 @section("page_title", "User Dashboard")
 
+@php
+    $user = auth()->user();
+@endphp
 
 @section('content')
 
@@ -35,8 +38,8 @@
                             <div class="row ">
                                 <div class="col-lg-7">
                                     <div class="user-desc bs-space">
-                                        <h5 class="user-name">{{ ucwords(auth()->user('web')->name) }}</h5>
-                                        <p class="user-bio">{{ auth()->user('web')->bio }}</p>
+                                        <h5 class="user-name">{{ ucwords($user->name) }}</h5>
+                                        <p class="user-bio">{{ $user->bio }}</p>
                                         
                                     </div>
                                 </div>
@@ -44,7 +47,7 @@
                                     <div class="user-avatar-section bs-space d-flex">
                                         <div class="user-avatar me-2 text-center">
                                             @php
-                                                $profile = auth()->user('web')->profile_photo;
+                                                $profile = $user->profile_photo;
                                                 $profile = !empty($profile) ? $profile : "default-profile.jpg";
                                             @endphp
                                             <img src="{{ asset('uploads/profiles/users/'.$profile) }}" 
@@ -54,37 +57,37 @@
                                             <table class="table table-borderless">
                                                 <tbody>
                                                     <tr>
-                                                        <td class="col-3 fw-700">Name : </td>
-                                                        <td class="col">{{ ucwords(auth()->user('web')->name) }}</td>
+                                                        <td class="col-3 fw-700">Name: </td>
+                                                        <td class="col">{{ ucwords($user->name) }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="col-3 fw-700">Email :</td>
-                                                        <td class="col">{{ ucwords(auth()->user('web')->email) }}</td>
+                                                        <td class="col-3 fw-700">Email:</td>
+                                                        <td class="col">{{ ucwords($user->email) }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="col-3 fw-700">Phone :</td>
-                                                        <td class="col">{{ ucwords(auth()->user('web')->contact_number) }}</td>
+                                                        <td class="col">{{ ucwords($user->contact_number) }}</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                             <ul class="user-social">
                                                 <li>
-                                                    <a href="{{ auth()->user('web')->facebook }}" class="flex-center" target="_blank">
+                                                    <a href="{{ $user->facebook }}" class="flex-center" target="_blank">
                                                     	<i class="lab la-facebook-f"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ auth()->user('web')->twitter }}" class="flex-center" target="_blank">
+                                                    <a href="{{ $user->twitter }}" class="flex-center" target="_blank">
                                                     	<i class="lab la-twitter"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ auth()->user('web')->instagram }}" class="flex-center" target="_blank">
+                                                    <a href="{{ $user->instagram }}" class="flex-center" target="_blank">
                                                     	<i class="lab la-instagram"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ auth()->user('web')->youtube }}" class="flex-center" target="_blank">
+                                                    <a href="{{ $user->youtube }}" class="flex-center" target="_blank">
                                                     	<i class="lab la-youtube"></i>
                                                     </a>
                                                 </li>
@@ -164,7 +167,8 @@
                                         <div class="bs-space">
                                             <div class="video-content" style="padding: 0;background: none;height: 265px;">
                                                 <video controls autoplay>
-                                                	<source src="{{ asset('site-assets/images/1.mp4') }}" autoplay type="video/mp4"> 
+                                                	<source src="{{ asset('site-assets/images/1.mp4') }}" autoplay 
+                                                        type="video/mp4"> 
                                                 </video>
                                             </div>
                                         </div>

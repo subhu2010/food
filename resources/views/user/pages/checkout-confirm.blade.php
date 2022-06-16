@@ -34,13 +34,14 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <input type="text" class="form-control  fw-700" value="Sarita Neupane"
-                                                readonly />
+                                            <input type="text" class="form-control  fw-700" 
+                                                value="{{ auth()->user()->name }}" readonly />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" class="form-control fw-700" value="9800921738" readonly>
+                                            <input type="text" class="form-control fw-700" 
+                                                value="{{ auth()->user()->contact_number }}" readonly>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -209,7 +210,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                @include ('site.includes.similar-product')
+                @include ('site.includes.similar-product', ["products" => $data["similar"]])
             </div>
         </div>
     </div>
