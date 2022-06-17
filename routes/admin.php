@@ -24,6 +24,7 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 		$route->post('/', [AdminLoginController::class, "loginProcess"])
 			->name('loginProcess');
 
+
 		/********************************** Admin Password Reset Route ********************************/
 
 		$route->get('/password/reset', [AdminForgotPasswordController::class, "showLinkRequestForm"])
@@ -45,7 +46,7 @@ Route::group(["namespace" => "Admin", "as" => "admin."], function ($route){
 	$route->group(["middleware" => "auth:admin"], function($route){
 
 		$route->post('/logout', [AdminLoginController::class, "logout"])
-			->name('adminLogout');
+			->name('logout');
 
 		$route->post('/change-password', [AdminLoginController::class, "changePassword"])
 			->name('changePassword');
