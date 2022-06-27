@@ -41,9 +41,130 @@
                                         Category
                                     </h3>
                                 </div>
-                                <ul class="product-category-list mt-2">
+                                <div class="accordion product-category-list mt-2"" id="productcateforyAccordion">
+                                    <ul class="accordion-item border-0">
+                                      <li class="category-list" id="headingOne">
+                                        <a  href="javascript:void(0)" class="" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Chicken <span class="count">9</span>
+                                        </a>
+                                      </li>
+                                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#productcateforyAccordion">
+                                        <div class="accordion-body">
+                                            <ul class="category-list-child">
+                                                <li class="category-list">
+                                                    <a href="#">Apple dumpling <span class="count">2</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Aloo paratha <span class="count">3</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Breadfruit <span class="count">1</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Egg bhurji <span class="count">6</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Muesli <span class="count">3</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </ul>
+                                    <ul class="accordion-item border-0">
+                                      <li class="category-list" id="headingTwo">
+                                        <a  href="javascript:void(0)" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            Burger <span class="count">12</span>
+                                        </a>
+                                      </li>
+                                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#productcateforyAccordion">
+                                        <div class="accordion-body">
+                                            <ul class="category-list-child">
+                                                <li class="category-list">
+                                                    <a href="#">Cheesy <span class="count">1</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Extra Component <span class="count">3</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Veg <span class="count">5</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </ul>
+                                    <ul class="accordion-item border-0">
+                                      <li class="category-list" id="headingThree">
+                                        <a  href="javascript:void(0)" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            Pizza <span class="count">9</span>
+                                        </a>
+                                      </li>
+                                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#productcateforyAccordion">
+                                        <div class="accordion-body">
+                                            <ul class="category-list-child">
+                                                <li class="category-list">
+                                                    <a href="#">Cheesy <span class="count">2</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Extra Component <span class="count">1</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </ul>
+                                    <ul class="accordion-item border-0">
+                                      <li class="category-list" id="headingFour">
+                                        <a  href="javascript:void(0)" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                            Momo <span class="count">10</span>
+                                        </a>
+                                      </li>
+                                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#productcateforyAccordion">
+                                        <div class="accordion-body">
+                                            <ul class="category-list-child">
+                                                <li class="category-list">
+                                                    <a href="#">Veg <span class="count">2</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Chicken <span class="count">1</span></a>
+                                                </li>
+                                                <li class="category-list">
+                                                    <a href="#">Buff <span class="count">1</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </ul>
+                                    <ul class="accordion-item border-0">
+                                        <li class="category-list" id="headingFive">
+                                          <a  href="javascript:void(0)" class=" collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                              Chicken <span class="count">9</span>
+                                          </a>
+                                        </li>
+                                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#productcateforyAccordion">
+                                          <div class="accordion-body">
+                                              <ul class="category-list-child">
+                                                  <li class="category-list">
+                                                      <a href="#">Apple dumpling <span class="count">2</span></a>
+                                                  </li>
+                                                  <li class="category-list">
+                                                      <a href="#">Aloo paratha <span class="count">3</span></a>
+                                                  </li>
+                                                  <li class="category-list">
+                                                      <a href="#">Breadfruit <span class="count">1</span></a>
+                                                  </li>
+                                                  <li class="category-list">
+                                                      <a href="#">Egg bhurji <span class="count">6</span></a>
+                                                  </li>
+                                                  <li class="category-list">
+                                                      <a href="#">Muesli <span class="count">3</span></a>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                        </div>
+                                      </ul>
+                                  </div>
+                                {{-- <ul class="product-category-list mt-2">
                                     <li class="category-list">
-                                        <a href="#">Chicken <span class="count">9</span></a>
+                                        <a href="javascript:void(0)">Chicken <span class="count">9</span></a>
                                         <ul class="category-list-child">
                                             <li class="category-list">
                                                 <a href="#">Apple dumpling <span class="count">2</span></a>
@@ -93,7 +214,7 @@
                                     <li class="category-list">
                                         <a href="#">Chowmine <span class="count">8</span></a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </aside>
                             <aside id="product-category" class="product-category mb-4">
                                 <div class="product-category-header">
@@ -304,8 +425,8 @@
         </div>
 </section>
 
-<section id="overlayCart" class="overlay-cart">
-    <button type="button" class="btn-close" aria-label="Close"></button>
+<section id="overlayCart" class=" overlay-cart">
+    <button type="button" class="btn-close"  aria-label="Close"></button>
     <div class="container">
         <div class="row">
             <div class="offset-lg-3 col-lg-6">
@@ -419,7 +540,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-close">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="firstModal" aria-label="Close"></button>
             </div>
             <div class="modal-body items-details container">
                 <div class="row">
@@ -563,7 +684,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 </div>
 

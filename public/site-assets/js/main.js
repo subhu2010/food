@@ -157,6 +157,8 @@ $(".cart-btn").on("click", function (event) {
 
 $(".btn-close").click(function () {
     $("#overlayCart").removeClass("active");
+    $("#quickView").modal('hide');
+    $('.modal-backdrop').remove();
 });
 
 function openFiler() {
@@ -225,6 +227,11 @@ function showDiv() {
     }
     // document.getElementById('qty').style.display = "flex";
 }
+
+
+$(".category-list").on("click", function (event) {
+    $(".category-list-child").toggleClass("active");
+});
 
 $(".home-main-carousel").owlCarousel({
     loop: true,

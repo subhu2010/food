@@ -17,6 +17,22 @@
                     </li>
                 </ul>
             </div>
+            {{-- <div class="top-left-menu d-none d-xl-block">
+                <ul class="top-menu">
+                    <li>
+                        <a href="{{ route('site.cakeLandingPage') }}">cakes</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('item-list') }}">foods</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('foodonways-deals') }}">foodonways Deals</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('contact-us') }}">Contact</a>
+                    </li>
+                </ul>
+            </div> --}}
             <div id="logo">
                 <a href="{{ url('/') }}">
                     <img src="{{ asset('uploads/logo/'.$data['setting']->logo) }}" class="img-fluid"></img>
