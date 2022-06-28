@@ -1,6 +1,6 @@
 @extends("site.layouts.layout")
 
-@section("page_title", "Food On Ways")
+@section("page_title", "About Us")
 
 @section("content")
 
@@ -53,7 +53,7 @@
 </div>
 
 
-<div class="pa-t">
+<!-- <div class="pa-t">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
@@ -70,8 +70,8 @@
         </div>
     </div>
 </div>
-
-<div class="about-contact pa-tb">
+ -->
+<!-- <div class="about-contact pa-tb">
     <div class="container">
         <div class="section-title">
             <h3>Contact Us</h3>
@@ -108,7 +108,7 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
 
 
 

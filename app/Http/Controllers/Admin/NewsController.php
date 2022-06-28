@@ -17,7 +17,7 @@ class NewsController extends Controller{
 
         $data["news"] = News::get();
 
-        return view("admin.pages.news.news-list", compact("data"));
+        return view("admin.pages.news.news-list", $data);
 
     }
 

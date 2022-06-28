@@ -62,5 +62,64 @@ class WebsiteController extends Controller{
 
 	}
 
+
+
+	public function blogDetail($blog){
+
+		// return $slug;
+
+		$data = $this->initialData();
+
+		return view("site.pages.blog-detail", compact("data"));
+
+	}
+
+
+
+	public function page($slug){
+
+		$data = $this->initialData();
+
+		$page = "";
+
+		switch($slug):
+
+			case "blogs":
+				$page = "blogs";
+				break;
+
+			case "about-us":
+				$page = "about-us";
+				break;
+
+			case "contact-us":
+				$page = "contact-us";
+				break;
+
+			case "faq";
+				$page = "faq";
+				break;
+
+			case "terms-condition":
+				$page = "terms-condition";
+				break;
+
+			case "terms-policy":
+				$page = "terms-policy";
+				break;
+
+			case "foodonways-deals":
+				$page = "foodonways-deals";
+				break;
+
+			default:
+				return redirect()->route("site.landingPage");
+
+		endswitch;
+
+		return view("site.pages.".$page, compact("data"));
+
+	}
+
     
 }

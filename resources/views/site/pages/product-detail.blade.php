@@ -49,14 +49,13 @@
                         <ul class="item-weight-holder">
                             <li>
                                 <span class="item-weight">
-                                    Serving size:
-                                    <span class="item-weight-values">
-                                        290 g </span>
+                                    Serving Size:
+                                    <span class="item-weight-values">{{ $product->serving_size }}</span>
                                 </span>
                             </li>
                         </ul>
                     </div>
-                    <div class="nutrition-summary">
+                    <!-- <div class="nutrition-summary">
                         <ul class="nutrition-list">
                             <li class="nutrition-energy">
                                 <span class="nutrition-list-label">Energy</span>
@@ -93,9 +92,9 @@
                             *DI: Recommended Daily Intake based on 2000 calories diet
                         </span>
                         <span class="nutrition-allergens fw-600">
-                            Allergens: Milk, Eggs, Soy, Glutten
+                            Allergens: {{ $product->ingredient }}
                         </span>
-                    </div>
+                    </div> -->
                     <div class="icon-star">
                         <span class="las la-star checked"></span>
                         <span class="las la-star checked"></span>
@@ -104,7 +103,7 @@
                         <span class="las la-star"></span>
                     </div>
                     <p class="price my-4">Rs. {{ number_format($product->price) }}</p>
-                    <div class="product-addon">
+                    <!-- <div class="product-addon">
                         <h3 class="addon-name">*NEW: Negative Add-ons </h3>
                         <div class="addon-description">
                             <p>Helpful when you want to remove ingredients and decrease the product price.</p>
@@ -133,35 +132,35 @@
                                 NO JALAPENO (–Rs 40)
                             </label><br>
                         </p>
-                    </div>
+                    </div> -->
                     <div class="product-addon">
                         <h3 class="addon-name">EXTRA TOPPINGS</h3>
                         <p class="checkbox">
                             <input type="checkbox" class="show-total" id="5" name="5" value="">
                             <label class="show-total" for="5" class="fw-700">
-                                EXTRA CHEDDAR (Rs 50)
+                                EXTRA CHEDDAR
                             </label><br>
                         </p>
                         <p class="checkbox">
                             <input type="checkbox" class="show-total" id="6" name="6" value="">
                             <label class="show-total" for="6" class="fw-700">
-                                SMOKED CHEESE (Rs 40)
+                                SMOKED CHEESE
                             </label><br>
                         </p>
                         <p class="checkbox">
                             <input type="checkbox" class="show-total" id="7" name="7" value="">
                             <label class="show-total" for="7" class="fw-700"> 
-                                FRIED ONION (Rs 100)
+                                FRIED ONION
                             </label><br>
                         </p>
                         <p class="checkbox">
                             <input type="checkbox" class="show-total" id="8" name="8" value="">
                             <label class="show-total" for="8" class="fw-700"> 
-                                SAUTEED ‘SHROOMS (Rs 40)
+                                SAUTEED ‘SHROOMS‘
                             </label><br>
                         </p>
                     </div>
-                    <div class="addon-total">
+                    <!-- <div class="addon-total">
                         <dl class="product-addon-totals">
                             <dt>Options total:</dt>
                             <dd>
@@ -176,7 +175,7 @@
                                 </strong>
                             </dd>
                         </dl>
-                    </div>
+                    </div> -->
                     <div class="addon-order">
                         <div class="quantity">
                             <input type="number" min="1" max="100" value="1" />
@@ -188,7 +187,7 @@
                     </div>
                     <div class="product-meta">
                         <span class="posted-in">Category:</span>
-                        <a href="javascrip:void(0)" rel="tag">Burgers</a>
+                        <a href="javascrip:void(0)" rel="tag">{{ $product->category->name }}</a>
                     </div>
                 </div>
             </div>

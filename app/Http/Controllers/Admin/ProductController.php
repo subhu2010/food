@@ -45,8 +45,10 @@ class ProductController extends Controller{
                 "name" => $request->name,
                 "slug" => strtolower(Str::slug($request->name).'-'.Str::random(5)),
                 "description" => $request->desc,
-                "price"     => $request->price,
-                "discount"  => $request->discount,
+                "price"    => $request->price,
+                "discount" => $request->discount,
+                "serving_size" => $request->serving_size,
+                "ingredient"   => $request->ingredient,
                 "status"    => $request->status,
                 "veg"       => $request->veg,
                 "surprise"  => $request->surprise,
@@ -111,6 +113,8 @@ class ProductController extends Controller{
             $product->price     = $request->price;
             $product->discount  = $request->discount;
             $product->status    = $request->status;
+            $product->serving_size = $request->serving_size;
+            $product->ingredient   = $request->ingredient;
             $product->veg       = $request->veg;
             $product->surprise  = $request->surprise;
             $product->trending  = $request->trending;

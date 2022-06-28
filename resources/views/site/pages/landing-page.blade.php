@@ -676,23 +676,25 @@
                 </div>
                 <div class="col-6">
                     <div class="default-btn text-end">
-                        <a href="#" class="btn see-btn">see all <i class="las la-angle-right"></i></a>
+                        <a href="{{ route('site.page', 'blogs') }}" class="btn see-btn">see all 
+                            <i class="las la-angle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="row">
+
                 <div class="col-lg-4 col-md-4">
                     <div class="blog-card">
-                        <a href="{{url('blog-detail')}}">
+                        <a href="{{ route('site.blogDetail', 'blog-details') }}">
                             <div class="blog-card-img">
-                                <img src="{{ asset('site-assets/images/5.jpg') }}" class="img-fluid" alt="food on ways">
+                                <img src="{{ asset('site-assets/images/5.jpg') }}" 
+                                    class="img-fluid" alt="food on ways">
                             </div>
                             <div class="blog-content">
                                 <h6>Breakfast</h6>
                                 <h5 class="fw-700" title="Tortor posuere ac ut consequat semper viverra nam libero.">
-                                    Tortor
-                                    posuere
-                                    ac ut consequat semper viverra nam libero.</h5>
+                                    Tortor posuere ac ut consequat semper viverra nam libero.</h5>
                                 <p>Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Facilisi cras
                                     fermentum odio eu feugiat pretium nibh ipsum consequat.</p>
                                 <ul class="blog-meta">
@@ -706,18 +708,18 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-4">
                     <div class="blog-card">
-                        <a href="{{url('blog-detail')}}">
+                        <a href="{{ route('site.blogDetail', 'blog-details') }}">
                             <div class="blog-card-img">
-                                <img src="{{ asset('site-assets/images/2.jpg') }}" class="img-fluid" alt="food on ways">
+                                <img src="{{ asset('site-assets/images/2.jpg') }}" 
+                                    class="img-fluid" alt="food on ways">
                             </div>
                             <div class="blog-content">
                                 <h6>Breakfast</h6>
                                 <h5 class="fw-700" title="Tortor posuere ac ut consequat semper viverra nam libero.">
-                                    Tortor
-                                    posuere
-                                    ac ut consequat semper viverra nam libero.</h5>
+                                    Tortor posuere ac ut consequat semper viverra nam libero.</h5>
                                 <p>Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Facilisi cras
                                     fermentum odio eu feugiat pretium nibh ipsum consequat.</p>
                                 <ul class="blog-meta">
@@ -731,18 +733,18 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-4">
                     <div class="blog-card">
-                        <a href="{{url('blog-detail')}}">
+                        <a href="{{ route('site.blogDetail', 'blog-details') }}">
                             <div class="blog-card-img">
-                                <img src="{{ asset('site-assets/images/8.jpg') }}" class="img-fluid" alt="food on ways">
+                                <img src="{{ asset('site-assets/images/8.jpg') }}" 
+                                    class="img-fluid" alt="food on ways">
                             </div>
                             <div class="blog-content">
                                 <h6>Breakfast</h6>
                                 <h5 class="fw-700" title="Tortor posuere ac ut consequat semper viverra nam libero.">
-                                    Tortor
-                                    posuere
-                                    ac ut consequat semper viverra nam libero.</h5>
+                                    Tortor posuere ac ut consequat semper viverra nam libero.</h5>
                                 <p>Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Facilisi cras
                                     fermentum odio eu feugiat pretium nibh ipsum consequat.</p>
                                 <ul class="blog-meta">
@@ -756,6 +758,7 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -769,6 +772,7 @@
                         <img src="{{ asset('site-assets/images/menu/13.png') }}" alt="">
                     </div>
                 </div>
+
                 <div class="col-lg-4">
                     <div class="moto-content py-5">
                         <h4>can't decide?</h4>
@@ -799,6 +803,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-lg-4">
                     <div class="moto-content-live py-5">
                         <div class="live-section px-4">
@@ -820,6 +825,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

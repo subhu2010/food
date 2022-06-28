@@ -13,11 +13,13 @@ class Product extends Model{
 
     protected $table = "products";
 
+    // protected $casts = ["ingredient" => "array"];
+
 
     protected $fillable = [
                             "category_id", "type", "name", "slug", "thumb", "pics", "description", "status", 
-                            "price", "discount", "surprise", "trending", "recommend", "veg", 
-                            "created_at", "updated_at"
+                            "price", "discount", "serving_size", "ingredient", "surprise", "trending", 
+                            "recommend", "veg", "created_at", "updated_at"
                         ];
 
 

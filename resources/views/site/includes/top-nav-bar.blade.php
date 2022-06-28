@@ -10,15 +10,15 @@
                         <a href="{{ url('item-list') }}">foods</a>
                     </li>
                     <li>
-                        <a href="{{ url('foodonways-deals') }}">foodonways Deals</a>
+                        <a href="{{ route('site.page', 'foodonways-deals') }}">foodonways Deals</a>
                     </li>
                     <li>
-                        <a href="{{ url('contact-us') }}">Contact</a>
+                        <a href="{{ route('site.page', 'contact-us') }}">Contact</a>
                     </li>
                 </ul>
             </div>
             <div id="logo">
-                <a href="{{ url('/') }}">
+                <a href="{{ route('site.landingPage') }}">
                     <img src="{{ asset('uploads/logo/'.$data['setting']->logo) }}" class="img-fluid"></img>
                 </a>
             </div>
@@ -41,8 +41,8 @@
                     <li>
                         <div class="location-input">
                             <i class="las la-map-marker"></i>
-                            <input type="text" class="form-control" disabled readonly value="kathmandu, Nepal"
-                            data-bs-toggle="modal" data-bs-target="#topLocation">
+                            <input type="text" class="form-control" value="kathmandu, Nepal" 
+                                disabled readonly data-bs-toggle="modal" data-bs-target="#topLocation">
                         </div>
                     </li>
                 </ul>

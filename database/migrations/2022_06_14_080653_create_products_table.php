@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration{
             $table->text("description")->nullable();
             $table->integer("price")->default(0);
             $table->integer("discount")->default(0);
+            $table->string("serving_size")->nullable();
+            $table->string("ingredient")->nullable();
             $table->enum("status", ["Active", "Banned"])->default("Banned");
             $table->enum("surprise", ["Yes", "No"])->default("No");
             $table->enum("trending", ["Yes", "No"])->default("No");

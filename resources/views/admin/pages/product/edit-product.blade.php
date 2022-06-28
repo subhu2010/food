@@ -129,7 +129,7 @@
                                             style="@if(!empty($product->pics))display: block; @endif" 
                                             alt="{{ $product->name }}" >
                                     </div>
-                                    <label for="file-ip-1">Upload Icon</label>
+                                    <label for="file-ip-1">Upload Image</label>
                                     <input type="file" id="file-ip-1" name="pics" accept="image/*" 
                                         onchange="showPreview(event);">
                                     @error('pics')

@@ -1,6 +1,6 @@
 @extends("site.layouts.layout")
 
-@section("page_title", "Food On Ways")
+@section("page_title", "Frequently Asked Questions")
 
 @section("content")
 

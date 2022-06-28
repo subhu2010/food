@@ -1,6 +1,6 @@
 @extends("site.layouts.layout")
 
-@section("page_title", "Food On Ways")
+@section("page_title", "Blog Details")
 
 @section("content")
 
@@ -10,8 +10,12 @@
         <h1>Blog Title</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb d-flex justify-content-center">
-                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{{url('/')}}">Blog</a></li>
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/') }}">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/') }}">Blog</a>
+                </li>
             </ol>
         </nav>
     </div>
@@ -23,7 +27,7 @@
             <div class="col-lg-8">
                 <div class="blog-article">
                     <div class="blog-article-img">
-                        <img src="{{asset('site-assets/images/1.jpg')}}" alt="Images">
+                        <img src="{{ asset('site-assets/images/1.jpg') }}" alt="Images">
                     </div>
                     <div class="blog-status">
                         <div class="row">
@@ -60,21 +64,19 @@
                     </div>
                     <div class="blog-article-share">
                         <ul class="social-icon">
+                            <li>Share This Post</li>
                             <li>
-                                Share This Post
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
+                                <a href="javascript:;" target="_blank">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="javascript:;" target="_blank">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="javascript:;" target="_blank">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                             </li>
@@ -87,51 +89,55 @@
                     <div class="side-bar-widget">
                         <h3 class="title">Recent Posts</h3>
                         <div class="widget-popular-post">
+
                             <article class="item">
-                                <a href="blog-detail.php" class="thumb">
+                                <a href="{{ route('site.blogDetail', 'blog-detail') }}" class="thumb">
                                     <span class="full-image cover bg1" role="img">
                                         <img src="https://source.unsplash.com/random/300x200?sig=1">
                                     </span>
                                 </a>
                                 <div class="info">
                                     <h4 class="title-text">
-                                        <a href="blog-detail.php">
+                                        <a href="{{ route('site.blogDetail', 'blog-detail') }}">
                                             Success Depends on Strategy and Plan
                                         </a>
                                     </h4>
                                     <p>March 20, 2021</p>
                                 </div>
                             </article>
+
                             <article class="item">
-                                <a href="blog-detail.php" class="thumb">
-                                    <span class="full-image cover bg2" role="img">
+                                <a href="{{ route('site.blogDetail', 'blog-detail') }}" class="thumb">
+                                    <span class="full-image cover bg1" role="img">
                                         <img src="https://source.unsplash.com/random/300x200?sig=2">
                                     </span>
                                 </a>
                                 <div class="info">
                                     <h4 class="title-text">
-                                        <a href="blog-detail.php">
-                                            Reaching the Goal With Best Consulting
+                                        <a href="{{ route('site.blogDetail', 'blog-detail') }}">
+                                            Success Depends on Strategy and Plan
                                         </a>
                                     </h4>
-                                    <p>June 11, 2021</p>
+                                    <p>March 20, 2021</p>
                                 </div>
                             </article>
+
                             <article class="item">
-                                <a href="blog-detail.php" class="thumb">
-                                    <span class="full-image cover bg3" role="img">
+                                <a href="{{ route('site.blogDetail', 'blog-detail') }}" class="thumb">
+                                    <span class="full-image cover bg1" role="img">
                                         <img src="https://source.unsplash.com/random/300x200?sig=3">
                                     </span>
                                 </a>
                                 <div class="info">
                                     <h4 class="title-text">
-                                        <a href="blog-detail.php">
-                                            Aim is to Reach My Goal With Best Plan
+                                        <a href="{{ route('site.blogDetail', 'blog-detail') }}">
+                                            Success Depends on Strategy and Plan
                                         </a>
                                     </h4>
-                                    <p>August 10, 2021</p>
+                                    <p>March 20, 2021</p>
                                 </div>
                             </article>
+                            
                         </div>
                     </div>
                 </div>
@@ -139,6 +145,5 @@
         </div>
     </div>
 </div>
-
 
 @endsection

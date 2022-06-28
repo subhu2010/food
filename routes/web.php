@@ -44,9 +44,6 @@ Route::get('about-us', function(){
     return view('site.pages.about-us');
 });
 
-Route::get('blog-detail', function(){
-    return view('site.pages.blog-detail');
-});
 
 Route::get('blog-list', function(){
     return view('site.pages.blog-list');
@@ -113,7 +110,15 @@ Route::group([], function($route){
 		->name('site.categoryDetail');
 
 	$route->get("/product/{slug}", [WebsiteController::class, "productDetail"])
-		->name('site.productDetail');
+		->name("site.productDetail");
+
+
+	$route->get("/page/{slug}", [WebsiteController::class, "page"])
+		->name("site.page");
+
+
+	$route->get("/blog/{blog}", [WebsiteController::class, "blogDetail"])
+		->name("site.blogDetail");
 
 
 	/**********************************  Route For Cake Website Controller *****************************/

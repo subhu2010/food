@@ -107,6 +107,24 @@
                                 @enderror
                             </div>
 
+                            <div class="form-group">
+                                <label class="form-label" for="ingredient">Service Size</label>
+                                <input type="text" name="ingredient" class="form-control" id="ingredient" 
+                                    value="{{ old('ingredient')??'' }}" placeholder="Egg, Salt, Sugar ...">
+                                @error('ingredient')
+                                <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="serving_size">Serving Size</label>
+                                <input type="text" name="serving_size" class="form-control" id="serving_size" 
+                                    value="{{ old('serving_size')??'' }}" placeholder="200g">
+                                @error('serving_size')
+                                <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+
                         </div>
 
                         <div class="col-lg-6">

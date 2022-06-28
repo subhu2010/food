@@ -6,32 +6,32 @@
 			<div class="col-lg-3 col-md-3">
 				<div class="footer-widget footer-about-dtl">
 					<div class="footer-title">
-						<h4>about us</h4>
+						<h4>About Us</h4>
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="{{url('about-us')}}">Our history</a>
+							<a href="{{ route('site.page', 'about-us') }}">Our History</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Join Us</a>
+							<a href="{{ route('site.page', 'join-us') }}">Join Us</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Our Team</a>
+							<a href="{{ route('site.page', 'our-team') }}">Our Team</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Our Strength</a>
+							<a href="{{ route('site.page', 'our-strength') }}">Our Strength</a>
 						</li>
 						<li>
-							<a href="{{url('blog-list')}}">Blog</a>
+							<a href="{{ route('site.page', 'blogs') }}">Blogs</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Corporate Order</a>
+							<a href="{{ route('site.page', 'corporate-order') }}">Corporate Order</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Bulk/Party Order</a>
+							<a href="{{ route('site.page', 'bulk-party') }}">Bulk/Party Order</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Diet Plan</a>
+							<a href="{{ route('site.page', 'diet-plan') }}">Diet Plan</a>
 						</li>
 					</ul>
 				</div>
@@ -43,22 +43,22 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="javascript:void(0)">Refund Policy</a>
+							<a href="{{ route('site.page', 'refund-policy') }}">Refund Policy</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Cancelation Policy</a>
+							<a href="{{ route('site.page', 'cancelation-policy') }}">Cancelation Policy</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Payments & Security</a>
+							<a href="{{ route('site.page', 'payment-security') }}">Payments & Security</a>
 						</li>
 						<li>
-							<a href="{{url('terms-policy')}}">Privacy Policy</a>
+							<a href="{{ route('site.page', 'privacy-poliicy') }}">Privacy Policy</a>
 						</li>
 						<li>
-							<a href="{{url('terms-policy')}}">Terms & Conditions</a>
+							<a href="{{ route('site.page', 'terms-condition') }}">Terms & Conditions</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Offers</a>
+							<a href="{{ route('site.page', 'offers') }}">Offers</a>
 						</li>
 					</ul>
 				</div>
@@ -70,19 +70,19 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="{{url('help-support')}}">Help Support</a>
+							<a href="{{ route('site.page', 'help-support') }}">Help Support</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Customer Service</a>
+							<a href="{{ route('site.page', 'customer-service') }}">Customer Service</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Customer Reviews</a>
+							<a href="{{ route('site.page', 'customer-review') }}">Customer Reviews</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">My Wishlist</a>
+							<a href="{{ route('site.page', 'my-review') }}">My Wishlist</a>
 						</li>
 						<li>
-							<a href="{{url('contact-us')}}">Contact Us</a>
+							<a href="{{ route('site.page', 'contact-us') }}">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -94,16 +94,19 @@
 					</div>
 					<ul class="footer-list">
 						<li>
-							<a href="{{url('faq')}}">frequently asked question's</a>
+							<a href="{{ route('site.page', 'faq') }}">frequently asked question's</a>
 						</li>
 						<li>
-							<a href="javascript:;">donations</a>
+							<a href="{{ route('site.page', 'donations') }}">donations</a>
 						</li>
 						<li>
-							<a href="javascript:;">feedbacks</a>
+							<a href="{{ route('site.page', 'feedbacks') }}">feedbacks</a>
 						</li>
 						<li>
-							<a href="{{url('terms-policy')}}">terms & policy</a>
+							<a href="{{ route('site.page', 'terms-policy') }}">terms & policy</a>
+						</li>
+						<li>
+							<a href="{{ route('site.page', 'foodonways-deals') }}">Food On Ways Deals</a>
 						</li>
 					</ul>
 				</div>
@@ -170,7 +173,7 @@
 							<a class="nav-link menu-link" href="javascript:;">my personal information</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="javascript:;">© 2021 - 2022</a>
+							<a class="nav-link menu-link" href="javascript:;">© 2021 - {{ date('Y') }}</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link menu-link" href="javascript:;">all rights reserved</a>
@@ -209,10 +212,8 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
 <script type="text/javascript" src="{{ asset('site-assets/js/main.js') }}"></script>
 <!-- <script type="text/javascript" src="{{ asset('site-assets/js/rangeslider.js') }}"></script> -->
 
-	@yield('script')
+@yield('script')
 
 </body>
-
-
 
 </html>
