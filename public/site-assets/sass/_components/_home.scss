@@ -516,9 +516,9 @@
         .product-category-list {
             max-height: 20.625rem;
             overflow-y: scroll;
-            padding-right: .625rem;
+            padding-right: 0.625rem;
             &::-webkit-scrollbar {
-                width: .3125rem;
+                width: 0.3125rem;
             }
             &::-webkit-scrollbar-track {
                 background: $darkYellow;
@@ -717,7 +717,7 @@
         margin: 2px 0;
         position: relative;
         width: 100%;
-        max-width: 25rem;
+        // max-width: 25rem;
         float: right;
         margin: 1.25rem 0;
         background-color: rgba(0, 0, 0, 4%);
@@ -2188,8 +2188,197 @@
     text-transform: capitalize;
     color: $darkBlack;
 }
-
 /*checkout end*/
+
+// new chaeckout start
+.light-border {
+    background: $white;
+    color: #999;
+    border: 1px solid #e1e1e1;
+    padding: 1.25rem;
+    font-size: 1.0625rem;
+    border-radius: 0.9375rem;
+    &.min-order {
+        border-left-width: 0.25rem;
+        border-left-color: $darkYellow;
+        p {
+            margin-bottom: 0;
+            span {
+                color: #333;
+            }
+        }
+    }
+    .delivery-time {
+        h5 {
+            background-color: #f8f8f8;
+            padding: 0.625rem 0.9375rem;
+            border-radius: 0.625rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            color: $darkBlack;
+            span {
+                font-size: 2rem;
+                color: $hoverColor;
+                margin-right: 0.625rem;
+            }
+        }
+        .form-group {
+            .form-control {
+                background-color: #f8f8f8;
+                border-color: #f8f8f8;
+                color: #666;
+            }
+        }
+        .form-check-input:checked {
+            background-color: $hoverColor;
+            border-color: $hoverColor;
+        }
+    }
+    .p-p {
+        font-size: .875rem;
+        color: #333;
+    }
+    .t-m {
+        margin-bottom: 1.25rem;
+        label {
+            color: $hoverColor;
+            font-size: .875rem;
+            a {
+                color: $hoverColor;
+            }
+        }
+    }
+}
+
+.checkout-box {
+    margin-top: 1.5625rem;
+    width: 100%;
+    overflow: auto;
+    td {
+        padding: 1.875rem 0.625rem 0.625rem 0.625rem;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 0.875rem;
+        color: #333;
+        font-weight: 400;
+    }
+    thead {
+        font-size: 15px;
+        font-weight: 500;
+        color: #333;
+        background-color: #f1f1f1;
+        tr {
+            th {
+                padding: 0.625rem 1.25rem;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                padding: 1.875rem 0.625rem 0.625rem 0.625rem;
+                border-bottom: 1px solid #e1e1e1;
+                font-size: 0.875rem;
+                color: #333;
+                font-weight: 400;
+                &.pro-name {
+                    span {
+                        color: $hoverColor;
+                        font-weight: 800;
+                    }
+                }
+                &.pro-price {
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+    tfoot {
+        tr {
+            td {
+                font-weight: 800;
+                &:first-child {
+                    border: none;
+                }
+                &.tot-price {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+.form-billing {
+    h3 {
+        font-weight: 800;
+        text-transform: capitalize;
+        color: #000;
+        font-size: 1.5rem;
+    }
+    form {
+        margin-top: 1.25rem;
+        .form-group {
+            margin-bottom: 0.9375rem;
+            label {
+                color: $hoverColor;
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: 0.3125rem;
+                span {
+                    margin-left: 0.5rem;
+                }
+            }
+            .form-control {
+                background-color: #f8f8f8;
+                border-color: #f8f8f8;
+                color: #666;
+            }
+        }
+    }
+}
+
+.payment-box {
+    margin-top: 1.25rem;
+    .accordion {
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #e1e1e1;
+            padding: 15px 0;
+            .form-check {
+                label {
+                    color: #333;
+                    font-weight: 800;
+                    font-size: 0.8125rem;
+                }
+            }
+            .accordion-body {
+                padding: 0;
+                p {
+                    font-size: 0.875rem;
+                    padding: 0.5rem;
+                    margin: 1rem 0;
+                    color: #333;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            ul {
+                display: flex;
+                .payment-icon {
+                    img {
+                        height: 3.75rem;
+                        width: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// new chaeckout end
 
 .overlay-side {
     position: fixed;

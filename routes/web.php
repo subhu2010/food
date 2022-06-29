@@ -28,6 +28,10 @@ Route::get('checkout-order', function(){
     return view('site.pages.checkout-order');
 });
 
+Route::get('checkout', function(){
+    return view('site.pages.checkout');
+});
+
 Route::get('checkout-confirm', function(){
     return view('site.pages.checkout-confirm');
 });

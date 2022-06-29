@@ -296,7 +296,7 @@
                         </div>
                         <div class="cart-buttons clearfix">
                             <a href="{{ url('cart') }}" class="btn">view cart</a>
-                            <a href="{{ url('checkout-confirm') }}" class="btn">checkout</a>
+                            <a href="{{ url('checkout') }}" class="btn">checkout</a>
                         </div>
                     </div>
                 </div>

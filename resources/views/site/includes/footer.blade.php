@@ -117,22 +117,22 @@
 				<div class="col-sm-6">
 					<ul>
 						<li>
-							<a href="{{ $data['setting']->facebook }}" class='facebook' target='_blank'>
+							<a href="{{ $data['setting']->facebook??'' }}" class='facebook' target='_blank'>
 								<i class="lab la-facebook-f"></i>
 							</a>
 						</li>
 						<li>
-							<a href="{{ $data['setting']->instagram }}" class='instagram' target='_blank'>
+							<a href="{{ $data['setting']->instagram ??''}}" class='instagram' target='_blank'>
 								<i class="lab la-instagram"></i>
 							</a>
 						</li>
 						<li>
-							<a href="{{ $data['setting']->tiktok }}" class='twitter' target='_blank'>
+							<a href="{{ $data['setting']->tiktok??'' }}" class='twitter' target='_blank'>
 								<i class="lab la-twitter"></i>
 							</a>
 						</li>
 						<li>
-							<a href="{{ $data['setting']->youtube }}" class='youtube' target='_blank'>
+							<a href="{{ $data['setting']->youtube??'' }}" class='youtube' target='_blank'>
 								<i class="lab la-youtube"></i>
 							</a>
 						</li>
