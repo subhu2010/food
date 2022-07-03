@@ -689,6 +689,15 @@ ul li {
   color: #fff;
 }
 
+ul.top-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+}
+ul.top-menu > li {
+  height: 3.75rem;
+}
 ul.top-menu > li > a {
   display: block;
   height: 3.75rem;
@@ -704,20 +713,30 @@ ul.top-menu > li > a {
 ul.top-menu > li > a:hover {
   color: #F2002D;
 }
+ul.top-menu > li marquee {
+  height: 3.75rem;
+  font-weight: 800;
+}
+ul.top-menu > li .location-input {
+  padding-left: 0.625rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 #logo {
   display: block;
-  min-height: 90px;
-  width: 179px;
+  min-height: 5.625rem;
+  width: 9.375rem;
   transition: all 0.3s ease-in-out 0s;
-  margin: 0 auto 55px;
+  margin: 0 auto 3.4375rem;
   text-align: center;
   z-index: 6;
   top: 0;
-  padding: 15px 15px 0;
+  padding: 0.9375rem 0.9375rem 0;
   background: #ffca3c;
   position: absolute;
-  top: -10px;
+  top: -0.625rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -727,8 +746,8 @@ ul.top-menu > li > a:hover {
   width: 0;
   height: 0;
   right: 0;
-  bottom: -40px;
-  border-width: 20px 45px;
+  bottom: -2.5rem;
+  border-width: 1.25rem 2.375rem;
   border-style: solid;
   border-color: #ffca3c transparent transparent #ffca3c;
 }
@@ -741,7 +760,7 @@ ul.top-menu > li > a:hover {
 }
 
 #logo img {
-  height: 80px;
+  height: 5rem;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1903,7 +1922,6 @@ ul.top-menu > li > a:hover {
   margin: 2px 0;
   position: relative;
   width: 100%;
-  max-width: 25rem;
   float: right;
   margin: 1.25rem 0;
   background-color: rgba(0, 0, 0, 0.04);
@@ -3319,6 +3337,170 @@ ul.top-menu > li > a:hover {
 }
 
 /*checkout end*/
+.light-border {
+  background: #fff;
+  color: #999;
+  border: 1px solid #e1e1e1;
+  padding: 1.25rem;
+  font-size: 1.0625rem;
+  border-radius: 0.9375rem;
+}
+.light-border.min-order {
+  border-left-width: 0.25rem;
+  border-left-color: #ffca3c;
+}
+.light-border.min-order p {
+  margin-bottom: 0;
+}
+.light-border.min-order p span {
+  color: #333;
+}
+.light-border .delivery-time h5 {
+  background-color: #f8f8f8;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+.light-border .delivery-time h5 span {
+  font-size: 2rem;
+  color: #F2002D;
+  margin-right: 0.625rem;
+}
+.light-border .delivery-time .form-group .form-control {
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+  color: #666;
+}
+.light-border .delivery-time .form-check-input:checked {
+  background-color: #F2002D;
+  border-color: #F2002D;
+}
+.light-border .p-p {
+  font-size: 0.875rem;
+  color: #333;
+}
+.light-border .t-m {
+  margin-bottom: 1.25rem;
+}
+.light-border .t-m label {
+  color: #F2002D;
+  font-size: 0.875rem;
+}
+.light-border .t-m label a {
+  color: #F2002D;
+}
+
+.checkout-box {
+  margin-top: 1.5625rem;
+  width: 100%;
+  overflow: auto;
+}
+.checkout-box td {
+  padding: 1.875rem 0.625rem 0.625rem 0.625rem;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 400;
+}
+.checkout-box thead {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  background-color: #f1f1f1;
+}
+.checkout-box thead tr th {
+  padding: 0.625rem 1.25rem;
+}
+.checkout-box tbody tr td {
+  padding: 1.875rem 0.625rem 0.625rem 0.625rem;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 400;
+}
+.checkout-box tbody tr td.pro-name span {
+  color: #F2002D;
+  font-weight: 800;
+}
+.checkout-box tbody tr td.pro-price {
+  font-weight: 800;
+}
+.checkout-box tfoot tr td {
+  font-weight: 800;
+}
+.checkout-box tfoot tr td:first-child {
+  border: none;
+}
+.checkout-box tfoot tr td.tot-price {
+  font-size: 1.25rem;
+}
+
+.form-billing h3 {
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #000;
+  font-size: 1.5rem;
+}
+.form-billing form {
+  margin-top: 1.25rem;
+}
+.form-billing form .form-group {
+  margin-bottom: 0.9375rem;
+}
+.form-billing form .form-group label {
+  color: #F2002D;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.3125rem;
+}
+.form-billing form .form-group label span {
+  margin-left: 0.5rem;
+}
+.form-billing form .form-group .form-control {
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+  color: #666;
+}
+
+.payment-box {
+  margin-top: 1.25rem;
+}
+.payment-box .accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 15px 0;
+}
+.payment-box .accordion .accordion-item .form-check label {
+  color: #333;
+  font-weight: 800;
+  font-size: 0.8125rem;
+}
+.payment-box .accordion .accordion-item .accordion-body {
+  padding: 0;
+}
+.payment-box .accordion .accordion-item .accordion-body p {
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  color: #333;
+}
+.payment-box .accordion .accordion-item:last-child {
+  border-bottom: none;
+}
+.payment-box .accordion .accordion-item ul {
+  display: flex;
+}
+.payment-box .accordion .accordion-item ul .payment-icon img {
+  height: 3.75rem;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .overlay-side {
   position: fixed;
   left: 0;
