@@ -31,14 +31,21 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="owl-carousel owl-theme quick-view-slide">
+
+                    @if(!empty($product->pics))
                     <div class="item">
                         <img src="{{ asset('uploads/products/'.$product->pics) }}" 
                             alt="{{ $product->name }}" class="img-fluid">
                     </div>
+                    @endif
+
+                    @foreach($product->gallery as $gal)
                     <div class="item">
-                        <img src="{{ asset('uploads/products/'.$product->pics) }}" 
-                            alt="{{ $product->name }}" class="img-fluid">
+                        <img src="{{ asset('uploads/gallery/'.$gal->pics) }}" 
+                            alt="{{ $gal->pics }}" class="img-fluid">
                     </div>
+                    @endforeach
+
                 </div>
             </div>
             <div class="col-lg-6">
@@ -295,7 +302,7 @@
                             <strong>Rs 1412</strong>
                         </div>
                         <div class="cart-buttons clearfix">
-                            <a href="{{ url('cart') }}" class="btn">view cart</a>
+                            <a href="{{ route('user.cartlist') }}" class="btn">view cart</a>
                             <a href="{{ url('checkout-confirm') }}" class="btn">checkout</a>
                         </div>
                     </div>

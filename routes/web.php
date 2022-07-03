@@ -195,16 +195,16 @@ Route::group([], function($route){
 			$route->post('/profile', [UserController::class, "updateProfile"])
 				->name('updateProfile');
 
-			$route->get('/my-orders', [UserController::class, "orders"])
+			$route->get('/orders', [UserController::class, "orders"])
 				->name('orders');
 
-			$route->get('/my-reviews', [UserController::class, "reviews"])
+			$route->get('/reviews', [UserController::class, "reviews"])
 				->name('reviews');
 
-			$route->get('/my-wishlist', [UserController::class, "wishlist"])
+			$route->get('/wishlist', [UserController::class, "wishlist"])
 				->name('wishlist');
 
-			$route->get('/my-cartlist', [UserController::class, "cartlist"])
+			$route->get('/cartlist', [UserController::class, "cartlist"])
 				->name('cartlist');
 
 			$route->get('/history', [UserController::class, "history"])

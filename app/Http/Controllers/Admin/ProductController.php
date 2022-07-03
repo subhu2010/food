@@ -160,11 +160,11 @@ class ProductController extends Controller{
     }
 
 
-    public function updateProductGallery(Request $request, product $product){
+    public function updateProductGallery(Request $request, Product $product){
 
         $data["product"] = $product;
 
-        return view("admin.pages.product.update-product-gallery", compact("data"));
+        return view("admin.pages.product.update-product-gallery", $data);
 
     }
 
@@ -173,7 +173,7 @@ class ProductController extends Controller{
 
         $request->validate([
                                 "gallery"   => "required",
-                                "gallery.*" => "image|mimes:png,jpg,jpeg,gif,webp"
+                                "gallery.*" => "image|mimes:png,jpg,jpeg,gif,webp|max:2048"
                             ], 
                             [
                                 "gallery.required" => "Gallery is Required ! ! !",

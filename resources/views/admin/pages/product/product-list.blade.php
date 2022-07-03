@@ -80,6 +80,10 @@
                             </td>
 
                             <td>
+                                <a href="{{ route('admin.updateProductGallery', $value->id) }}" 
+                                    class="btn icon btn-sm btn-primary">
+                                    <i class="fas fa-image"></i>
+                                </a>
                                 <a href="{{ route('admin.editProduct', $value->id) }}" 
                                     class="btn icon btn-sm btn-primary">
                                     <i class="far fa-edit"></i>
